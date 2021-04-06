@@ -35,16 +35,30 @@ form.addEventListener('submit', function (e) {
     e.preventDefault();
 
     // check username
-    if(username.value === '') {
-       showError(username, 'Username is required') 
+    if (username.value === '') {
+        showError(username, 'Username is required')
     } else {
         showSuccess(username);
     }
 
     // check email
-    if(email.value === '') {
-       showError(email, 'Email is required') 
+    if (email.value === '') {
+        showError(email, 'Email is required')
     } else {
         showSuccess(email);
+    }
+
+    // check password
+    if (password.value === '') {
+        showError(password, 'Password is required')
+    } else {
+        showSuccess(password);
+    }
+
+    // check password 2
+    if (password2.value === '') {
+        showError(password2, 'Password 2 is required')
+    } else {
+        showSuccess(password2);
     }
 });
