@@ -1,6 +1,8 @@
 
 // collect all the dom elements
 
+const { RuleTester } = require("eslint");
+
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
@@ -20,6 +22,12 @@ function showError(input, message) {
 
     // replace the inner txt for the element with the small class
     small.innerText = message;
+}
+
+// check if email is an email address
+function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return RuleTester(String(email).toLowerCase());
 }
 
 
