@@ -21,7 +21,23 @@ body {
     width: 400px;
 }
 
+h2 {
+    text-align: center;
+    margin: 0 0 20px;
+}
 
 .form {
     padding: 30px 40px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: #777;
+    display: block;
+    margin-bottom: 5px;
 }
