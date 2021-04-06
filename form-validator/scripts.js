@@ -22,8 +22,6 @@ function showError(input, message) {
     small.innerText = message;
 }
 
-// Event listeners
-
 
 // Show input success 
 function showSuccess(input) {
@@ -31,12 +29,22 @@ function showSuccess(input) {
     fromControl.className = 'form-control success';
 }
 
+
+// Event listeners
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
+    // check username
     if(username.value === '') {
        showError(username, 'Username is required') 
     } else {
         showSuccess(username);
+    }
+
+    // check email
+    if(email.value === '') {
+       showError(email, 'Email is required') 
+    } else {
+        showSuccess(email);
     }
 });
