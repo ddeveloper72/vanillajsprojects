@@ -55,3 +55,11 @@ h2 {
     outline: 0;
     border-color: #777;
 }
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
