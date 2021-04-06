@@ -12,7 +12,7 @@ const password2 = document.getElementById('password2');
 function showError(input, message) {
     const fromControl = input.parentElement;
 
-    // search the form for the element with the small tag
+    // search the DOM for matching css selector
     const small = fromControl.querySelector('small');
 
     // updated class names
