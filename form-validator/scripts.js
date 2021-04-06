@@ -1,8 +1,5 @@
 
 // collect all the dom elements
-
-const { RuleTester } = require("eslint");
-
 const form = document.getElementById('form');
 const username = document.getElementById('username');
 const email = document.getElementById('email');
@@ -27,7 +24,7 @@ function showError(input, message) {
 // check if email is an email address
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return RuleTester(String(email).toLowerCase());
+    return re.test(String(email).toLowerCase());
 }
 
 
@@ -52,6 +49,8 @@ form.addEventListener('submit', function (e) {
     // check email
     if (email.value === '') {
         showError(email, 'Email is required')
+    } else if (!validateEmail(email.value)) {
+        showError(email, 'Please provide an email address')
     } else {
         showSuccess(email);
     }
