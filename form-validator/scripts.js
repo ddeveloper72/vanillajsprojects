@@ -35,37 +35,20 @@ function showSuccess(input) {
 }
 
 
+// check required fields
+function checkRequired(inputArray) {
+    inputArray.forEach(function (input) {
+        if(input.value.trim() === '') {
+            showError(input, `${input.id} is required`);
+        } else {
+            showSuccess(input);
+        }
+    });
+}
+
 // Event listeners
 form.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    // check username
-    if (username.value === '') {
-        showError(username, 'Username is required')
-    } else {
-        showSuccess(username);
-    }
-
-    // check email
-    if (email.value === '') {
-        showError(email, 'Email is required')
-    } else if (!validateEmail(email.value)) {
-        showError(email, 'Please provide an email address')
-    } else {
-        showSuccess(email);
-    }
-
-    // check password
-    if (password.value === '') {
-        showError(password, 'Password is required')
-    } else {
-        showSuccess(password);
-    }
-
-    // check password 2
-    if (password2.value === '') {
-        showError(password2, 'Password 2 is required')
-    } else {
-        showSuccess(password2);
-    }
+    checkRequired([username, email, password, password2]);
 });
