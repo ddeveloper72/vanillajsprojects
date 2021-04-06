@@ -39,11 +39,17 @@ function showSuccess(input) {
 function checkRequired(inputArray) {
     inputArray.forEach(function (input) {
         if(input.value.trim() === '') {
-            showError(input, `${input.id} is required`);
+            showError(input, `${getFieldName(input)} is required`);
         } else {
             showSuccess(input);
         }
     });
+}
+
+// convert input.id to proper case
+function getFieldName(input) {
+    // convert just 1st letter to upper then splice on remaining text
+    return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
 
 // Event listeners
