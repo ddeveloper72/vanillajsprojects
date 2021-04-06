@@ -8,6 +8,21 @@ const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
 
+// Show input error message
+
+function showError(input, message) {
+    const fromControl = input.parentElement;
+
+    // search the form for the element with the small tag
+    const small = fromControl.querySelector('small');
+
+    // updated class names
+    fromControl.className = 'form-control error';
+
+    // replace the inner txt for the element with the small class
+    small.innerText = message;
+}
+
 // Event listeners
 
 form.addEventListener('submit', function (e) {
