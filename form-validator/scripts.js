@@ -9,7 +9,6 @@ const password2 = document.getElementById('password2');
 
 
 // Show input error message
-
 function showError(input, message) {
     const fromControl = input.parentElement;
 
@@ -24,6 +23,13 @@ function showError(input, message) {
 }
 
 // Event listeners
+
+
+// Show input success 
+function showSuccess(input) {
+    const fromControl = input.parentElement;
+    fromControl.className = 'form-control success';
+}
 
 form.addEventListener('submit', function (e) {
     e.preventDefault();
