@@ -3,7 +3,7 @@
 :root {
     --white-color: #fff;
     --background-color: #242333;
-    --available-seat-color: #444451
+    --available-seat-color: #444451;
 }
 
 * {
@@ -43,4 +43,8 @@ body {
     margin: 3px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.row {
+    display: flex;
 }
