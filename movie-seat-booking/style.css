@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+:root {
+    --white-color: #fff;
+    --background-color: #242333;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #242333;
+    background-color: var(--background-color);
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: var(--white-color);
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -20,3 +25,12 @@ body {
     margin: 20px 0;
 }
 
+.movie-container select {
+    background-color: var(--white-color);
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+}
