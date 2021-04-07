@@ -39,6 +39,12 @@ body {
     appearance: none;
 }
 
+.container {
+    /* give the effect of the screen tilted toward the seats */
+    perspective: 1000px;
+    margin-bottom: 30px;
+}
+
 .seat {
     background-color: var(--available-seat-color);
     height: 12px;
