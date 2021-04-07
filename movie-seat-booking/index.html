@@ -8,6 +8,8 @@
     <title>Movie Seat Booking</title>
 </head>
 <body>
+
+    <!-- Movie prices -->
     <div class="movie-container">
         <label>Pick a movie:</label>
         <select id="movie">
@@ -17,6 +19,22 @@
             <option value="9">The Lion King (€9)</option>
         </select>
     </div>
+
+    <!-- Showcase legend -->
+    <ul class="show-case">
+        <li>
+            <div class="seat"></div>
+            <small>N/A</small>
+        </li>
+        <li>
+            <div class="seat selected"></div>
+            <small>Selected</small>
+        </li>
+        <li>
+            <div class="seat occupied"></div>
+            <small>Occupied</small>
+        </li>
+    </ul>
     
     <script src="scripts.js"></script>
 </body>
