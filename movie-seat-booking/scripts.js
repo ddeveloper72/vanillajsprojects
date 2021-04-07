@@ -1,6 +1,6 @@
 // collect the DOM elements
 const container = document.querySelector('.container');
-const seats = document.querySelectorAll('row .seat:not(.occupied)'); // use css class syntax
+const seats = document.querySelectorAll('.row .seat:not(.occupied)'); // use css class syntax
 const count = document.getElementById('count');
 const total = document.getElementById('total');
 const movieSelect = document.getElementById('movie');
@@ -12,6 +12,13 @@ let ticketPrice = +movieSelect.value; // set type from string to number & use le
 function updateSelectedCount() {
     // add all selected seats to an empty node-list
     const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+    // convert node list into and array then store indexes of seats in the array
+    const seatsIndex = [...selectedSeats].map(seat =>
+        [...seats].indexOf(seat)
+    );
+
+    console.log(seatsIndex);
 
     const selectedSeatsCount = selectedSeats.length;  // get number of selected
 
@@ -28,7 +35,7 @@ movieSelect.addEventListener('change', e => {
 // Seat click element
 container.addEventListener('click', (e) => {
     // console.log(e.target); // find target element
-    if(
+    if (
         e.target.classList.contains('seat') &&
         !e.target.classList.contains('occupied')
     ) {
