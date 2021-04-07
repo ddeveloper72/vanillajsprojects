@@ -64,6 +64,12 @@ body {
     margin-left: 18px;
 }
 
+/* indicate seat availability on mouse hover */
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
 .row {
     display: flex;
 }
