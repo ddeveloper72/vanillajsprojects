@@ -5,6 +5,7 @@
     --background-color: #242333;
     --available-seat-color: #444451;
     --selected-seat-color: #6feaf6;
+    --occupied-seat-color: #fff;
 }
 
 * {
@@ -48,6 +49,10 @@ body {
 
 .seat.selected {
     background-color: var(--selected-seat-color);
+}
+
+.seat.occupied {
+    background-color: var(--occupied-seat-color);
 }
 
 .row {
