@@ -8,4 +8,12 @@ const movieSelect = document.getElementById('movie');
 
 const ticketPrice = +movieSelect.value; // set type from string to number
 
-console.log(typeof ticketPrice);
+container.addEventListener('click', (e) => {
+    // console.log(e.target); // find target element
+    if(
+        e.target.classList.contains('seat') &&
+        !e.target.classList.contains('occupied')
+    ) {
+        e.target.classList.toggle('selected');
+    }
+})
