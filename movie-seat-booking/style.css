@@ -101,3 +101,16 @@ body {
 .row {
     display: flex;
 }
+
+.screen {
+    background-color: var(--white-color);
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    /* tilt screen to make it appear smaller */
+    transform: rotateX(-45deg);
+    /* add effect of a lighted screen */
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+
+
+}
