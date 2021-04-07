@@ -8,6 +8,17 @@ const movieSelect = document.getElementById('movie');
 
 const ticketPrice = +movieSelect.value; // set type from string to number
 
+// Updated the ticket price totals for number of seats selected
+function updateSelectedCount() {
+    // add all selected seats to an empty node-list
+    const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+    const selectedSeatsCount = selectedSeats.length;  // get number of selected
+
+    count.innerText = selectedSeatsCount;
+    total.innerText = selectedSeatsCount * ticketPrice;
+}
+
 container.addEventListener('click', (e) => {
     // console.log(e.target); // find target element
     if(
@@ -15,5 +26,7 @@ container.addEventListener('click', (e) => {
         !e.target.classList.contains('occupied')
     ) {
         e.target.classList.toggle('selected');
+
+        updateSelectedCount();
     }
 })
