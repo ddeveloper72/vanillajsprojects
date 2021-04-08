@@ -35,7 +35,8 @@ function updateProgress() {
 
 // set vide time to progress
 function setVideoProgress() {
-        return true;
+    // calculate the video location based a % of the value * duration
+    video.currentTime = (+progress.value * video.duration) / 100;
 }
 
 
