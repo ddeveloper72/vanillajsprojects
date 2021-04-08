@@ -4,3 +4,5 @@ movie-seat-booking/.firebaserc
 movie-seat-booking/firebase.json
 form-validator/.firebaserc
 form-validator/firebase.json
+custom-video-player/firebase.json
+custom-video-player/.firebaserc
