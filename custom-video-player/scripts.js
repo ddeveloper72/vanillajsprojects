@@ -64,6 +64,11 @@ function stopVideo() {
     video.pause();
 }
 
+// function mute video
+function toggleSound() {
+    video.muted = !video.muted;
+}
+
 // Event listeners
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('play', updatePlayIcon);
