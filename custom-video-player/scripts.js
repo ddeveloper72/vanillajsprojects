@@ -7,7 +7,13 @@ const timestamp = document.getElementById('timestamp')
 
 // Play and pause the video
 function toggleVideoStatus() {
-    return true;
+
+    // use API route to video tag
+    if (video.paused) {
+        video.play();
+    } else {
+        video.pause();
+    }
 }
 
 // Update play/pause icon
@@ -34,7 +40,7 @@ function stopVideo() {
 // Event listeners
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('play', updatePlayIcon);
-video.addEventListener('pause', updatePauseIcon);
+video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
 
 
