@@ -18,7 +18,12 @@ function toggleVideoStatus() {
 
 // Update play/pause icon
 function updatePlayIcon() {
-    return true;
+    // update the html element with id for play
+    if(video.paused) {
+        play.innerHTML = `<i class="fa fa-play fa-2x"></i>`
+    } else {
+        play.innerHTML = `<i class="fa fa-pause fa-2x"></i>`
+    }
 }
 
 // Update progress and timestamp
