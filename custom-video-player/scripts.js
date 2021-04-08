@@ -4,6 +4,9 @@ const play = document.getElementById('play')
 const stop = document.getElementById('stop')
 const progress = document.getElementById('progress')
 const timestamp = document.getElementById('timestamp')
+const mute = document.getElementById('mute');
+const volinc = document.getElementById('volup');
+const voldec = document.getElementById('voldown');
 
 // Play and pause the video
 function toggleVideoStatus() {
@@ -70,3 +73,5 @@ video.addEventListener('timeupdate', updateProgress);
 play.addEventListener('click', toggleVideoStatus);
 stop.addEventListener('click', stopVideo);
 progress.addEventListener('change', setVideoProgress);
+
+mute.addEventListener('click', toggleSound )
