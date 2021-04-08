@@ -1,12 +1,18 @@
-# Custom Video Player 
+# [Custom Video Player](https://movie-player-b59b9.web.app/)
 
 This video player makes use of the HTML5 video element as well as a JavaScript API
 
 ## The Specifications
 
-* Setup a user interface
-* More to follow here
-
+* Setup a user interface with a custom video player interface
+* Player features:
+  * Play/pause
+  * Stop
+  * Video progress indicator
+  * Time played indicator in minutes and seconds
+  * Sound muted\ un-muted button
+  * Volume increase button
+  * Volume decrease button
 
 ## Deployment
 
