@@ -27,6 +27,17 @@ h1 {
     border-top-right-radius: 5px;
 }
 
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: #333;
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
 @media (max-width: 800px) {
     .screen,
     .controls {
