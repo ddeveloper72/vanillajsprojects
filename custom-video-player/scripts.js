@@ -5,8 +5,8 @@ const stop = document.getElementById('stop')
 const progress = document.getElementById('progress')
 const timestamp = document.getElementById('timestamp')
 const mute = document.getElementById('mute');
-const volinc = document.getElementById('volup');
-const voldec = document.getElementById('voldown');
+const volinc = document.getElementById('volinc');
+const voldec = document.getElementById('voldec');
 
 // Play and pause the video
 function toggleVideoStatus() {
@@ -75,6 +75,17 @@ function toggleSound() {
     }
 }
 
+// Change volume direction
+var alterVolume = function(dir) {
+    var currentVolume = Math.floor(video.volume * 10) / 10;
+    if (dir == '+') {
+        if (currentVolume < 1) video.volume += 0.1;
+    }
+    else if (dir == '-') {
+        if (currentVolume > 0) video.volume -= 0.1;
+    }
+}
+
 // Event listeners
 video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('play', updatePlayIcon);
@@ -85,4 +96,12 @@ play.addEventListener('click', toggleVideoStatus);
 stop.addEventListener('click', stopVideo);
 progress.addEventListener('change', setVideoProgress);
 
-mute.addEventListener('click', toggleSound )
+mute.addEventListener('click', toggleSound );
+
+volinc.addEventListener('click', function(e) {
+    alterVolume('+');
+});
+
+voldec.addEventListener('click', function(e) {
+    alterVolume('-')
+});
