@@ -67,6 +67,12 @@ function stopVideo() {
 // function mute video
 function toggleSound() {
     video.muted = !video.muted;
+
+    if (!video.muted) {
+        mute.innerHTML = `<i class="fa fa-volume-mute fa-2x mute"></i>`
+    } else {
+        mute.innerHTML = `<i class="fa fa-volume-mute fa-2x"></i>`
+    }
 }
 
 // Change volume direction
