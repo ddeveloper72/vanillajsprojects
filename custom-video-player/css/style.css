@@ -4,6 +4,9 @@
     --screen-background: #000;
     --controls-background: #333;
     --control-timestamp: #fff;
+    --fa-play: #28a745;
+    --fa-stop: #dc3545;
+    --fa-pause: #fff;
 }
 
 * {
@@ -37,9 +40,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
     padding: 5px;
     background-color: var(--controls-background);
-    color: var(--control-timestamp);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -48,6 +51,24 @@ h1 {
     border: 0;
     background: transparent;
     cursor: pointer;
+}
+
+.controls .fa-play {
+    color: var(--fa-play);
+}
+
+.controls .fa-stop {
+    color: var(--fa-stop);
+}
+
+.controls .fa-pause {
+    color: var(--fa-pause);
+}
+
+.controls .timestamp {
+    color: var(--control-timestamp);
+    font-weight: bold;
+    margin-left: 10px;    
 }
 
 @media (max-width: 800px) {
