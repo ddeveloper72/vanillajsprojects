@@ -67,6 +67,12 @@ function stopVideo() {
 // function mute video
 function toggleSound() {
     video.muted = !video.muted;
+
+    if (!video.muted) {
+        mute.innerHTML = `<span class="fa-stack"><i class="fas fa-volume-mute fa-stack-1x"></i><i class="fas fa-times fa-stack-2x"></i></span>`
+    } else {
+        mute.innerHTML = `<i class="fa fa-volume-mute fa-2x"></i>`
+    }
 }
 
 // Event listeners
