@@ -19,7 +19,7 @@ function toggleVideoStatus() {
 // Update play/pause icon
 function updatePlayIcon() {
     // update the html element with id for play
-    if(video.paused) {
+    if (video.paused) {
         play.innerHTML = `<i class="fa fa-play fa-2x"></i>`
     } else {
         play.innerHTML = `<i class="fa fa-pause fa-2x"></i>`
@@ -28,13 +28,16 @@ function updatePlayIcon() {
 
 // Update progress and timestamp
 function updateProgress() {
-    return true
+    // update progress value on the HTML as a %, so CSS can draw
+    progress.value = (video.currentTime / video.duration) * 100;
 }
+
 
 // set vide time to progress
 function setVideoProgress() {
-    return true;
+        return true;
 }
+
 
 // function stop video
 function stopVideo() {
@@ -49,10 +52,6 @@ video.addEventListener('play', updatePlayIcon);
 video.addEventListener('pause', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
 
-
-
 play.addEventListener('click', toggleVideoStatus);
-
 stop.addEventListener('click', stopVideo);
-
 progress.addEventListener('change', setVideoProgress);
