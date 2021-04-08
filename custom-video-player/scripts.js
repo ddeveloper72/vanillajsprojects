@@ -68,8 +68,9 @@ function stopVideo() {
 function toggleSound() {
     video.muted = !video.muted;
 
+    // add muted class to enable css color change on button
     if (!video.muted) {
-        mute.innerHTML = `<i class="fa fa-volume-mute fa-2x mute"></i>`
+        mute.innerHTML = `<i class="fa fa-volume-mute fa-2x muted"></i>`
     } else {
         mute.innerHTML = `<i class="fa fa-volume-mute fa-2x"></i>`
     }
