@@ -37,9 +37,10 @@ function setVideoProgress() {
 }
 
 // function stop video
-
 function stopVideo() {
-    return true;
+    // return the video to the 0 time stamp, then pause
+    video.currentTime = 0;
+    video.pause();
 }
 
 // Event listeners
