@@ -44,6 +44,12 @@ h1 {
     border-bottom-right-radius: 5px;
 }
 
+.controls .btn {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+}
+
 @media (max-width: 800px) {
     .screen,
     .controls {
