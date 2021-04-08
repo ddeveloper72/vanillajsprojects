@@ -65,6 +65,18 @@ h1 {
     color: var(--fa-pause);
 }
 
+.controls .fa-volume-mute {
+    color: var(--fa-pause);
+}
+
+.controls .fa-volume-up {
+    color: var(--fa-pause);
+}
+
+.controls .fa-volume-down {
+    color: var(--fa-pause);
+}
+
 .controls .timestamp {
     color: var(--control-timestamp);
     font-weight: bold;
