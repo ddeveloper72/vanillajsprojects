@@ -11,3 +11,11 @@ video.addEventListener('click', toggleVideoStatus);
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('pause', updatePauseIcon);
 video.addEventListener('timeupdate', updateProgress);
+
+
+
+play.addEventListener('click', toggleVideoStatus);
+
+stop.addEventListener('click', stopVideo);
+
+progress.addEventListener('change', setVideoProgress);
