@@ -69,7 +69,7 @@ h1 {
     color: var(--fa-pause);
 }
 
-.controls .mute {
+.controls .muted {
     color: var(--fa-stop);
 }
 
