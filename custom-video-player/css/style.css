@@ -69,6 +69,10 @@ h1 {
     color: var(--fa-pause);
 }
 
+.controls .fa-times {
+    color: var(--fa-stop);
+}
+
 .controls .fa-volume-up {
     color: var(--fa-pause);
 }
@@ -81,6 +85,13 @@ h1 {
     color: var(--control-timestamp);
     font-weight: bold;
     margin-left: 10px;    
+}
+
+.controls .fa-stack {
+}
+
+.controls i {
+    vertical-align: middle;
 }
 
 .btn:focus {
