@@ -1,6 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:&display=swap');
 
+:root {
+    --primary-color: #176CC6;
+
+}
 
 * {
     box-sizing: border-box;
@@ -16,4 +20,8 @@ body {
     height: 100vh;
     margin: 0;
     padding: 20px;
+}
+
+h1 {
+    color: var(--primary-color);
 }
