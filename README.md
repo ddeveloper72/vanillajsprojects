@@ -7,6 +7,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Form Validation](https://form-validation-4e7aa.firebaseapp.com/)
 * [Movie Seat Booking](https://movie-seat-booking-2ec36.firebaseapp.com/)
 * [Custom Movie Player](https://movie-player-b59b9.firebaseapp.com/)
+* [Exchange Rate Calculator](https://currency-exchange-rates-ef59c.firebaseapp.com/)
 
 ## Deployment
 
