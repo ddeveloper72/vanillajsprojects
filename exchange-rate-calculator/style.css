@@ -91,3 +91,10 @@ input:focus,
 button:focus {
     outline: 0;
 }
+
+/* reduce max width for smaller screen */
+@media(max-width: 600px) {
+    .currency input {
+        width: 200px;
+    }
+}
