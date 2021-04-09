@@ -4,7 +4,10 @@ use an API provided by [Exchange Rate API](https://www.exchangerate-api.com/) to
 
 ## Specifications
 
-* This is work in progress
+* Provide a user interface for selecting a currency and adding a value, then selecting a different currency and seeing the exchange value in that currency
+* Use an API to provide actual current exchange rate data.
+* Provide a facility to swap the currency values.
+* Updating an amount, also updates the amount of the foreign currency
 
 ## Deployment
 
