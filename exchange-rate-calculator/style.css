@@ -24,6 +24,7 @@ body {
 
 h1 {
     color: var(--primary-color);
+    text-align: center;
 }
 
 p {
@@ -41,4 +42,8 @@ p {
 .btn i:hover {
     transform: translateY(-2px);
     text-shadow: 0 6.36px 8.896px #000,0 -2px 1px #fff;
+}
+
+.money-img {
+    width: 150px;
 }
