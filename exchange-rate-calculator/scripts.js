@@ -19,7 +19,11 @@ function calculate() {
         // console.log(data);
         const rate = data.rates[currency_two];
 
+        // render the exchange rate from the API to the innerText element id, rate
         rateEl.innerText = `1 ${currency_one} = ${rate} ${currency_two}`
+
+        // render the calculated rate to the element id's value
+        amountEl_two.value = (amountEl_one.value * rate).toFixed(2);
     });
 }
 
