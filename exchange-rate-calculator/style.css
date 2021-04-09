@@ -25,3 +25,20 @@ body {
 h1 {
     color: var(--primary-color);
 }
+
+p {
+    text-align: center;
+}
+
+.btn {
+    border: none;
+    color: var(--primary-color);
+    cursor: pointer;
+    padding: 5px 12px;
+    transition: all .5;
+}
+
+.btn i:hover {
+    transform: translateY(-2px);
+    text-shadow: 0 6.36px 8.896px #000,0 -2px 1px #fff;
+}
