@@ -1,1 +1,19 @@
-ECHO is on.
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4f4;
+    font-family: 'Inter', sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
