@@ -1,4 +1,4 @@
-# Exchange Rate Calculator
+# [Exchange Rate Calculator](https://currency-exchange-rates-ef59c.firebaseapp.com/)
 
 use an API provided by [Exchange Rate API](https://www.exchangerate-api.com/) to convert a number between different financial currencies
 
