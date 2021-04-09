@@ -44,6 +44,11 @@ p {
     text-shadow: 0 6.36px 8.896px #000,0 -2px 1px #fff;
 }
 
+.btn i:active {
+    transform: translateY(0);
+    text-shadow: none;
+}
+
 .money-img {
     width: 150px;
 }
