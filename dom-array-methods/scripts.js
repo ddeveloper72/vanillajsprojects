@@ -7,3 +7,9 @@ const calculateWealthBtn = document.getElementById('calculate-wealth');
 const main = document.getElementById('main');
 
 
+let data = [];
+
+// fetch a random user from API
+function getRandomUser() {
+    fetch('https://randomuser.me/api');
+}
