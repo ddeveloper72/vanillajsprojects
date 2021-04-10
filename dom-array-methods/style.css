@@ -84,3 +84,14 @@ h2 {
     font-weight: 300;
     margin: 0 0 20px;
 }
+
+/* data bing added by javaScript */
+h3 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #111;
+    padding: 10px;
+    font-weight: 300;
+    margin: 20px 0 0;
+}
