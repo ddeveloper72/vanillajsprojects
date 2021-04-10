@@ -7,7 +7,7 @@ const calculateWealthBtn = document.getElementById('calculate-wealth');
 const main = document.getElementById('main');
 
 
-let data = [];
+let data = []; // default data array
 
 getRandomUser();
 getRandomUser();
@@ -33,4 +33,11 @@ function addData(object) {
     data.push(obj);
 
     updateDOM();
+}
+
+// update DOM 
+function updateDOM(providedData = data) { // if there is no provided data, use default data
+    // Clear main div element by rebuilding div element
+    main.innerHTML = `<h2><strong>Person> Wealth</hr>`;
+
 }
