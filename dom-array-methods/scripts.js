@@ -44,8 +44,15 @@ function updateDOM(providedData = data) { // if there is no provided data, use d
         // Element construction
         const element = document.createElement('div');
         element.classList.add('person');
-        element.innerHTML = `<strong>${item.name}</strong> ${item.money}`;
+        element.innerHTML = 
+            `<strong>${item.name}</strong> 
+            ${formatMoney(item.money)}`; // wrap money in a format function
         main.appendChild(element);
     });
+}
 
+// Format number as currency
+function formatMoney(num) {
+    // use regex expression as well as concatenate currency symbol
+    return '€' + num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
