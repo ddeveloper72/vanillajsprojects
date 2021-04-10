@@ -25,8 +25,12 @@ async function getRandomUser() {
         money: Math.floor(Math.random() * 1000000)  // make fake money!
     };
 
-    console.log(newUser);
+    addData(newUser);
+}
 
-    // addData(newUser);
+// Add new object to data array
+function addData(object) {
+    data.push(obj);
 
+    updateDOM();
 }
