@@ -30,7 +30,7 @@ async function getRandomUser() {
 
 // Add new object to data array
 function addData(object) {
-    data.push(obj);
+    data.push(object);
 
     updateDOM();
 }
@@ -39,5 +39,13 @@ function addData(object) {
 function updateDOM(providedData = data) { // if there is no provided data, use default data
     // Clear main div element by rebuilding div element
     main.innerHTML = `<h2><strong>Person> Wealth</hr>`;
+
+    providedData.forEach(item => {
+        // Element construction
+        const element = document.createElement('div');
+        element.classList.add('person');
+        element.innerHTML = `<strong>${item.name}</strong> ${item.money}`;
+        main.appendChild(element);
+    });
 
 }
