@@ -56,3 +56,6 @@ function formatMoney(num) {
     // use regex expression as well as concatenate currency symbol
     return '€' + num.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
 }
+
+// Event listeners
+addUserBtn.addEventListener('click', getRandomUser);
