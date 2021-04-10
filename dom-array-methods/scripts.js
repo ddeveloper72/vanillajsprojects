@@ -10,6 +10,7 @@ const main = document.getElementById('main');
 let data = [];
 
 // fetch a random user from API
-function getRandomUser() {
-    fetch('https://randomuser.me/api');
+async function getRandomUser() {
+    const res = await fetch('https://randomuser.me/api');
+    
 }
