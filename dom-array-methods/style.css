@@ -70,3 +70,8 @@ button i {
 button i:hover {
     transform: translateY(-2px) scale(1.2);
 }
+
+main {
+    flex: 1;
+    padding: 10px 20px;
+}
