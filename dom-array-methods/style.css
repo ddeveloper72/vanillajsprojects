@@ -26,3 +26,47 @@ aside {
     border-right: 1px solid #111;
 }
 
+button {
+    background-color: #fff;
+    border: solid 1px #111;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button .fa-user-plus {
+    color: #ff7f50;
+}
+
+button .fa-coins {
+    color: #aa8f56;
+}
+
+button .fa-filter {
+    color: #e6ab2e;
+}
+
+button .fa-sort-amount-up {
+    background: linear-gradient(rgb(04, 72, 12, 0.979), rgb(150, 240, 122));
+    background: -webkit-linear-gradient(rgb(04, 72, 12, 0.979), rgb(150, 240, 122));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+button .fa-calculator {
+    color: #e6532e;
+}
+
+button i {
+    transition: all .2s;
+}
+
+button i:hover {
+    transform: translateY(-2px) scale(1.2);
+}
