@@ -4,6 +4,7 @@
     --modal-duration: 1s;
     --primary-color: #30336b;
     --secondary-color: #be2edd;
+    --white-color: #fff;
 }
 
 * {
@@ -13,4 +14,15 @@
 body {
     font-family: 'Lato', sans-serif;
     margin: 0;
+}
+
+nav {
+    position: fixed;
+    background-color: var(--primary-color);
+    border-right: 2px solid rgba(200, 200, 200, 0.1);
+    color: var(--white-color);
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
 }
