@@ -38,7 +38,7 @@ function addData(object) {
 // update DOM 
 function updateDOM(providedData = data) { // if there is no provided data, use default data
     // Clear main div element by rebuilding div element
-    main.innerHTML = `<h2><strong>Person> Wealth</hr>`;
+    main.innerHTML = `<h2><strong>Person</strong> Wealth</hr>`;
 
     providedData.forEach(item => {
         // Element construction
