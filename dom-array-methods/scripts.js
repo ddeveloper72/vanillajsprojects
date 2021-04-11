@@ -51,6 +51,13 @@ function addData(object) {
     updateDOM();
 }
 
+// filter by millionaires
+function showMillionaire() {
+    data = data.filter(user => user.money >= 1000000);
+
+    updateDOM();
+}
+
 // update DOM 
 function updateDOM(providedData = data) { // if there is no provided data, use default data
     // Clear main div element by rebuilding div element
