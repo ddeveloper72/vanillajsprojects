@@ -85,3 +85,4 @@ addUserBtn.addEventListener('click', getRandomUser);
 doubleMoneyBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByWealthiest);
 showMillionaireBtn.addEventListener('click', showMillionaire);
+calculateWealthBtn.addEventListener('click', calculateWealth);
