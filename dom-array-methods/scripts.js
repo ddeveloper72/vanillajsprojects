@@ -28,6 +28,15 @@ async function getRandomUser() {
     addData(newUser);
 }
 
+// Double Money function
+function doubleMoney() {
+    data = data.map(user => {
+        return { ...user, money: user.money * 2};
+    });
+
+    updateDOM();
+}
+
 // Add new object to data array
 function addData(object) {
     data.push(object);
