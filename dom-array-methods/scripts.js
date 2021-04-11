@@ -77,3 +77,4 @@ function formatMoney(num) {
 addUserBtn.addEventListener('click', getRandomUser);
 doubleMoneyBtn.addEventListener('click', doubleMoney);
 sortBtn.addEventListener('click', sortByWealthiest);
+showMillionaireBtn.addEventListener('click', showMillionaire);
