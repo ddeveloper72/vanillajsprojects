@@ -8,3 +8,6 @@ custom-video-player/firebase.json
 custom-video-player/.firebaserc
 exchange-rate-calculator/.firebaserc
 exchange-rate-calculator/firebase.json
+dom-array-methods/.firebaserc
+.gitignore
+dom-array-methods/firebase.json
