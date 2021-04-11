@@ -58,6 +58,15 @@ function showMillionaire() {
     updateDOM();
 }
 
+// calculate total wealth
+function calculateWealth() {
+    const wealth = data.reduce((accumulator, user) => (
+        accumulator += user.money)
+        , 0)
+    console.log(formatMoney(wealth));
+
+}
+
 // update DOM 
 function updateDOM(providedData = data) { // if there is no provided data, use default data
     // Clear main div element by rebuilding div element
