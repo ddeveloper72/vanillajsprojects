@@ -59,3 +59,5 @@ function formatMoney(num) {
 
 // Event listeners
 addUserBtn.addEventListener('click', getRandomUser);
+
+doubleMoneyBtn.addEventListener('click', doubleMoney);
