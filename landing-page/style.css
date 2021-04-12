@@ -116,3 +116,11 @@ button:focus {
     padding: 12px 30px;
     font-size: 20px;
 }
+
+.container {
+    padding: 15px;
+    margin: 0 auto;
+    /* control the overall width of the container used space */
+    max-width: 100%;
+    width: 800px;
+}
