@@ -176,3 +176,8 @@ button:focus {
     display: block;
     margin-bottom: 5px;
 }
+
+.modal-form .form-input {
+    padding: 8px;
+    width: 100%;
+}
