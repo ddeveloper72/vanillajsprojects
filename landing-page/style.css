@@ -73,3 +73,12 @@ nav ul li a {
 nav ul li a:hover {
   background-position: 0 100%;
 }
+
+header {
+    background-color: var(--primary-color);
+    columns: var(--white-color);
+    font-size: 130%;
+    position: relative;
+    padding: 40px 15px;
+    text-align: center;
+}
