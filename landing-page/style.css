@@ -151,3 +151,9 @@ button:focus {
     width: 400px;
     max-width: 100%;
 }
+
+.modal-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 15px;
+}
