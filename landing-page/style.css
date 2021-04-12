@@ -162,3 +162,8 @@ button:focus {
     margin: 0;
     border-bottom: 1px solid #333;
 }
+
+/* space out the modal form divs */
+.modal-form div {
+    margin: 15px 0;
+}
