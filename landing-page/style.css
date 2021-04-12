@@ -105,4 +105,9 @@ button:focus {
     outline: none;
 }
 
-
+.toggle {
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
