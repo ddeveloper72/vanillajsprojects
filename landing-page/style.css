@@ -157,3 +157,8 @@ button:focus {
     color: var(--white-color);
     padding: 15px;
 }
+
+.modal-header h3 {
+    margin: 0;
+    border-bottom: 1px solid #333;
+}
