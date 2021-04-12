@@ -181,3 +181,11 @@ button:focus {
     padding: 8px;
     width: 100%;
 }
+
+.close-btn {
+    background: transparent;
+    font-size: 25px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
