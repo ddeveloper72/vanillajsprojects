@@ -27,8 +27,8 @@ nav {
   width: 200px;
   height: 100vh;
   z-index: 100;
-  /* move nave off the screen */
-  /* transform: translateY(-100%); */
+  /* move nav off the screen */
+  transform: translateY(-100%);
 }
 
 nav .logo img {
