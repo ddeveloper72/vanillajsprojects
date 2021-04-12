@@ -6,6 +6,8 @@
   --secondary-color: #be2edd;
   --white-color: #fff;
   --light-grey-border-color: rgba(200, 200, 200, 0.1);
+  --iii-percent-rgba-black: rgba(0, 0, 0, 0.3);
+  --vi-percent-rgba-black: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -106,7 +108,7 @@ button:focus {
 }
 
 .toggle {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--iii-percent-rgba-black);
     top: 20px;
     left: 20px;
     position: absolute;
@@ -123,4 +125,14 @@ button:focus {
     /* control the overall width of the container used space */
     max-width: 100%;
     width: 800px;
+}
+
+.modal-container {
+    background-color: var(--vi-percent-rgba-black);
+    /* display: none; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
