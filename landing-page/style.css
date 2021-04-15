@@ -112,6 +112,7 @@ input[type='submit'] {
   border-radius: 5px;
   color: var(--white-color);
   cursor: pointer;
+  margin-top: 14px;
   padding: 8px 12px;
 }
 
@@ -147,6 +148,10 @@ button:focus {
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+.modal-container .modal-form {
+  padding-bottom: 1px;
 }
 
 .modal-container.show-modal {
