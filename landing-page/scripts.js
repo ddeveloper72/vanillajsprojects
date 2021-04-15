@@ -10,10 +10,14 @@ toggle.addEventListener('click', () => {
     document.body.classList.toggle('show-nav')
 });
 
-// show modal
+// Show modal
 open.addEventListener('click', () => modal.classList.add
 ('show-modal'));
 
-// close modal
+// Close modal
 close.addEventListener('click', () => modal.classList.add
 ('hide-modal'));
+
+// Hide modal on outside click
+window.addEventListener('click', e => 
+    e.target == modal ? modal.classList.remove('show-modal') : false)
