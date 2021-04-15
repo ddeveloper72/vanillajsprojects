@@ -11,3 +11,5 @@ exchange-rate-calculator/firebase.json
 dom-array-methods/.firebaserc
 .gitignore
 dom-array-methods/firebase.json
+landing-page/firebase.json
+landing-page/.firebaserc
