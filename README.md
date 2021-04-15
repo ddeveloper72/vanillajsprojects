@@ -9,6 +9,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Custom Movie Player](https://movie-player-b59b9.firebaseapp.com/)
 * [Exchange Rate Calculator](https://currency-exchange-rates-ef59c.firebaseapp.com/)
 * [DOM Array Methods](https://dom-array-methods.firebaseapp.com/)
+* [Simple Landing Page](https://landing-page-c8769.firebaseapp.com/)
 
 ## Deployment
 
