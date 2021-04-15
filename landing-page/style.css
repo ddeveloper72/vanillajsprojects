@@ -149,6 +149,10 @@ button:focus {
   bottom: 0;
 }
 
+.modal-container.show-modal {
+  display: block;
+}
+
 .modal {
   background-color: var(--white-color);
   border-radius: 4px;
@@ -162,6 +166,8 @@ button:focus {
   transform: translate(-50%, -50%);
   width: 400px;
   max-width: 100%;
+  animation-name: modal-open;
+  animation-duration: var(--modal-duration);
 }
 
 .modal-header {
@@ -200,4 +206,13 @@ button:focus {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+@keyframes modal-open {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
