@@ -22,6 +22,10 @@ body {
     overflow: hidden;
 }
 
+h1 {
+    margin: 20px 0 0 ;
+}
+
 .figure-container {
     fill: transparent;
     stroke: var(--svg-stroke-color);
