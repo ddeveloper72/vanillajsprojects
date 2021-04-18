@@ -115,3 +115,11 @@ h1 {
     padding: 12px 20px;
     font-size: 12px;
 }
+
+.popup button:active {
+    transform: scale(0.98);
+}
+
+.popup button:focus {
+    outline: none;
+}
