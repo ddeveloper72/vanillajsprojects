@@ -16,4 +16,8 @@ const words = ['hello', 'world', 'head', 'shoe', 'butterfly'];
 // select a random word from the words array
 let selectedWord = words[Math.floor(Math.random() * words.length)];
 
-console.log(selectedWord);
+// Store correct letters
+const correctLetters = [];
+
+// Store wrong letters
+const wrongLetters = [];
