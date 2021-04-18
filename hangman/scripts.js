@@ -21,3 +21,27 @@ const correctLetters = [];
 
 // Store wrong letters
 const wrongLetters = [];
+
+// Show hidden word
+// split each word into letters in an array
+// map through the array then return a span element
+// then check if the letter is included in correct letters
+// else show and empty string
+// then join the letters
+function displayWord() {
+    wordEl.innerHTML = `
+        ${selectedWord
+            .split('')
+            .map(
+                letter => `
+                    <span class="letter">
+                        ${correctLetters.includes(letter) ? letter : ''}
+                    </span>
+                `
+            )
+            .join('')}
+    `;
+}
+
+
+displayWord()
