@@ -130,5 +130,22 @@ window.addEventListener('keydown', e => {
     }
 });
 
+// Restart game
+playBtnEl.addEventListener('click', () => {
+    // empty all arrays
+    correctLetters.splice(0);
+    wrongLetters.splice(0);
+
+    // get a new word form the words array
+    selectedWord = words[Math.floor(Math.random() * words.length)];
+
+    displayWord();
+
+    updateWrongLettersEl();
+
+    popupEl.style.display = 'none';
+
+});
+
 
 displayWord()
