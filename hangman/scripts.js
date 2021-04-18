@@ -60,6 +60,20 @@ function updateWrongLettersEl() {
         ${wrongLetters.map(letter => `<span>${letter}</span>`)}
     `;
 
+    figureParts.forEach((part, index) => {
+        // check the number of wrong letters
+        const errors = wrongLetters.length;
+
+        if(index < errors) {
+            // for each error set style to display...
+            part.style.display = 'block';
+        } else {
+            // leave the style alone for no errors counted
+            part.style.display = 'none';
+        }
+
+    })
+
 }
 
 // Show notification
