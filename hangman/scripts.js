@@ -45,15 +45,21 @@ function displayWord() {
     const innerWord = wordEl.innerText.replace(/\n/g, '');
     // console.log(wordEl.innerText);
     // console.log(innerWord);
-    if(innerWord === selectedWord) {
+    if (innerWord === selectedWord) {
         finalMessageEl.innerText = '🎊 Congratulations! You\'ve won! ✨';
         popupEl.style.display = 'flex';
     }
 }
 
 // Update the wrong letters array
-function updateWrongLettersEl () {
-    console.log('Update wrong letters');
+function updateWrongLettersEl() {
+    // check if letter is in the wrong letters array else return nothing
+    // if the letter is not in the array, show the letter
+    wrongLettersEl.innerHTML = `
+        ${wrongLetters.length > 0 ? '<p>Wrong</p>' : ''}
+        ${wrongLetters.map(letter => `<span>${letter}</span>`)}
+    `;
+
 }
 
 // Show notification
@@ -71,12 +77,12 @@ function showNotification() {
 window.addEventListener('keydown', e => {
     // console.log(e.keyCode);
     // letter key codes run from 65 to 90
-    if(e.keyCode >= 65 && e.keyCode <=90) {
+    if (e.keyCode >= 65 && e.keyCode <= 90) {
         const letter = e.key;
 
         if (selectedWord.includes(letter)) {
             // check if letter is already in the correctLetters array
-            if(!correctLetters.includes(letter)) {
+            if (!correctLetters.includes(letter)) {
                 // push onto it, the letter
                 correctLetters.push(letter);
 
@@ -88,11 +94,11 @@ window.addEventListener('keydown', e => {
                 showNotification();
             }
 
-         //  add letter to the wrong letters array
+            //  add letter to the wrong letters array
         } else {
 
             // check if wrong letter is in the wrongLetters array
-            if(!wrongLetters.includes(letter)) {
+            if (!wrongLetters.includes(letter)) {
                 // push the wrong letter onto the array
                 wrongLetters.push(letter);
 
