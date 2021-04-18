@@ -51,5 +51,41 @@ function displayWord() {
     }
 }
 
+// keydown letter press
+window.addEventListener('keydown', e => {
+    // console.log(e.keyCode);
+    // letter key codes run from 65 to 90
+    if(e.keyCode >= 65 && e.keyCode <=90) {
+        const letter = e.key;
+
+        if (selectedWord.includes(letter)) {
+            // check if letter is already in the correctLetters array
+            if(!correctLetters.includes(letter)) {
+                // push onto it, the letter
+                correctLetters.push(letter);
+
+                // then display word
+                displayWord();
+
+            } else {
+                // if the letter is already there
+                showNotification();
+            }
+
+         //  add letter to the wrong letters array
+        } else {
+
+            // check if wrong letter is in the wrongLetters array
+            if(!wrongLetters.includes(letter)) {
+                // push the wrong letter onto the array
+                wrongLetters.push(letter);
+            } else {
+                // show user the wrong letter used
+                showNotification();
+            }
+        }
+    }
+});
+
 
 displayWord()
