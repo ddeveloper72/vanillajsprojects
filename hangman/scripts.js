@@ -51,6 +51,12 @@ function displayWord() {
     }
 }
 
+// Update the wrong letters array
+function updateWrongLettersEl () {
+    console.log('Update wrong letters');
+}
+
+
 // keydown letter press
 window.addEventListener('keydown', e => {
     // console.log(e.keyCode);
