@@ -6,3 +6,7 @@ const popupEl = document.getElementById('popup-container');
 const playBtnEl = document.getElementById('play-button');
 const finalMessageEl = document.getElementById('final-message');
 const notificationEl = document.getElementById('notification-container');
+
+
+// DOM elements for svg drawing
+const figureParts = document.querySelectorAll('.figure-part');
