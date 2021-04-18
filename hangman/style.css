@@ -126,6 +126,7 @@ h1 {
 .notification-container {
     background-color: var(--popup-background);
     border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
     position: absolute;
     bottom: -50px;
     transition: transform 0.3s ease-in-out;
@@ -133,4 +134,9 @@ h1 {
 
 .notification-container p {
     margin: 0;
+}
+
+/* ease in notification when show class is added to container class */
+.notification-container.show {
+    transform: translateY(-50px);
 }
