@@ -41,6 +41,14 @@ function displayWord() {
             )
             .join('')}
     `;
+
+    const innerWord = wordEl.innerText.replace(/\n/g, '');
+    // console.log(wordEl.innerText);
+    // console.log(innerWord);
+    if(innerWord === selectedWord) {
+        finalMessageEl.innerText = '🎊 Congratulations! You\'ve won! ✨';
+        popupEl.style.display = 'flex';
+    }
 }
 
 
