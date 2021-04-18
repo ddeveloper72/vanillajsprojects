@@ -131,3 +131,6 @@ h1 {
     transition: transform 0.3s ease-in-out;
 }
 
+.notification-container p {
+    margin: 0;
+}
