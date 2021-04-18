@@ -95,6 +95,8 @@ window.addEventListener('keydown', e => {
             if(!wrongLetters.includes(letter)) {
                 // push the wrong letter onto the array
                 wrongLetters.push(letter);
+
+                updateWrongLettersEl();
             } else {
                 // show user the wrong letter used
                 showNotification();
