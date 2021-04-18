@@ -105,3 +105,13 @@ h1 {
     padding: 20px;
     text-align: center;
 }
+
+.popup button {
+    cursor: pointer;
+    background-color: var(--svg-stroke-color);
+    color: var(--border-bottom-color);
+    border: none;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 12px;
+}
