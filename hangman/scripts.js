@@ -56,6 +56,16 @@ function updateWrongLettersEl () {
     console.log('Update wrong letters');
 }
 
+// Show notification
+function showNotification() {
+    // add show class to DOM element for a time
+    notificationEl.classList.add('show');
+
+    // use a timer to remove the show class
+    setTimeout(() => {
+        notificationEl.classList.remove('show');
+    }, 2000);
+}
 
 // keydown letter press
 window.addEventListener('keydown', e => {
