@@ -72,8 +72,13 @@ function updateWrongLettersEl() {
             part.style.display = 'none';
         }
 
-    })
+    });
 
+    // Check if lost
+    if(wrongLetters.length === figureParts.length) {
+        finalMessageEl.innerText = 'Unfortunately you\'ve lost 🙄';
+        popupEl.style.display = 'flex'; 
+    }
 }
 
 // Show notification
