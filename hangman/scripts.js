@@ -10,7 +10,20 @@ const notificationEl = document.getElementById('notification-container');
 // DOM elements for svg drawing
 const figureParts = document.querySelectorAll('.figure-part');
 
-const words = ['hello', 'world', 'head', 'shoe', 'butterfly'];
+const words = [
+    'hello', 
+    'world', 
+    'head', 
+    'shoe', 
+    'butterfly',
+    'farmer',
+    'shop',
+    'ship',
+    'space-station',
+    'aeroplane',
+    'submarine',
+    'mermaid'
+];
 
 
 // select a random word from the words array
