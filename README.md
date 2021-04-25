@@ -10,6 +10,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Exchange Rate Calculator](https://currency-exchange-rates-ef59c.firebaseapp.com/)
 * [DOM Array Methods](https://dom-array-methods.firebaseapp.com/)
 * [Simple Landing Page](https://landing-page-c8769.firebaseapp.com/)
+* [Hangman](https://hangman-69259.firebaseapp.com/)
 
 ## Deployment
 
