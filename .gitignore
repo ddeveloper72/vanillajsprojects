@@ -13,3 +13,5 @@ dom-array-methods/.firebaserc
 dom-array-methods/firebase.json
 landing-page/firebase.json
 landing-page/.firebaserc
+hangman/.firebaserc
+hangman/firebase.json
