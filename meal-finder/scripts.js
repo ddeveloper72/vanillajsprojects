@@ -12,6 +12,9 @@ function searchMeal(e) {
     // this is a submit, so prevent default method of submitting data to a file
     e.preventDefault();
 
+    // Clear single meal if it's already shown
+    single_mealEl.innerHTML = '';
+
 
 }
 
