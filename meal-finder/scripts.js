@@ -26,6 +26,12 @@ function searchMeal(e) {
             .then(data => {  // this returns another promise with the data.
             console.log(data);
             resultsHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
+
+            if (data.meals === null) {
+
+            } else {
+
+            }
         }); 
     } else {
         alert('Please enter a search term')
