@@ -33,6 +33,7 @@ function searchMeal(e) {
                 mealsEl.innerHTML = data.meals.map(meal => `
                 <div class="meal">
                     <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                    <div class="meal-info" data-mealID="${meal.idMeal}"></div>
                 </div>`)
             }
         }); 
