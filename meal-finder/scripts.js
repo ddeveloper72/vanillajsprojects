@@ -21,7 +21,7 @@ function searchMeal(e) {
     
     // Check if a term was submitted
     if (term.trim()) {
-
+        fetch(`www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
     } else {
         alert('Please enter a search term')
     }
