@@ -28,7 +28,7 @@ function searchMeal(e) {
             resultsHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
 
             if (data.meals === null) {
-
+                resultsHeading.innerHTML = `<p>There are no search results for '${term}'</p>`;
             } else {
 
             }
