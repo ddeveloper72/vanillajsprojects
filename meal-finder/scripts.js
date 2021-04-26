@@ -21,7 +21,11 @@ function searchMeal(e) {
     
     // Check if a term was submitted
     if (term.trim()) {
-        fetch(`www.themealdb.com/api/json/v1/1/search.php?s=${search}`)
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
+        .then(response => response.json()) // fetch returns promise, then caught & format to json
+        .then(data => {
+            console.log(data);
+        }); // this returns another promise with the data.
     } else {
         alert('Please enter a search term')
     }
