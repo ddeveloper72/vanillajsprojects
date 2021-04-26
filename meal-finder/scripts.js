@@ -15,6 +15,10 @@ function searchMeal(e) {
     // Clear single meal if it's already shown
     single_mealEl.innerHTML = '';
 
+    // Get the search term
+    const term = search.value;
+    console.log(term);
+
 
 }
 
