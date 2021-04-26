@@ -1,1 +1,18 @@
-ECHO is on.
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #2d2013;
+    color: #fff;
+    font-size: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+
+.container {
+
+}
+
+.flex {
+    
+}
