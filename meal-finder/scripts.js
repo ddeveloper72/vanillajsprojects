@@ -17,7 +17,14 @@ function searchMeal(e) {
 
     // Get the search term
     const term = search.value;
-    console.log(term);
+    
+    
+    // Check if a term was submitted
+    if (term.trim()) {
+
+    } else {
+        alert('Please enter a search term')
+    }
 
 
 }
