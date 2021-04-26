@@ -37,6 +37,7 @@ function searchMeal(e) {
                     <h3>${meal.strMeal}</h3>
                     </div>
                 </div>`)
+                .join('');  // join string data combined using map
             }
         }); 
     } else {
