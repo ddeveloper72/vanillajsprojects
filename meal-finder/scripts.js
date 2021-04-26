@@ -29,8 +29,11 @@ function searchMeal(e) {
 
             if (data.meals === null) {
                 resultsHeading.innerHTML = `<p>There are no search results for '${term}'</p>`;
-            } else {
-
+            } else { // meal tags are sourced from studying the api key value fields
+                mealsEl.innerHTML = data.meals.map(meal => `
+                <div class="meal">
+                    <img src="${meal.strMealThumb}" alt="${meal.strMeal}"/>
+                </div>`)
             }
         }); 
     } else {
