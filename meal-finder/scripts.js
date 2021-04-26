@@ -40,6 +40,10 @@ function searchMeal(e) {
                 .join('');  // join string data combined using map
             }
         }); 
+
+        // Clear search text once submitted
+        search.value = '';
+
     } else {
         alert('Please enter a search term')
     }
