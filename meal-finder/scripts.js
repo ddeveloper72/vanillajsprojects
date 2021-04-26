@@ -23,9 +23,10 @@ function searchMeal(e) {
     if (term.trim()) {
         fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${term}`)
         .then(response => response.json()) // fetch returns promise, then caught & format to json
-        .then(data => {
+            .then(data => {  // this returns another promise with the data.
             console.log(data);
-        }); // this returns another promise with the data.
+            resultsHeading.innerHTML = `<h2>Search results for '${term}':</h2>`;
+        }); 
     } else {
         alert('Please enter a search term')
     }
