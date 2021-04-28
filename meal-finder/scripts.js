@@ -64,7 +64,7 @@ function getMealById(mealId) {  // Return a single meal array from mealId
 
 // Add meal to DOM
 function addMealToDOM(meal) {
-    
+    const ingredients = [];  // init an array of ingredients
 }
 
 // Event listeners
