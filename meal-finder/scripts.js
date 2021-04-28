@@ -65,6 +65,14 @@ function getMealById(mealId) {  // Return a single meal array from mealId
 // Add meal to DOM
 function addMealToDOM(meal) {
     const ingredients = [];  // init an array of ingredients
+
+    for(let i = 1; i <= 20; i++) {  // create an index for each ingredient in the array
+        if(meal[`strIngredients${i}`]) {  // align each ingredient with its own measure
+            ingredients.push(`${meal[`strIngredients${i}`]} - ${meal[`strMeasure${i}`]}`)
+        } else {
+            break;
+        }
+    }
 }
 
 // Event listeners
