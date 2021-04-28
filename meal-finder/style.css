@@ -119,6 +119,11 @@ input[type='text'] {
     line-height: 1.5;
 }
 
+.single-meal ul {
+    padding-left: 0;
+    list-style: none;
+}
+
 @media(max-width: 800px) {}
 @media(max-width: 700px) {}
 @media(max-width: 500px) {
