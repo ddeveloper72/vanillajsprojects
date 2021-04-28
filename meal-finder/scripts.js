@@ -53,3 +53,10 @@ function searchMeal(e) {
 
 // Event listeners
 submit.addEventListener('submit', searchMeal);
+
+
+mealsEl.addEventListener('click', e => { // search through each meal-info divs
+    const mealInfo = e.path.find(item => {  // search the child elements
+        console.log(item);
+    })
+});
