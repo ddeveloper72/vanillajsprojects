@@ -96,6 +96,7 @@ function addMealToDOM(meal) {
 
 // Event listeners
 submit.addEventListener('submit', searchMeal);
+random.addEventListener('click', randomMeal);
 
 
 mealsEl.addEventListener('click', e => { // search through each meal-info divs
