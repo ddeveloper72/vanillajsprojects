@@ -124,6 +124,18 @@ input[type='text'] {
     list-style: none;
 }
 
+.single-meal ul li {
+    border: 1px solid #ededed;
+    border-radius: 4px;
+    background-color: #ffff;
+    display: inline-block;
+    color: #2d2013;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px;
+    margin: 0 5px 5px 0;
+}
+
 @media(max-width: 800px) {}
 @media(max-width: 700px) {}
 @media(max-width: 500px) {
