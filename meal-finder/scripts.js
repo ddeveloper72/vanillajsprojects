@@ -56,8 +56,15 @@ function getMealById(mealId) {  // Return a single meal array from mealId
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
     .then(response => response.json())
     .then(data => {
-        console.log(data);
+        const meal = data.meals[0];
+
+        addMealToDOM(meal);
     })
+}
+
+// Add meal to DOM
+function addMealToDOM(meal) {
+    
 }
 
 // Event listeners
