@@ -64,5 +64,8 @@ mealsEl.addEventListener('click', e => { // search through each meal-info divs
         }
     });
 
-    console.log(mealInfo);
+    if (mealInfo) {
+        const mealId = mealInfo.getAttribute('data-mealId');  // get the attribute for the mealId
+        console.log(mealId);
+    }
 });
