@@ -62,6 +62,21 @@ function getMealById(mealId) {  // Return a single meal array from mealId
     })
 }
 
+// fetch random meal
+function getRandomMeal() {
+    // clear meals and headings
+    mealsEl.innerHTML = '';
+    resultsHeading.innerHTML = '',
+
+    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    .then(response => response.json())
+    .then(data => {
+        const meal = data.meals[0];
+
+        addMealToDOM(meal);
+    })
+}
+
 // Add meal to DOM
 function addMealToDOM(meal) {
     const ingredients = [];  // init an array of ingredients
@@ -96,7 +111,7 @@ function addMealToDOM(meal) {
 
 // Event listeners
 submit.addEventListener('submit', searchMeal);
-random.addEventListener('click', randomMeal);
+random.addEventListener('click', getRandomMeal);
 
 
 mealsEl.addEventListener('click', e => { // search through each meal-info divs
