@@ -57,6 +57,12 @@ submit.addEventListener('submit', searchMeal);
 
 mealsEl.addEventListener('click', e => { // search through each meal-info divs
     const mealInfo = e.path.find(item => {  // search the child elements
-        console.log(item);
-    })
+        if(item.classList) {
+            return item.classList.contains('meal-info');  // the class on the element
+        } else {
+            return false;
+        }
+    });
+
+    console.log(mealInfo);
 });
