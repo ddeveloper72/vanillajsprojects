@@ -67,12 +67,18 @@ function addMealToDOM(meal) {
     const ingredients = [];  // init an array of ingredients
 
     for(let i = 1; i <= 20; i++) {  // create an index for each ingredient in the array
-        if(meal[`strIngredients${i}`]) {  // align each ingredient with its own measure
-            ingredients.push(`${meal[`strIngredients${i}`]} - ${meal[`strMeasure${i}`]}`)
+        if (meal[`strIngredient${i}`]) {  // align each ingredient with its own measure
+            ingredients.push(`${meal[`strIngredient${i}`]} - ${meal[`strMeasure${i}`]}`)
         } else {
             break;
         }
     }
+
+    // render the DOM elements
+    single_mealEl.innerHTML = `
+    <div class="single-meal">
+    <h1>${meal.strMeal}</h1>
+    </div>`;
 }
 
 // Event listeners
