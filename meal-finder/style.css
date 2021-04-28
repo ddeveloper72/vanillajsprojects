@@ -106,6 +106,13 @@ input[type='text'] {
     border-radius: 4px;
 }
 
+.single-meal-info {
+    margin: 20px;
+    padding: 10px;
+    border: #e09850 dashed;
+    border-radius: 5px;
+}
+
 @media(max-width: 800px) {}
 @media(max-width: 700px) {}
 @media(max-width: 500px) {
