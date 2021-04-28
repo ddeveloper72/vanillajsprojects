@@ -51,6 +51,15 @@ function searchMeal(e) {
 
 }
 
+// Fetch meal by Id
+function getMealById(mealId) {  // Return a single meal array from mealId
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+}
+
 // Event listeners
 submit.addEventListener('submit', searchMeal);
 
@@ -66,6 +75,6 @@ mealsEl.addEventListener('click', e => { // search through each meal-info divs
 
     if (mealInfo) {
         const mealId = mealInfo.getAttribute('data-mealId');  // get the attribute for the mealId
-        console.log(mealId);
+        getMealById(mealId);
     }
 });
