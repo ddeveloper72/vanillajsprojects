@@ -1,4 +1,4 @@
-# Meal Finder
+# [Meal Finder](https://meal-finder-582bf.firebaseapp.com/)
 
 Meal finder demonstrates using fetch to search an API and lets users access interesting meals.
 

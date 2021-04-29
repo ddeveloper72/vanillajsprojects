@@ -11,6 +11,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [DOM Array Methods](https://dom-array-methods.firebaseapp.com/)
 * [Simple Landing Page](https://landing-page-c8769.firebaseapp.com/)
 * [Hangman](https://hangman-69259.firebaseapp.com/)
+* [Meal Finder](https://meal-finder-582bf.firebaseapp.com/)
 
 ## Deployment
 
