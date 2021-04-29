@@ -4,7 +4,9 @@ Meal finder demonstrates using fetch to search an API and lets users access inte
 
 ## Specifications
 
-* project specifications to be added here
+* Setup a landing page that provides the user search form for looking up different sorts of meals
+* Provide a button for returning one random meal
+* Display each the specific recipe for a meal when selected
 
 ## Deployment
 
