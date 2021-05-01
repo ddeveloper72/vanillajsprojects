@@ -19,3 +19,13 @@ const dummyTransaction = [
 ];
 
 let transactions = dummyTransaction;
+
+// Add transactions to the DOM
+function addTransactionDOM(transaction) {
+    // Get pos neg value indicator of transaction
+    const sign = transaction.amount < 0 ? '-' : '+';
+
+
+
+
+}
