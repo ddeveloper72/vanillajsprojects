@@ -127,11 +127,11 @@ input[type='number'] {
 
 /* Add balance pos/neg color indicator */
 .list li.plus {
-    border-right: 5px solid var(--red);
+    border-right: 5px solid var(--green);
 }
 
 .list li.minus {
-    border-right: 5px solid var(--green);
+    border-right: 5px solid var(--red);
 }
 
 .delete-btn {
