@@ -38,3 +38,12 @@ function addTransactionDOM(transaction) {
     // append item to the list item
     list.appendChild(item);
 }
+
+// Initiate the list
+function init() {
+    list.innerHTML = '';
+
+    transactions.forEach(addTransactionDOM);
+}
+
+init();
