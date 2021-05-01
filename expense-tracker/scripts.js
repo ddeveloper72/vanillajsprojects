@@ -59,7 +59,9 @@ function updateValues() {
         .reduce((accumulator, item) => (accumulator += item), 0) * -1)
         .toFixed(2);
 
-        console.log(expense);
+        balance.innerText = `€${total}`;
+        money_plus.innerText = `€${income}`;
+        money_minus.innerText = `€${expense}`;
 }
 
 // Initiate the list
