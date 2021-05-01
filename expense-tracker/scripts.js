@@ -35,7 +35,6 @@ function addTransactionDOM(transaction) {
     ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
     <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>`;
 
-    
-
-
+    // append item to the list item
+    list.appendChild(item);
 }
