@@ -71,3 +71,9 @@ h3 {
 .money.minus {
     color: var(--red);
 }
+
+label {
+    display: inline-block;
+    margin: 10px 0;
+}
+
