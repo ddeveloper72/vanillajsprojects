@@ -20,6 +20,11 @@ const dummyTransaction = [
 
 let transactions = dummyTransaction;
 
+// Add Transaction
+function addTransaction() {
+    
+}
+
 // Add transactions to the DOM
 function addTransactionDOM(transaction) {
     // Get pos neg value indicator of transaction
@@ -73,3 +78,6 @@ function init() {
 }
 
 init();
+
+// Event listeners
+form.addEventListener('submit', addTransaction)
