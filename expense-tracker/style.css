@@ -8,6 +8,7 @@
     --darker-grey: #333;
     --green: #2ecc71;
     --red: #c0392b;
+    --orange: #e74c3c;
     --purple: #836eeb;
 }
 
@@ -131,4 +132,18 @@ input[type='number'] {
 
 .list li.minus {
     border-right: 5px solid var(--green);
+}
+
+.delete-btn {
+    background-color: var(--orange);
+    border: 0;
+    color: var(--white);
+    font-size: 20px;
+    line-height: 20px;
+    padding: 2px 5px;
+    /* reposition button */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%, -50%);
 }
