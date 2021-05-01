@@ -135,9 +135,9 @@ input[type='number'] {
 }
 
 .delete-btn {
-    background-color: var(--orange);
+    background-color: none;
     border: 0;
-    color: var(--white);
+    color: var(--orange);
     font-size: 20px;
     line-height: 20px;
     padding: 2px 5px;
@@ -146,4 +146,16 @@ input[type='number'] {
     top: 50%;
     left: 0;
     transform: translate(-100%, -50%);
+    opacity: 0;
+    transition: .4s;
+}
+
+.btn:focus,
+.delete-btn:focus {
+    outline: 0;
+}
+
+.list li:hover .delete-btn {
+    cursor: pointer;
+    opacity: 1;
 }
