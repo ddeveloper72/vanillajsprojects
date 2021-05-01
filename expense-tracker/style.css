@@ -5,7 +5,7 @@
     --grey: #dedede;
     --green: #2ecc71;
     --red: #c0392b;
-    --purple: #9c8ff9;
+    --purple: #836eeb;
 }
 
 * {
@@ -101,4 +101,10 @@ input[type='number'] {
     margin: 10px 0 30px;
     padding: 10px;
     width: 100%;
+}
+
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
 }
