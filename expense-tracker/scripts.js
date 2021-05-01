@@ -39,11 +39,20 @@ function addTransactionDOM(transaction) {
     list.appendChild(item);
 }
 
+// Update the income & expense balance
+function updateValues() {
+    const amounts = transactions.map(transaction => 
+        transaction.amount);
+
+        console.log(amounts);
+}
+
 // Initiate the list
 function init() {
     list.innerHTML = '';
 
     transactions.forEach(addTransactionDOM);
+    updateValues();
 }
 
 init();
