@@ -17,3 +17,5 @@ const dummyTransaction = [
     { id: 5, text: 'X-box', amount: -15},
     { id: 6, text: 'PayPal-Alex', amount: 20}
 ];
+
+let transactions = dummyTransaction;
