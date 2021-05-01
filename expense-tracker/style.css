@@ -5,6 +5,7 @@
     --grey: #dedede;
     --green: #2ecc71;
     --red: #c0392b;
+    --purple: #9c8ff9;
 }
 
 * {
@@ -87,5 +88,17 @@ input[type='number'] {
     padding: 10px;
     /* give it the width of the container */
     width: 100%;
+}
 
+.btn {
+    background-color: var(--purple);
+    box-shadow: var(--box-shadow);
+    cursor: pointer;
+    color: #fff;
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
 }
