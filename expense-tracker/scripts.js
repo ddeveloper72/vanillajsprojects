@@ -21,9 +21,18 @@ const dummyTransaction = [
 let transactions = dummyTransaction;
 
 // Add Transaction
-function addTransaction() {
-    
+function addTransaction(e) {
+    e.preventDefault();  // prevent the default submit action
+
+    // check for text as well as value from the form input fields
+    if(text.value.trim() === '' || amount.value.trim() === '') {
+        alert('Please add text as well as an amount')
+    } else {
+
+    }
 }
+
+
 
 // Add transactions to the DOM
 function addTransactionDOM(transaction) {
