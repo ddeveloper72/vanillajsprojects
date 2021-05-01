@@ -48,6 +48,11 @@ function updateValues() {
         const total = amounts.reduce((accumulator, item) => (accumulator += item), 0)
         .toFixed(2);
 
+        // use filer to grab all positive values then reduce to add them together
+        const income = amounts.filter(item => item > 0)
+        .reduce((accumulator, item) => (accumulator += item), 0)
+        .toFixed(2);
+
         console.log(total);
 }
 
