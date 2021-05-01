@@ -25,7 +25,10 @@ function addTransactionDOM(transaction) {
     // Get pos neg value indicator of transaction
     const sign = transaction.amount < 0 ? '-' : '+';
 
+    const item = document.createElement('li');
 
+    // Add class based on pos neg value
+    item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
 
 }
