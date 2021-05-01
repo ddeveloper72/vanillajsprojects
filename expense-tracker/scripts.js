@@ -29,12 +29,19 @@ function addTransaction(e) {
         alert('Please add text as well as an amount')
     } else {
         const transaction = {
-            
-        }
+            id: generateID(),
+            text: text.value,
+            amount: amount.value
+        };
+
+        console.log(transaction);
     }
 }
 
-
+// Generate a random ID
+function generateID() {
+    return Math.floor(Math.random() * 100000000);
+}
 
 // Add transactions to the DOM
 function addTransactionDOM(transaction) {
