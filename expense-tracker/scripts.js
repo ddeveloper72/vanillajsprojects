@@ -44,7 +44,11 @@ function updateValues() {
     const amounts = transactions.map(transaction => 
         transaction.amount);
 
-        console.log(amounts);
+        // use reduce to total all items in the array
+        const total = amounts.reduce((accumulator, item) => (accumulator += item), 0)
+        .toFixed(2);
+
+        console.log(total);
 }
 
 // Initiate the list
