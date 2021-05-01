@@ -30,5 +30,9 @@ function addTransactionDOM(transaction) {
     // Add class based on pos neg value
     item.classList.add(transaction.amount < 0 ? 'minus' : 'plus');
 
+    // add the sign and the absolute value of the number
+    item.innerHTML = `
+    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>`
+
 
 }
