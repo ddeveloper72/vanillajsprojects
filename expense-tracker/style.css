@@ -2,7 +2,10 @@
 
 :root {
     --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0 , 0, 0, 0.24);
+    --white: #fff;
     --grey: #dedede;
+    --dark-grey: #bbbbbb;
+    --darker-grey: #333;
     --green: #2ecc71;
     --red: #c0392b;
     --purple: #836eeb;
@@ -34,13 +37,13 @@ h1 {
 }
 
 h3 {
-    border-bottom: 1px solid #bbb;
+    border-bottom: 1px solid var(--dark-grey);
     padding-bottom: 10px;
     margin: 40px 0 10px;
 }
 
 .inc-exp-container {
-    background-color: #fff;
+    background-color: var(--white)
     box-shadow: var(--box-shadow);
     padding: 20px;
     /* rework layout with flex box */
@@ -94,7 +97,7 @@ input[type='number'] {
     background-color: var(--purple);
     box-shadow: var(--box-shadow);
     cursor: pointer;
-    color: #fff;
+    color: var(--white);
     border: 0;
     display: block;
     font-size: 16px;
@@ -107,4 +110,15 @@ input[type='number'] {
     list-style-type: none;
     padding: 0;
     margin-bottom: 40px;
+}
+
+.list li {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    color: var(--darker-grey);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px;
+    margin: 10px 0;
 }
