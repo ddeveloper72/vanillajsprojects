@@ -28,7 +28,9 @@ function addTransaction(e) {
     if(text.value.trim() === '' || amount.value.trim() === '') {
         alert('Please add text as well as an amount')
     } else {
-
+        const transaction = {
+            
+        }
     }
 }
 
