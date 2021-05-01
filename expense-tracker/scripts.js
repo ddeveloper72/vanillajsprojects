@@ -53,7 +53,13 @@ function updateValues() {
         .reduce((accumulator, item) => (accumulator += item), 0)
         .toFixed(2);
 
-        console.log(total);
+        // filer to grab all neg values then reduce to add them together 
+        // and multiply by -1 to return an absolute number
+        const expense = (amounts.filter(item => item < 0)
+        .reduce((accumulator, item) => (accumulator += item), 0) * -1)
+        .toFixed(2);
+
+        console.log(expense);
 }
 
 // Initiate the list
