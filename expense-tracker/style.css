@@ -122,3 +122,13 @@ input[type='number'] {
     padding: 10px;
     margin: 10px 0;
 }
+
+
+/* Add balance pos/neg color indicator */
+.list li.plus {
+    border-right: 5px solid var(--red);
+}
+
+.list li.minus {
+    border-right: 5px solid var(--green);
+}
