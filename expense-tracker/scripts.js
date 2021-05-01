@@ -32,7 +32,10 @@ function addTransactionDOM(transaction) {
 
     // add the sign and the absolute value of the number
     item.innerHTML = `
-    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>`
+    ${transaction.text} <span>${sign}${Math.abs(transaction.amount)}</span>
+    <button class="delete-btn"><i class="fas fa-trash-alt"></i></button>`;
+
+    
 
 
 }
