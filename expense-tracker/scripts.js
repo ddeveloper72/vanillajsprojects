@@ -22,14 +22,16 @@ const amount = document.getElementById('amount');
 // parse the stringified array using JSON
 const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
 
-let transactions = dummyTransaction;
+// check if data is in local storage, else if nothing, set it to an empty array
+let transactions = localStorage.getItem('transactions') !== null ?
+    localStorageTransactions : [];
 
 // Add Transaction
 function addTransaction(e) {
     e.preventDefault();  // prevent the default submit action
 
     // check for text as well as value from the form input fields
-    if(text.value.trim() === '' || amount.value.trim() === '') {
+    if (text.value.trim() === '' || amount.value.trim() === '') {
         alert('Please add text as well as an amount')
     } else {
         const transaction = {
@@ -80,27 +82,27 @@ function addTransactionDOM(transaction) {
 
 // Update the income & expense balance
 function updateValues() {
-    const amounts = transactions.map(transaction => 
+    const amounts = transactions.map(transaction =>
         transaction.amount);
 
-        // use reduce to total all items in the array
-        const total = amounts.reduce((accumulator, item) => (accumulator + item), 0)
+    // use reduce to total all items in the array
+    const total = amounts.reduce((accumulator, item) => (accumulator + item), 0)
         .toFixed(2);
 
-        // use filer to grab all positive values then reduce to add them together
-        const income = amounts.filter(item => item > 0)
+    // use filer to grab all positive values then reduce to add them together
+    const income = amounts.filter(item => item > 0)
         .reduce((accumulator, item) => (accumulator += item), 0)
         .toFixed(2);
 
-        // filer to grab all neg values then reduce to add them together 
-        // and multiply by -1 to return an absolute number
-        const expense = (amounts.filter(item => item < 0)
+    // filer to grab all neg values then reduce to add them together 
+    // and multiply by -1 to return an absolute number
+    const expense = (amounts.filter(item => item < 0)
         .reduce((accumulator, item) => (accumulator += item), 0) * -1)
         .toFixed(2);
 
-        balance.innerText = `€${total}`;
-        money_plus.innerText = `€${income}`;
-        money_minus.innerText = `€${expense}`;
+    balance.innerText = `€${total}`;
+    money_plus.innerText = `€${income}`;
+    money_minus.innerText = `€${expense}`;
 }
 
 // Remove transaction by ID
