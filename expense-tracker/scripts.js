@@ -19,7 +19,8 @@ const amount = document.getElementById('amount');
 // ];
 
 // Create a local storage object to contain the transactions array
-const localStorageTransactions = localStorage.getItem('transactions');
+// parse the stringified array using JSON
+const localStorageTransactions = JSON.parse(localStorage.getItem('transactions'));
 
 let transactions = dummyTransaction;
 
