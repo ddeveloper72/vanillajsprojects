@@ -99,6 +99,15 @@ function updateValues() {
         money_minus.innerText = `€${expense}`;
 }
 
+// Remove transaction by ID
+function removeTransaction(id) {
+
+    // use array filter method
+    transactions = transactions.filter(transaction => transaction.id !== id);
+
+    init();
+}
+
 // Initiate the list
 function init() {
     list.innerHTML = '';
