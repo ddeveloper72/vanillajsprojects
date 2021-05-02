@@ -37,6 +37,16 @@ function addTransaction(e) {
         // Push transaction to the transactions array
         transactions.push(transaction);
 
+        // add the transaction to the DOM
+        addTransactionDOM(transaction);
+
+        updateValues();
+
+
+        // Clear input fields after add transaction
+        text.value = '';
+        amount.value = '';
+
     }
 }
 
