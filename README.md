@@ -12,6 +12,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Simple Landing Page](https://landing-page-c8769.firebaseapp.com/)
 * [Hangman](https://hangman-69259.firebaseapp.com/)
 * [Meal Finder](https://meal-finder-582bf.firebaseapp.com/)
+* [Expense Tracker](https://expense-tracker-884d7.firebaseapp.com/)
 
 ## Deployment
 
