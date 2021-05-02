@@ -17,3 +17,5 @@ hangman/.firebaserc
 hangman/firebase.json
 meal-finder/.firebaserc
 meal-finder/firebase.json
+expense-tracker/.firebaserc
+expense-tracker/firebase.json
