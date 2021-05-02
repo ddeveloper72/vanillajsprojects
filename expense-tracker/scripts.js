@@ -48,6 +48,8 @@ function addTransaction(e) {
 
         updateValues();
 
+        // add transactions to local storage
+        updateLocalStorage();
 
         // Clear input fields after add transaction
         text.value = '';
