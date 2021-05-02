@@ -114,6 +114,13 @@ function removeTransaction(id) {
     init();
 }
 
+// Update local storage with transactions
+function updateLocalStorage() {
+
+    // method to add transactions to the local storage array
+    localStorage.setItem('transactions', JSON.stringify(transactions));
+}
+
 // Initiate the list
 function init() {
     list.innerHTML = '';
