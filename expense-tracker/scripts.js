@@ -113,6 +113,9 @@ function removeTransaction(id) {
     // use array filter method
     transactions = transactions.filter(transaction => transaction.id !== id);
 
+    // remove transactions to local storage
+    updateLocalStorage();
+
     init();
 }
 
