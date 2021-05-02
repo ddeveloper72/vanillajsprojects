@@ -31,7 +31,7 @@ function addTransaction(e) {
         const transaction = {
             id: generateID(),
             text: text.value,
-            amount: amount.value
+            amount: +amount.value // convert string to a number
         };
 
         // Push transaction to the transactions array
@@ -80,7 +80,7 @@ function updateValues() {
         transaction.amount);
 
         // use reduce to total all items in the array
-        const total = amounts.reduce((accumulator, item) => (accumulator += item), 0)
+        const total = amounts.reduce((accumulator, item) => (accumulator + item), 0)
         .toFixed(2);
 
         // use filer to grab all positive values then reduce to add them together
