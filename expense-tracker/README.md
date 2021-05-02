@@ -4,7 +4,12 @@ This app is for keeping track or income as well as out-goings.  Information pers
 
 ## Specifications
 
-* The project specifications will be added here.
+* Create a user interface showing user transaction data
+* Provide a form field for user data input, item text and amount
+* Allow the user to delete an entry.
+* Use reduce method to total income and expenses
+* use filter method to remove an item by id.
+* Save the transaction data in an array to localStorage, so data persist on page refresh
 
 ## Deployment
 
