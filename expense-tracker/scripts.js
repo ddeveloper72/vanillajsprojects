@@ -34,7 +34,9 @@ function addTransaction(e) {
             amount: amount.value
         };
 
-        console.log(transaction);
+        // Push transaction to the transactions array
+        transactions.push(transaction);
+
     }
 }
 
