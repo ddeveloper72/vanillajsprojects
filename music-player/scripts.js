@@ -9,4 +9,10 @@ const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
+// Song tittles
 const songs = ['bensound-hipjazz', 'bensound-hipjazz', 'bensound-jazzyfrenchy', 'bensound-thelounge']
+
+// Keep track of song
+let songIndex = 2;
+
+
