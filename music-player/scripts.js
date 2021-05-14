@@ -8,3 +8,5 @@ const cover = document.getElementById('cover');
 const prevBtn = document.getElementById('prev');
 const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
+
+const songs = ['bensound-hipjazz', 'bensound-hipjazz', 'bensound-jazzyfrenchy', 'bensound-thelounge']
