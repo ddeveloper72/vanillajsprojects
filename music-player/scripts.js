@@ -1,5 +1,5 @@
 // Import DOM elements
-const musicContainer = document.getElementById('music_container');
+const musicContainer = document.getElementById('music-container');
 const title = document.getElementById('title');
 const progressContainer = document.getElementById('progress-container');
 const progress = document.getElementById('progress');
@@ -24,6 +24,16 @@ function loadSong(song) {
     audio.src = `music/${song}.mp3`;
     cover.src = `images/${song}.jpg`;
 };
+
+// Play Song
+function playSong() {
+    musicContainer.classList.add('play');
+    // toggle between play and pause font-awesome icons
+    playBtn.querySelector('i.fas').classList.remove('fa-play');
+    playBtn.querySelector('i.fas').classList.add('fa-pause');
+
+    audio.play();
+}
 
 // Even Listeners
 
