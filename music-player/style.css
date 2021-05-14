@@ -82,3 +82,7 @@ body {
     color: #cdc2d0;
     font-size: 30px;
 }
+
+.action-btn:focus {
+    outline: 0;
+}
