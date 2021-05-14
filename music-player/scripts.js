@@ -13,7 +13,15 @@ const nextBtn = document.getElementById('next');
 const songs = ['bensound-hipjazz', 'bensound-hipjazz', 'bensound-jazzyfrenchy', 'bensound-thelounge']
 
 // Keep track of song
-let songIndex = 2;
+let songIndex = 1;
 
 // Initially load song details into DOM
-loadSong(songs[index]);
+loadSong(songs[songIndex]);
+console.log(songs);
+
+// Update song details
+function loadSong(song) {
+    title.innerText = song;
+    audio.src = `music/${song}.mp3`;
+    cover.src = `images/${song}.jpg`;
+};
