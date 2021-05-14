@@ -77,3 +77,8 @@ body {
     padding: 10px;
     margin: 0 20px;
 }
+
+.action-btn.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
