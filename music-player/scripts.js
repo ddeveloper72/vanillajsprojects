@@ -13,11 +13,10 @@ const nextBtn = document.getElementById('next');
 const songs = ['bensound-hipjazz', 'bensound-jazzcomedy', 'bensound-jazzyfrenchy', 'bensound-thelounge']
 
 // Keep track of song
-let songIndex = 3;
+let songIndex = 2;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
-console.log(songs);
 
 // Update song details
 function loadSong(song) {
@@ -25,3 +24,14 @@ function loadSong(song) {
     audio.src = `music/${song}.mp3`;
     cover.src = `images/${song}.jpg`;
 };
+
+// Even Listeners
+
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play');
+    if(isPlaying) {
+        pauseSong();
+    } else {
+        playSong();
+    }
+})
