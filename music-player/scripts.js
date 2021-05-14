@@ -35,11 +35,21 @@ function playSong() {
     audio.play();
 }
 
+// Pause Song
+function pauseSong() {
+    musicContainer.classList.remove('play');
+    // toggle between play and pause font-awesome icons
+    playBtn.querySelector('i.fas').classList.add('fa-play');
+    playBtn.querySelector('i.fas').classList.remove('fa-pause');
+
+    audio.pause();
+}
+
 // Even Listeners
 
 playBtn.addEventListener('click', () => {
     const isPlaying = musicContainer.classList.contains('play');
-    if(isPlaying) {
+    if (isPlaying) {
         pauseSong();
     } else {
         playSong();
