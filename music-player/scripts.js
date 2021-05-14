@@ -10,10 +10,10 @@ const playBtn = document.getElementById('play');
 const nextBtn = document.getElementById('next');
 
 // Song tittles
-const songs = ['bensound-hipjazz', 'bensound-hipjazz', 'bensound-jazzyfrenchy', 'bensound-thelounge']
+const songs = ['bensound-hipjazz', 'bensound-jazzcomedy', 'bensound-jazzyfrenchy', 'bensound-thelounge']
 
 // Keep track of song
-let songIndex = 1;
+let songIndex = 3;
 
 // Initially load song details into DOM
 loadSong(songs[songIndex]);
