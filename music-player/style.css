@@ -112,3 +112,12 @@ body {
 .music-info h4 {
     margin: 0;
 }
+
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+    cursor: pointer;
+}
