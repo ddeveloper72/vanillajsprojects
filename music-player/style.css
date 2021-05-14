@@ -30,7 +30,14 @@ body {
     z-index: 10;
 }
 
-.image-container {
+.img-container {
     position: relative;
     width: 110px;
+}
+
+.img-container img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 110px;
+    width: inherit;
 }
