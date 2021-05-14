@@ -100,11 +100,15 @@ body {
   /* move text into view */
   transform: translateY(0%);
   transition: transform 0.3s ease-in, opacity 0.3s ease-in;
-  z-index: 1;
+  z-index: 0;
 }
 
 .music-container.play .music-info {
   /* set opacity and move music info up -100% */
   opacity: 1;
   transform: translateY(-100%);
+}
+
+.music-info h4 {
+    margin: 0;
 }
