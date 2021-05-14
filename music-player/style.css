@@ -121,3 +121,12 @@ body {
     width: 100%;
     cursor: pointer;
 }
+
+.progress {
+    background-color: #fe8daa;
+    border-radius: 4px;
+    height: 100%;
+    width: 0%;
+    /* define the progress transition rate as the music plays */
+    transition: width 0.1s linear;
+}
