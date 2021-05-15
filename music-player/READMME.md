@@ -1,10 +1,12 @@
-# Music Player
+# [Music Player](https://music-player-8e555.firebaseapp.com/)
 
 This music player is developed using <audio>: The Embed Audio element from [Mozilla MSN Web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio)
 
 ## The Specifications
 
-* The project specifications will be added here 👇
+* Create a basic music player UI interface
+* Add play, pause previous and next functionality to the player
+* Present a clickable progress bar that then plays the song from that point
 
 ## Acceptations
 
