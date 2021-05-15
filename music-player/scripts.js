@@ -93,3 +93,6 @@ playBtn.addEventListener('click', () => {
 // Change Song
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
+
+// Time/song update
+audio.addEventListener('timeupdate', updateProgress);
