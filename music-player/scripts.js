@@ -79,6 +79,16 @@ function nextSong() {
     playSong();
 }
 
+// Update progress bar
+function updateProgress(e) {
+
+    // monitor the audio element target
+    // see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
+    // for element properties
+    const {duration, currentTime} = e.target;
+    console.log(duration, currentTime);
+}
+
 // Even Listeners
 
 playBtn.addEventListener('click', () => {
