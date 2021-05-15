@@ -87,7 +87,7 @@ function updateProgress(e) {
     // for element properties
     const {duration, currentTime} = e.target;
     const progressPercent = (currentTime / duration) * 100;
-    console.log(progressPercent);
+    progress.style.width = `${progressPercent}%`;
 }
 
 // Even Listeners
