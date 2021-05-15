@@ -45,6 +45,23 @@ function pauseSong() {
     audio.pause();
 }
 
+// Previous Song
+function prevSong() {
+
+    // decrease the index by 1 to go back down the index
+    songIndex--;
+
+    // if the song is the 1st one in the index, skip to the last song in the index
+    // by calculating the total indexes then subtract 1
+    if(songIndex < 0) {
+        songIndex = songs.length -1;
+    }
+
+    loadSong(songs[songIndex]);
+
+    playSong();
+}
+
 // Even Listeners
 
 playBtn.addEventListener('click', () => {
