@@ -90,6 +90,14 @@ function updateProgress(e) {
     progress.style.width = `${progressPercent}%`;
 }
 
+// set progress on progress bar
+function setProgress() {
+
+// reference https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth
+    const width = this.clientWidth;
+    console.log(width);
+}
+
 // Even Listeners
 
 playBtn.addEventListener('click', () => {
@@ -107,3 +115,6 @@ nextBtn.addEventListener('click', nextSong);
 
 // Time/song update
 audio.addEventListener('timeupdate', updateProgress);
+
+// Click on progress bar
+progressContainer.addEventListener('click', setProgress);
