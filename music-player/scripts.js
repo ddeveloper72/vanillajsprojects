@@ -91,11 +91,19 @@ function updateProgress(e) {
 }
 
 // set progress on progress bar
-function setProgress() {
+function setProgress(e) {
 
-// reference https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth
+    // reference https://developer.mozilla.org/en-US/docs/Web/API/Element/clientWidth
     const width = this.clientWidth;
-    console.log(width);
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent/offsetX
+    const clickX = e.offsetX;
+
+    // get duration of audio track from the audio api
+    const duration = audio.duration;
+
+    // set current time by calculating the new remaining current time
+    audio.currentTime = (clickX / width) * duration;
 }
 
 // Even Listeners
