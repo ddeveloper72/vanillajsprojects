@@ -62,6 +62,23 @@ function prevSong() {
     playSong();
 }
 
+// Next Song
+function nextSong() {
+
+    // increase the index by 1 to go up the index
+    songIndex++;
+
+    // if the song is the last one in the index, skip to the first song in the index
+    // by calculating the total indexes then subtract 1
+    if (songIndex > songs.length - 1) {
+        songIndex = 0;
+    }
+
+    loadSong(songs[songIndex]);
+
+    playSong();
+}
+
 // Even Listeners
 
 playBtn.addEventListener('click', () => {
