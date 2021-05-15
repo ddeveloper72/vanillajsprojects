@@ -86,7 +86,8 @@ function updateProgress(e) {
     // see https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio
     // for element properties
     const {duration, currentTime} = e.target;
-    console.log(duration, currentTime);
+    const progressPercent = (currentTime / duration) * 100;
+    console.log(progressPercent);
 }
 
 // Even Listeners
