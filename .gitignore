@@ -20,3 +20,5 @@ meal-finder/firebase.json
 expense-tracker/.firebaserc
 expense-tracker/firebase.json
 music-player/music/*
+music-player/.firebaserc
+music-player/firebase.json
