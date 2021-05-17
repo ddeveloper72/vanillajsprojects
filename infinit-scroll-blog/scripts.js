@@ -37,6 +37,10 @@ async function showPosts() {
 // Show loader and fetch more posts
 function showLoading() {
     loading.classList.add('show');
+
+    setTimeout(() => {
+        loading.classList.remove('show')
+    }, 1000);
 }
 
 // Show initial posts
