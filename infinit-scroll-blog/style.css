@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
+:root {
+    --background-blue: #296CA8;
+}
+
 * {
     box-sizing: border-box;
 }
 
 body {
-    background-color: #296CA8;
+    background-color: var(--background-blue);
     color: #fff;
     font-family: 'Roboto', sans-serif;
     display: flex;
@@ -56,4 +60,20 @@ h1 {
 
 .post .post-info {
     margin-left: 20px;
+}
+
+.post .number {
+    position: absolute;
+    top: -15PX;
+    left: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--background-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px 10px;
 }
