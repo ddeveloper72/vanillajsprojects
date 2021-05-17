@@ -1,7 +1,7 @@
 // DOM ID imports
 const filter = document.getElementById('filter');
 const postContainer = document.getElementById('post-container');
-const loading = document.getElementsByClassName('.loader');
+const loading = document.querySelector('.loader');
 
 
 let limit = 3;
@@ -34,6 +34,11 @@ async function showPosts() {
     });
 }
 
+// Show loader and fetch more posts
+function showLoading() {
+    loading.classList.add('show');
+}
+
 // Show initial posts
 showPosts();
 
@@ -45,7 +50,7 @@ window.addEventListener('scroll', () => {
 
     // determine the scroll range
     if (scrollTop + clientHeight >= scrollHeight - 5) {
-        console.log('🚧 Scroll End');
+        showLoading();
     }
 
 
