@@ -77,3 +77,11 @@ h1 {
     align-items: center;
     padding: 7px 10px;
 }
+
+.loader {
+    /* opacity: 0; */
+    display: flex;
+    position: fixed;
+    bottom: 50px;
+    transition: opacity 0.3s ease-in;
+}
