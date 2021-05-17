@@ -44,3 +44,7 @@ h1 {
     width: 80vw;
     max-width: 800px;
 }
+
+.post .post-title {
+    margin: 0;
+}
