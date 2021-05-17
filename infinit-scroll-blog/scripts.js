@@ -40,5 +40,13 @@ showPosts();
 // Event Listeners
 window.addEventListener('scroll', () => {
     // reference https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop
-    console.log(document.documentElement.scrollTop);
-})
+    // console.log(document.documentElement.scrollTop);
+    const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+
+    // determine the scroll range
+    if (scrollTop + clientHeight >= scrollHeight - 5) {
+        console.log('🚧 Scroll End');
+    }
+
+
+});
