@@ -11,6 +11,15 @@ async function getPosts() {
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts?_limit=${limit}&_pages=${page}`);
 
     const data = await res.json();
-    
+
     return data;
 }
+
+// Show posts in DOM
+async function showPosts() {
+    const posts = await getPosts();
+
+    console.log(posts);
+}
+
+showPosts();
