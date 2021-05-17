@@ -34,4 +34,11 @@ async function showPosts() {
     });
 }
 
+// Show initial posts
 showPosts();
+
+// Event Listeners
+window.addEventListener('scroll', () => {
+    // reference https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollTop
+    console.log(document.documentElement.scrollTop);
+})
