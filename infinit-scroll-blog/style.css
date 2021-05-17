@@ -48,3 +48,8 @@ h1 {
 .post .post-title {
     margin: 0;
 }
+
+.post .post-body {
+    margin: 15px 0 0 ;
+    line-height: 1.3;
+}
