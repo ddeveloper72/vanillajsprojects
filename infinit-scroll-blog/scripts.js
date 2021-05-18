@@ -26,7 +26,7 @@ async function showPosts() {
         <div class="number">${post.id}</div>
         <div class="post-info">
             <h2 class="post-title">${post.title}</h2>
-            <p class="post.body">${post.body}</p>
+            <p class="post-body">${post.body}</p>
         </div>
         `;
 
@@ -52,13 +52,20 @@ function showLoading() {
 // filter posts
 function filterPosts(e) {
     const term = e.target.value.toUpperCase();
-    const post = document.querySelectorAll('.post');
+    const posts = document.querySelectorAll('.post');
 
     // search the tile and body for the term
-    post.forEach(post => {
-        const title = post.querySelector('.post-title').innerText;
-        const body = post.querySelector('.post-body').innerText;
-    })
+    posts.forEach(post => {
+        const title = post.querySelector('.post-title').innerText.toUpperCase();
+        const body = post.querySelector('.post-body').innerText.toUpperCase();
+
+        // check is term is in the the array by searching all the indexes
+        if(title.indexOf(term) > -1 || body.indexOf(term) > -1) {
+            post.style.display =  'flex';
+        } else {
+            post.style.display = 'none';
+        }
+    });
 }
 
 // Show initial posts
