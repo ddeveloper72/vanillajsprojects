@@ -14,6 +14,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Meal Finder](https://meal-finder-582bf.firebaseapp.com/)
 * [Expense Tracker](https://expense-tracker-884d7.firebaseapp.com/)
 * [Music Player](https://music-player-8e555.firebaseapp.com/)
+* [Infinite Scroll blog](https://infinite-scroll-blog.firebaseapp.com/)
 
 ## Deployment
 

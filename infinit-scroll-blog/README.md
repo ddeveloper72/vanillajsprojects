@@ -1,4 +1,4 @@
-# Infinite Scroll blog
+# [Infinite Scroll blog](https://infinite-scroll-blog.firebaseapp.com/)
 
 This mini-project uses fake blog data from [{JSON} Placeholder](https://jsonplaceholder.typicode.com/) which is an API for testing and prototyping.
 
