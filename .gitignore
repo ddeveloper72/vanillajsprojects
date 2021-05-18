@@ -22,3 +22,5 @@ expense-tracker/firebase.json
 music-player/music/*
 music-player/.firebaserc
 music-player/firebase.json
+infinit-scroll-blog/.firebaserc
+infinit-scroll-blog/firebase.json
