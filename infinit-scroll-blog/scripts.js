@@ -49,6 +49,11 @@ function showLoading() {
     }, 1000);
 }
 
+// filter posts
+function filterPosts(e) {
+    console.log(e.target.value);
+}
+
 // Show initial posts
 showPosts();
 
@@ -62,6 +67,7 @@ window.addEventListener('scroll', () => {
     if (scrollTop + clientHeight >= scrollHeight - 5) {
         showLoading();
     }
-
-
 });
+
+// Filter posts
+filter.addEventListener('input', filterPosts);
