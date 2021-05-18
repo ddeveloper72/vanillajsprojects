@@ -4,7 +4,10 @@ This mini-project uses fake blog data from [{JSON} Placeholder](https://jsonplac
 
 ## The Specifications
 
-* Project specifications will be added here 👇
+* The UI is designed to display a number of fake blog entries, index, heading and body
+* The UI displays a custom animated CSS loader
+* Scrolling done the posts will prompt a get request to the API for another page of blog posts
+* A search function searches post loaded to the DOM, filtering out all other posts
 
 
 ## Reference Material
