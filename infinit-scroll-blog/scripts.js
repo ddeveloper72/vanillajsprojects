@@ -4,7 +4,7 @@ const postContainer = document.getElementById('post-container');
 const loading = document.querySelector('.loader');
 
 
-let limit = 3;
+let limit = 5;
 let page = 1;
 
 async function getPosts() {
@@ -39,7 +39,13 @@ function showLoading() {
     loading.classList.add('show');
 
     setTimeout(() => {
-        loading.classList.remove('show')
+        loading.classList.remove('show');
+
+        setTimeout(() => {
+            page++;
+            showPosts();
+        }, 300);
+
     }, 1000);
 }
 
