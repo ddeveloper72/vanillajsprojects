@@ -51,7 +51,14 @@ function showLoading() {
 
 // filter posts
 function filterPosts(e) {
-    console.log(e.target.value);
+    const term = e.target.value.toUpperCase();
+    const post = document.querySelectorAll('.post');
+
+    // search the tile and body for the term
+    post.forEach(post => {
+        const title = post.querySelector('.post-title').innerText;
+        const body = post.querySelector('.post-body').innerText;
+    })
 }
 
 // Show initial posts
