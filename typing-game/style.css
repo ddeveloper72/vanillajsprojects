@@ -35,4 +35,13 @@ button {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    /* show the settings so user has option to hide */
+    transform: translateY(0);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* hide the settings, toggled by JS DOM update */
+.settings.hide {
+    transform: translateY(-100);
 }
