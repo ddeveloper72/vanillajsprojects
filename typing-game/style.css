@@ -29,6 +29,10 @@ select {
     border-radius: 0;
 }
 
+select:focus button:focus {
+    outline: none;
+}
+
 .settings-btn {
     position: absolute;
     bottom: 30px;
