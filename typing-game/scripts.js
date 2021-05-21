@@ -35,7 +35,7 @@ let time = 0;
 async function addWordToDom() {
     const words = getWords()
         .then(v => {
-            console.log(v[Math.floor(Math.random() * v.length)]);
+            // console.log(v[Math.floor(Math.random() * v.length)]);
             
             randomWord = v[Math.floor(Math.random() * v.length)];
 
@@ -44,3 +44,9 @@ async function addWordToDom() {
 }
 
 addWordToDom();
+
+// Event listener
+text.addEventListener('input', e => {
+    const insertedText = e.target.value;
+    console.log(insertedText);
+})
