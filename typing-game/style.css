@@ -90,3 +90,9 @@ input {
     padding: 12px 20px;
     margin-top: 10PX;
 }
+
+.score-container {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+}
