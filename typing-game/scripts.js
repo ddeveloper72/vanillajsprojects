@@ -34,6 +34,9 @@ let time = 0;
 // Focus on text at start
 text.focus();
 
+// Start countdown timer
+const timeInterval = setInterval(updateTime, 1000);
+
 
 // Generate random word
 async function addWordToDom() {
