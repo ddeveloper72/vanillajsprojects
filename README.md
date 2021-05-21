@@ -15,6 +15,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Expense Tracker](https://expense-tracker-884d7.firebaseapp.com/)
 * [Music Player](https://music-player-8e555.firebaseapp.com/)
 * [Infinite Scroll blog](https://infinite-scroll-blog.firebaseapp.com/)
+* [Typing Game](https://speed-typing-8160a.firebaseapp.com/)
 
 ## Deployment
 

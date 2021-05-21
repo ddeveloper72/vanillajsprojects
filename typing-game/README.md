@@ -1,4 +1,4 @@
-# Typing Game
+# [Typing Game](https://speed-typing-8160a.firebaseapp.com/)
 
 This is a fun game where one need to type the word before time runs out! QUICK!
 
