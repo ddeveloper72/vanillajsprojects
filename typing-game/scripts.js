@@ -29,7 +29,7 @@ let randomWord;
 let score = 0;
 
 // Initialize time
-let time = 10;
+let time = 15;
 
 // Focus on text at start
 text.focus();
@@ -93,5 +93,9 @@ text.addEventListener('input', e => {
 
         // Clear text
         e.target.value = '';
+        
+        time += 10;
+
+        updateTime();
     }
 })
