@@ -48,5 +48,8 @@ addWordToDom();
 // Event listener
 text.addEventListener('input', e => {
     const insertedText = e.target.value;
-    console.log(insertedText);
+    // console.log(insertedText);
+    if(insertedText === randomWord) {
+        addWordToDom();
+    }
 })
