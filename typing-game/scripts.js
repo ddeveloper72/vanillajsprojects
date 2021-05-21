@@ -101,7 +101,13 @@ text.addEventListener('input', e => {
         // Clear text
         e.target.value = '';
 
-        time += 10;
+        if(difficulty === 'hard') {
+            time += 2;
+        } else if (difficulty === 'medium') {
+            time += 6;
+        } else {
+            time += 8;
+        }
 
         updateTime();
     }
