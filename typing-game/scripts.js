@@ -31,6 +31,10 @@ let score = 0;
 // Initialize time
 let time = 0;
 
+// Focus on text at start
+text.focus();
+
+
 // Generate random word
 async function addWordToDom() {
     const words = getWords()
