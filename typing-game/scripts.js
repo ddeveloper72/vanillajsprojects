@@ -1,6 +1,6 @@
 // DOM Imports
 const settingsBtn = document.getElementById('settings-btn');
-const settings = document.getElementById('settings-btn');
+const settings = document.getElementById('settings');
 const settingsForm = document.getElementById('settings-form');
 const difficultySelect = document.getElementById('difficulty');
 const word = document.getElementById('word');
@@ -14,9 +14,9 @@ let number = 20;
 // list of words for game
 async function getWords() {
     const res = await fetch(`https://random-word-api.herokuapp.com//word?number=${number}`);
-    
+
     const data = await res.json();
-        
+
     return data;
 }
 
@@ -43,7 +43,7 @@ async function addWordToDom() {
     const words = getWords()
         .then(v => {
             // console.log(v[Math.floor(Math.random() * v.length)]);
-            
+
             randomWord = v[Math.floor(Math.random() * v.length)];
 
             word.innerHTML = randomWord;
@@ -53,7 +53,7 @@ async function addWordToDom() {
 // Update Score
 function updateScore() {
     score++;
-    
+
     // update DOM
     scoreEl.innerHTML = score;
 }
@@ -62,7 +62,7 @@ function updateScore() {
 function updateTime() {
     time--;
     timeEl.innerHTML = time + 's';
-    if(time === 0) {
+    if (time === 0) {
         clearInterval(timeInterval)
 
         // end game
@@ -87,15 +87,20 @@ addWordToDom();
 text.addEventListener('input', e => {
     const insertedText = e.target.value;
     // console.log(insertedText);
-    if(insertedText === randomWord) {
+    if (insertedText === randomWord) {
         addWordToDom();
         updateScore();
 
         // Clear text
         e.target.value = '';
-        
+
         time += 10;
 
         updateTime();
     }
+})
+
+// settings button click
+settingsBtn.addEventListener('click', () => {
+    settings.classList.toggle('hide');
 })
