@@ -8,3 +8,39 @@ const text = document.getElementById('text');
 const timeEl = document.getElementById('time');
 const scoreEl = document.getElementById('score');
 const endgameEl = document.getElementById('end-game-container');
+
+let number = 20;
+
+// list of words for game
+async function getWords() {
+    const res = await fetch(`https://random-word-api.herokuapp.com//word?number=${number}`);
+    
+    const data = await res.json();
+        
+    return data;
+}
+
+
+
+// Initialize word
+let randomWord;
+
+// initialize score
+let score = 0;
+
+// Initialize time
+let time = 0;
+
+// Generate random word
+async function addWordToDom() {
+    const words = getWords()
+        .then(v => {
+            console.log(v[Math.floor(Math.random() * v.length)]);
+            
+            randomWord = v[Math.floor(Math.random() * v.length)];
+
+            word.innerHTML = randomWord;
+        });
+}
+
+addWordToDom();
