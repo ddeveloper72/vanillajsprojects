@@ -58,6 +58,11 @@ function updateScore() {
     scoreEl.innerHTML = score;
 }
 
+// Update time 
+function updateTime() {
+    console.log(1);
+}
+
 addWordToDom();
 
 // Event listener
