@@ -81,3 +81,12 @@ h2 {
 h1 {
     margin: 0;
 }
+
+input {
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 300px;
+    padding: 12px 20px;
+    margin-top: 10PX;
+}
