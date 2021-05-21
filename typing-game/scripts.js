@@ -43,6 +43,14 @@ async function addWordToDom() {
         });
 }
 
+// Update Score
+function updateScore() {
+    score++;
+    
+    // update DOM
+    scoreEl.innerHTML = score;
+}
+
 addWordToDom();
 
 // Event listener
@@ -51,6 +59,7 @@ text.addEventListener('input', e => {
     // console.log(insertedText);
     if(insertedText === randomWord) {
         addWordToDom();
+        updateScore();
 
         // Clear text
         e.target.value = '';
