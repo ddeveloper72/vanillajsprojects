@@ -60,7 +60,8 @@ function updateScore() {
 
 // Update time 
 function updateTime() {
-    console.log(1);
+    time--;
+    timeEl.innerHTML = time + 's';
 }
 
 addWordToDom();
