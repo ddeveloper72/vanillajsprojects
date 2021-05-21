@@ -29,7 +29,7 @@ let randomWord;
 let score = 0;
 
 // Initialize time
-let time = 0;
+let time = 10;
 
 // Focus on text at start
 text.focus();
@@ -62,6 +62,12 @@ function updateScore() {
 function updateTime() {
     time--;
     timeEl.innerHTML = time + 's';
+    if(time === 0) {
+        clearInterval(timeInterval)
+
+        // end game
+        gameOver();
+    }
 }
 
 addWordToDom();
