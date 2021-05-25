@@ -38,3 +38,9 @@ h1 {
 select:focus {
     outline: 0;
 }
+
+.btn-toggle {
+    /* push button to middle */
+    display: block;
+    margin:auto;
+}
