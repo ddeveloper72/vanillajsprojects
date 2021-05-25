@@ -79,6 +79,24 @@ function createBox(item) {
     main.appendChild(box);
 }
 
+
+// Store Voices
+let voices = [];
+
+// see reference materials at https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/getVoices
+function getVoices() {
+    voices = speechSynthesis.getVoices();
+
+    voices.forEach(voice => {
+        const option = document.createElement('option');
+        
+        option.value = voice.name;
+        option.innerText = `${voice.name} ${voice.lang}`;
+
+        voicesSelect.appendChild(option);
+    })
+};
+
 // Event listeners below
 
 // toggle button
@@ -90,3 +108,8 @@ toggleBtn.addEventListener('click', () =>
 closeBtn.addEventListener('click', () =>
     document.getElementById('text-box').classList.remove('show')
 );
+
+// Voices Changed
+speechSynthesis.addEventListener('voiceschanged', getVoices);
+
+getVoices();
