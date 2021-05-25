@@ -114,3 +114,16 @@ main {
     object-fit: cover;
     height: 200px;
 }
+
+.box .info {
+    background-color: darksalmon;
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+    height: 100%;
+
+}
