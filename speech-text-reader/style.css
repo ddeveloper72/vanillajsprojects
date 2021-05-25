@@ -87,3 +87,9 @@ select:focus {
     text-align: right;
     cursor: pointer;
 }
+
+main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
