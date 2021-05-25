@@ -43,6 +43,7 @@ select:focus {
     /* push button to middle */
     display: block;
     margin:auto;
+    margin-bottom: 20px;
 }
 
 .text-box {
@@ -51,7 +52,7 @@ select:focus {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -800px);
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -92,4 +93,10 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+}
+
+.box img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
 }
