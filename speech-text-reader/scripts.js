@@ -58,8 +58,23 @@ const data = [
     }
 ];
 
+// use a for each loop on the crateBox function to crate a box for each object
 data.forEach(createBox);
 
+
+// Create the main element boxe
 function createBox(item) {
-    console.log(item);
+    const box = document.createElement('div');
+
+    // use destructuring technique to pull the image & text from the item
+    // item is an object with these two properties
+    const {image, text} = item;
+
+    box.classList.add('box');
+    box.innerHTML = `
+    <img src="${image}" alt="${text}" />
+    <p class="info">${text}</p>
+    `;
+
+    main.appendChild(box);
 }
