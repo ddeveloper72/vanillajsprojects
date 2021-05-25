@@ -67,3 +67,13 @@ select:focus {
     height: 30px;
     width: 100%;
 }
+
+.text-box textarea {
+    width: 100%;
+    border: 1px #dadada solid;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px;
+    margin: 15px 0;
+    height: 150px;
+}
