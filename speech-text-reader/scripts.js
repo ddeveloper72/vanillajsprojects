@@ -62,13 +62,13 @@ const data = [
 data.forEach(createBox);
 
 
-// Create the main element boxe
+// Create the main element box
 function createBox(item) {
     const box = document.createElement('div');
 
     // use destructuring technique to pull the image & text from the item
     // item is an object with these two properties
-    const {image, text} = item;
+    const { image, text } = item;
 
     box.classList.add('box');
     box.innerHTML = `
@@ -78,3 +78,15 @@ function createBox(item) {
 
     main.appendChild(box);
 }
+
+// Event listeners below
+
+// toggle button
+toggleBtn.addEventListener('click', () =>
+    document.getElementById('text-box').classList.toggle('show')
+);
+
+//close button
+closeBtn.addEventListener('click', () =>
+    document.getElementById('text-box').classList.remove('show')
+);
