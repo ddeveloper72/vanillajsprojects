@@ -42,3 +42,9 @@ h1 button {
     font-size: 12px;
     padding: 5px 10px;
 }
+
+/* only display the x */
+.btn-ghost {
+    border: 0;
+    background-color: transparent;
+}
