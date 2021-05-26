@@ -82,3 +82,11 @@ h1 button {
     cursor: pointer;
     z-index: 10;
 }
+
+.inner-card {
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
