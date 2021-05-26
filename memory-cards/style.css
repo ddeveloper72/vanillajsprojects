@@ -69,9 +69,16 @@ h1 button {
 .card {
     position: absolute;
     opacity: 0;
+    font-size: 1.5em;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
 }
 
 /* make active card visible */
 .card.active {
     opacity: 1;
+    cursor: pointer;
+    z-index: 10;
 }
