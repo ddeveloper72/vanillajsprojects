@@ -5,6 +5,7 @@ const textBox = document.getElementById('toggle-box');
 const closeBtn = document.getElementById('close');
 const voicesSelect = document.getElementById('voices');
 const textarea = document.getElementById('text');
+const readBtn = document.getElementById('read');
 
 // Import data file
 const data = [
@@ -148,5 +149,13 @@ function speakText() {
 
 // Change voice
 voicesSelect.addEventListener('change', setVoice);
+
+
+// read text
+readBtn.addEventListener('click', () => {
+    // get the text value from the textaria
+    setTextMessage(textarea.value);
+    speakText();
+})
 
 getVoices();
