@@ -1,92 +1,106 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300,500,700&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 /* setup h1 so buttons can be positioned absolute */
 h1 {
-    position: relative;
+  position: relative;
 }
 
 h1 button {
-    position: absolute;
-    right: 0;
-    transform: translate(120%, -50%);
-    z-index: 2;
+  position: absolute;
+  right: 0;
+  transform: translate(120%, -50%);
+  z-index: 2;
 }
 
 .btn {
-    background-color: #fff;
-    border: 1px solid #aaa;
-    border-radius: 4px;
-    font-size: 14px;
-    padding: 10px 15px;
-    margin-top: 20px;
-    cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 14px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  cursor: pointer;
 }
 
 .btn-small {
-    font-size: 12px;
-    padding: 5px 10px;
+  font-size: 12px;
+  padding: 5px 10px;
 }
 
 /* only display the x */
 .btn-ghost {
-    border: 0;
-    background-color: transparent;
+  border: 0;
+  background-color: transparent;
 }
 
 /* set location for clear cards btn */
 .clear {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
 }
 
 /* styling the cards */
 .cards {
-    perspective: 1000px;
-    position: relative;
-    height: 300px;
-    width: 500px;
-    max-width: 100%;
+  perspective: 1000px;
+  position: relative;
+  height: 300px;
+  width: 500px;
+  max-width: 100%;
 }
 
 /* locate all individual cards over the same position */
 .card {
-    position: absolute;
-    opacity: 0;
-    font-size: 1.5em;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
+  position: absolute;
+  opacity: 0;
+  font-size: 1.5em;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 /* make active card visible */
 .card.active {
-    opacity: 1;
-    cursor: pointer;
-    z-index: 10;
+  opacity: 1;
+  cursor: pointer;
+  z-index: 10;
 }
 
 .inner-card {
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-    border-radius: 4px;
-    height: 100%;
-    width: 100%;
-    position: relative;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* layout front and back shared properties */
+.inner-card-front,
+.inner-card-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background: #fff ;
 }
