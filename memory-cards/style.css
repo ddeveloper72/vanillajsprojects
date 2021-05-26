@@ -88,6 +88,12 @@ h1 button {
   transform: translateX(0) rotateY(0deg);
 }
 
+/* left class added by JS */
+.card.left {
+    /*  add card lef animation properties */
+    transform: translateX(-50%) rotateY(10deg);
+}
+
 .inner-card {
   box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
   border-radius: 4px;
