@@ -48,3 +48,10 @@ h1 button {
     border: 0;
     background-color: transparent;
 }
+
+/* set location for clear cards btn */
+.clear {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
