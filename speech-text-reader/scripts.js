@@ -1,5 +1,3 @@
-const { brotliCompress } = require("node:zlib");
-
 // Import DOm selectors
 const main = document.querySelector('main');
 const toggleBtn = document.getElementById('toggle');
