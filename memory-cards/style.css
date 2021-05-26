@@ -15,3 +15,15 @@ body {
     margin: 0;
     overflow: hidden;
 }
+
+/* setup h1 so buttons can be positioned absolute */
+h1 {
+    position: relative;
+}
+
+h1 button {
+    position: absolute;
+    right: 0;
+    transform: translate(120%, -50%);
+    z-index: 2;
+}
