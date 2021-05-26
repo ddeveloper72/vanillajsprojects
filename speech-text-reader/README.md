@@ -2,10 +2,16 @@
 
 This app converts text to speech for users.  the project uses a Web Speech API backend, as well as a UI for easy operation by the user.
 
-## 🚧 The Specifications 🚧
+## The Specifications
 
-* the project specifications will be updated below 👇
+* Build a responsive UI using CSS grid containing picture buttons
+* The text on the button is read when clicked by the user
+* A dropdown menu lets one change the language accent of the voices
+* A custom text box lets one write text which is then read by the synthesizer
 
+## Accreditation
+
+The royalty free pictures were provided by [Pexels](https://www.pexels.com/)
 ## Deployment
 
 This applet can be run from live server, or from a remote host, such as GitHub pages.
