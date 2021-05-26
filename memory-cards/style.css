@@ -70,3 +70,8 @@ h1 button {
     position: absolute;
     opacity: 0;
 }
+
+/* make active card visible */
+.card.active {
+    opacity: 1;
+}
