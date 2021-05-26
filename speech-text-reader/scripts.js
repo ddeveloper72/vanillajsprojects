@@ -131,4 +131,14 @@ closeBtn.addEventListener('click', () =>
 // Voices Changed
 speechSynthesis.addEventListener('voiceschanged', getVoices);
 
+// Set text
+function setTextMessage(text)  {
+    // get text called on the button click
+    message.text = text;
+}
+
+// Speak text
+function speakText() {
+
+}
 getVoices();
