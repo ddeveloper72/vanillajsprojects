@@ -1,5 +1,6 @@
 .vscode
 \public
+*\highres
 movie-seat-booking/.firebaserc
 movie-seat-booking/firebase.json
 form-validator/.firebaserc
