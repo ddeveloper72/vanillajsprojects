@@ -95,6 +95,9 @@ function createBox(item) {
     main.appendChild(box);
 }
 
+// Initiate Speech Synthesis
+const message = new SpeechSynthesisUtterance();
+
 
 // Store Voices
 let voices = [];
