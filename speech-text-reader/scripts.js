@@ -87,7 +87,7 @@ function createBox(item) {
 
         // remove active class after set timeout
         setTimeout(() => box.classList.remove('active'), 800);
-        
+
     });
 
     main.appendChild(box);
@@ -106,12 +106,18 @@ function getVoices() {
 
     voices.forEach(voice => {
         const option = document.createElement('option');
-        
+
         option.value = voice.name;
         option.innerText = `${voice.name} ${voice.lang}`;
 
         voicesSelect.appendChild(option);
     })
+};
+
+// Set voice
+function setVoice(e) {
+    // find the voice from the api, matching the value selected in the select box
+    message.voice = voices.find(voice => voice.name === e.target.value);
 };
 
 // Event listeners below
@@ -130,7 +136,7 @@ closeBtn.addEventListener('click', () =>
 speechSynthesis.addEventListener('voiceschanged', getVoices);
 
 // Set text
-function setTextMessage(text)  {
+function setTextMessage(text) {
     // get text called on the button click
     message.text = text;
 }
