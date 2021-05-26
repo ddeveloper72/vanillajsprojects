@@ -16,6 +16,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Music Player](https://music-player-8e555.firebaseapp.com/)
 * [Infinite Scroll blog](https://infinite-scroll-blog.firebaseapp.com/)
 * [Typing Game](https://speed-typing-8160a.firebaseapp.com/)
+* [Speech to text Reader](https://text-to-speech-6f7cf.firebaseapp.com/)
 
 ## Deployment
 
