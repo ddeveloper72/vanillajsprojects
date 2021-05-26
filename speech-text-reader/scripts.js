@@ -140,4 +140,7 @@ function speakText() {
     speechSynthesis.speak(message);
 }
 
+// Change voice
+voicesSelect.addEventListener('change', setVoice);
+
 getVoices();
