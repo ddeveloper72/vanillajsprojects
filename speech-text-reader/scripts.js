@@ -139,6 +139,7 @@ function setTextMessage(text)  {
 
 // Speak text
 function speakText() {
-
+    speechSynthesis.speak(message);
 }
+
 getVoices();
