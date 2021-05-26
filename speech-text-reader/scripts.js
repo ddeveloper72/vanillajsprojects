@@ -1,3 +1,5 @@
+const { brotliCompress } = require("node:zlib");
+
 // Import DOm selectors
 const main = document.querySelector('main');
 const toggleBtn = document.getElementById('toggle');
@@ -75,6 +77,20 @@ function createBox(item) {
     <img src="${image}" alt="${text}" />
     <p class="info">${text}</p>
     `;
+
+    // Add speak event
+    box.addEventListener('click', () => {
+        // get text from the box
+        setTextMessage(text);
+        speakText();
+
+        // Add active class effect
+        box.classList.add('active');
+
+        // remove active class after set timeout
+        setTimeout(() => box.classList.remove('active'), 800);
+        
+    });
 
     main.appendChild(box);
 }
