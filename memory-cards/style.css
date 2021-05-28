@@ -165,3 +165,7 @@ h1 button {
   cursor: pointer;
   font-size: 16px;
 }
+
+.navigation p {
+  margin: 0 25px;
+}
