@@ -74,6 +74,8 @@ h1 button {
   top: 0;
   height: 100%;
   width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
   /* added perspective to enhance the 3d effect of the card rotation */
   perspective: 1000px;
   /*  add card animation properties */
