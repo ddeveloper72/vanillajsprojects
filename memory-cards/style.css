@@ -172,8 +172,8 @@ h1 button {
 
 /* setup add card container */
 .add-container {
-  /* opacity: 0; */
-  /* z-index: -1; */
+  opacity: 0;
+  z-index: -1;
   background-color: #B2DFDB;
   border-top: 2px solid #eee;
   display: flex;
@@ -186,4 +186,10 @@ h1 button {
   bottom: 0;
   width: 100%;
   transform: 0.3s ease;
+}
+
+/* add show class using JS */
+.add-container.show {
+  opacity: 1;
+  z-index: 2;
 }
