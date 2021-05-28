@@ -203,3 +203,12 @@ h1 button {
   display: block;
   margin: 20px 0 10px;
 }
+
+.form-group textarea {
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 12px;
+  min-width: 500px;
+  max-width: 100%;
+}
