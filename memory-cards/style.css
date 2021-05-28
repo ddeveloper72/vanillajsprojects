@@ -169,3 +169,21 @@ h1 button {
 .navigation p {
   margin: 0 25px;
 }
+
+/* setup add card container */
+.add-container {
+  /* opacity: 0; */
+  /* z-index: -1; */
+  background-color: #B2DFDB;
+  border-top: 2px solid #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  transform: 0.3s ease;
+}
