@@ -90,8 +90,8 @@ h1 button {
 
 /* left class added by JS */
 .card.left {
-    /*  add card lef animation properties */
-    transform: translateX(-50%) rotateY(10deg);
+  /*  add card lef animation properties */
+  transform: translateX(-50%) rotateY(10deg);
 }
 
 .inner-card {
@@ -114,14 +114,19 @@ h1 button {
   justify-content: center;
   height: 100%;
   width: 100%;
-  background: #fff;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
 /* Do an horizontal flip when show-answer is added by JS */
-.card.show-answer .inner-card  {
+.card.show-answer .inner-card {
   transform: rotateY(180deg);
+}
+
+/* Style the front face of card */
+.inner-card-front {
+  background-color: dodgerblue;
+  color: white;
 }
 
 /* Style the back face of card */
