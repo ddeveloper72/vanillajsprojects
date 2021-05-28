@@ -100,6 +100,7 @@ h1 button {
   height: 100%;
   width: 100%;
   position: relative;
+  transition: transform 0.8s;
   transform-style: preserve-3d;
 }
 
@@ -119,7 +120,7 @@ h1 button {
 }
 
 /* Do an horizontal flip when show-answer is added by JS */
-.card.show-answer .inner-card {
+.card:hover .inner-card {
   transform: rotateY(180deg);
 }
 
