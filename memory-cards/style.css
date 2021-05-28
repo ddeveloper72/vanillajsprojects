@@ -114,4 +114,11 @@ h1 button {
   height: 100%;
   width: 100%;
   background: #fff;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Do an horizontal flip when show-answer is added by JS */
+.card.show-answer .inner-card  {
+  transform: rotateY(180deg);
 }
