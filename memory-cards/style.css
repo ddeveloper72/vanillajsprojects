@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #fff;
+  background-color: #778C8C;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,13 +130,13 @@ h1 button {
 
 /* Style the front face of card */
 .inner-card-front {
-  background-color: dodgerblue;
+  background-image: linear-gradient(to right bottom, #273940d8, #153259);
   color: white;
 }
 
 /* Style the back face of card */
 .inner-card-back {
-  background-color: dodgerblue;
+  background-image: linear-gradient(to right bottom, #4B5947, #33402A);
   color: white;
   transform: rotateY(180deg);
 }
