@@ -153,3 +153,8 @@ h1 button {
   font-size: 16px;
   color: #ddd;
 }
+
+.navigation {
+  display: flex;
+  margin: 20px 0;
+}
