@@ -100,6 +100,7 @@ h1 button {
   height: 100%;
   width: 100%;
   position: relative;
+  transform-style: preserve-3d;
 }
 
 /* layout front and back shared properties */
@@ -120,5 +121,12 @@ h1 button {
 
 /* Do an horizontal flip when show-answer is added by JS */
 .card.show-answer .inner-card  {
+  transform: rotateY(180deg);
+}
+
+/* Style the back face of card */
+.inner-card-back {
+  background-color: dodgerblue;
+  color: white;
   transform: rotateY(180deg);
 }
