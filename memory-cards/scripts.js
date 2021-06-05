@@ -63,7 +63,10 @@ function createCard(data, index) {
             </div>
         </div>
     `;
-    
+
+    // add event listener to toggle show-answer
+    card.addEventListener('click', () => card.classList.toggle('show-answer'));
+
     // Add to DOM cards
     cardsEl.push(card);
 
