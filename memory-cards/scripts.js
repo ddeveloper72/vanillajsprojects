@@ -17,3 +17,20 @@ let currentActiveCard = 0;
 
 // Store the DOM cards > an array of the elements
 const cardsEl = [];
+
+// Store card data WIP - hardcoded
+const cardsData = [
+
+    {
+        question: 'What must a variable begin with?',
+        answer: 'a letter, $ or _'
+    },
+    {
+        question: 'What is a variable?',
+        answer: 'Container for a piece of data'
+    },
+    {
+        question: 'Example of case Sensitive Variable',
+        answer: 'thisIsAVariable'
+    }
+];
