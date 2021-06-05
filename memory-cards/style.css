@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Lato', sans-serif;
-  background-color: #778C8C;
+  background-color: #778c8c;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,7 +124,7 @@ h1 button {
 }
 
 /* Do an horizontal flip when show-answer is added by JS */
-.card:hover .inner-card {
+.card.show-answer .inner-card {
   transform: rotateY(180deg);
 }
 
@@ -136,7 +136,7 @@ h1 button {
 
 /* Style the back face of card */
 .inner-card-back {
-  background-image: linear-gradient(to right bottom, #4B5947, #33402A);
+  background-image: linear-gradient(to right bottom, #4b5947, #33402a);
   color: white;
   transform: rotateY(180deg);
 }
@@ -174,13 +174,13 @@ h1 button {
 .add-container {
   opacity: 0;
   z-index: -1;
-  background-color: #B2DFDB;
+  background-color: #b2dfdb;
   border-top: 2px solid #eee;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 10px 0;;
+  padding: 10px 0;
   position: absolute;
   top: 0;
   bottom: 0;
