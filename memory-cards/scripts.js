@@ -72,6 +72,13 @@ function createCard(data, index) {
 
     // Update the cards container with the new elements
     cardsContainer.appendChild(card);
+
+    updateCurrentText();
+}
+
+// Show number of cards
+function updateCurrentText() {
+    currentEl.innerText = `${currentActiveCard + 1} of ${cardsEl.length}`
 }
 
 crateCards();
