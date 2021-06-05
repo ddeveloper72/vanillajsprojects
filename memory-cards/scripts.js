@@ -14,3 +14,6 @@ const addCardBtn = document.getElementById('add-card');
 
 // Track Current card.  Add a starting card
 let currentActiveCard = 0;
+
+// Store the DOM cards > an array of the elements
+const cardsEl = [];
