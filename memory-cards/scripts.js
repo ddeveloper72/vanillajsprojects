@@ -46,5 +46,24 @@ function createCard(data, index) {
     const card = document.createElement('div');
     // add card class to El
     card.classList.add('card');
+
+    // add active class to card with first index
+    if (index === 0) {
+        card.classList.add('active');
+    }
+
+    // Add inner card markup
+    card.innerHTML = `
+        <div class="inner-card">
+            <div class="inner-card-front">
+                <p>${data.question}</p>
+            </div>
+            <div class="inner-card-back">
+                <p>${data.answer}</p>
+            </div>
+        </div>
+    `;
     
+
+
 }
