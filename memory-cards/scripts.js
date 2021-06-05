@@ -39,3 +39,12 @@ const cardsData = [
 function crateCards() {
     cardsData.forEach((data, index) => createCard(data, index));
 }
+
+// create a single card in the DOM
+function createCard(data, index) {
+    // create card element div
+    const card = document.createElement('div');
+    // add card class to El
+    card.classList.add('card');
+    
+}
