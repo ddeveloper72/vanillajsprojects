@@ -69,5 +69,6 @@ function createCard(data, index) {
 
     // Update the cards container with the new elements
     cardsContainer.appendChild(card);
-
 }
+
+crateCards();
