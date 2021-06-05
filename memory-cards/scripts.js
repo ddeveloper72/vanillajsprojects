@@ -64,6 +64,8 @@ function createCard(data, index) {
         </div>
     `;
     
+    // Add to DOM cards
+    cardsEl.push(card);
 
 
 }
