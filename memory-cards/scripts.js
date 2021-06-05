@@ -67,5 +67,7 @@ function createCard(data, index) {
     // Add to DOM cards
     cardsEl.push(card);
 
+    // Update the cards container with the new elements
+    cardsContainer.appendChild(card);
 
 }
