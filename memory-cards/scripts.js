@@ -82,3 +82,9 @@ function updateCurrentText() {
 }
 
 crateCards();
+
+// Event listeners
+nextBtn.addEventListener('click', () => {
+    // override the current class name with a new one
+    cardsEl[currentActiveCard].className = 'card left'
+})
