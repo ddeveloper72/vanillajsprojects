@@ -101,3 +101,22 @@ nextBtn.addEventListener('click', () => {
 
     updateCurrentText();
 })
+
+
+prevBtn.addEventListener('click', () => {
+    // override the current class name with a new one
+    cardsEl[currentActiveCard].className = 'card right';
+
+    // change current active card to the next index value
+    currentActiveCard = currentActiveCard - 1;
+
+    if(currentActiveCard < 0) {
+        // return the card number and calculated from the index
+        currentActiveCard = 0;
+    }
+
+    // set the next selected card to the active class
+    cardsEl[currentActiveCard].className = 'card active';
+
+    updateCurrentText();
+})
