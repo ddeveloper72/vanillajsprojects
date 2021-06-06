@@ -90,4 +90,11 @@ nextBtn.addEventListener('click', () => {
 
     // change current active card to the next index value
     currentActiveCard = currentActiveCard + 1;
+
+    if(currentActiveCard > cardsEl.length -1) {
+        // return the card number and calculated from the index
+        currentActiveCard = cardsEl.length -1;
+    }
+
+    cardsEl[currentActiveCard].className = 'card active';
 })
