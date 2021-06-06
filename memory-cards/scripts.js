@@ -86,5 +86,8 @@ crateCards();
 // Event listeners
 nextBtn.addEventListener('click', () => {
     // override the current class name with a new one
-    cardsEl[currentActiveCard].className = 'card left'
+    cardsEl[currentActiveCard].className = 'card left';
+
+    // change current active card to the next index value
+    currentActiveCard = currentActiveCard + 1;
 })
