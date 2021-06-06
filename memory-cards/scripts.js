@@ -96,5 +96,8 @@ nextBtn.addEventListener('click', () => {
         currentActiveCard = cardsEl.length -1;
     }
 
+    // set the next selected card to the active class
     cardsEl[currentActiveCard].className = 'card active';
+
+    updateCurrentText();
 })
