@@ -89,7 +89,9 @@ function updateCurrentText() {
 // Get cards form local storage
 function getCardsData() {
     // local storage only stores strings. use JSON to parse
-const cards = JSON.parse(localStorage.getItem('cards'));
+    const cards = JSON.parse(localStorage.getItem('cards'));
+    // use shortened ternary if else operator
+    return cards === null ? [] : cards;
 }
 
 crateCards();
