@@ -94,7 +94,10 @@ function getCardsData() {
 
 // Add card to local storage
 function setCardsData(cards) {
-    
+    // add card to local storage
+    localStorage.setItem('cards', JSON.stringify(cards));
+    // reload page, so data form local storage is then read
+    window.location.reload();
 }
 
 crateCards();
