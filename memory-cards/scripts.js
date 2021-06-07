@@ -1,3 +1,5 @@
+const { AsyncLocalStorage } = require("async_hooks");
+
 // Dome selector imports
 const clearBtn = document.getElementById('clear');
 const showBtn = document.getElementById('show');
@@ -18,7 +20,8 @@ let currentActiveCard = 0;
 // Store the DOM cards > an array of the elements
 const cardsEl = [];
 
-// Store card data WIP - hardcoded
+// Store card data
+const cardsData = getCardsData();
 
 
 // const cardsData = [
@@ -81,6 +84,12 @@ function createCard(data, index) {
 // Show number of cards
 function updateCurrentText() {
     currentEl.innerText = `${currentActiveCard + 1} of ${cardsEl.length}`
+}
+
+// Get cards form local storage
+function getCardsData() {
+    // local storage only stores strings. use JSON to parse
+const cards = JSON.parse(localStorage.getItem('cards'));
 }
 
 crateCards();
