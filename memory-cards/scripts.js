@@ -140,3 +140,10 @@ showBtn.addEventListener('click', () => addContainer.classList.add('show'));
 
 // Hide add container
 hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
+
+// Add card
+addCardBtn.addEventListener('click', () => {
+    const question = questionEl.value;
+    const answer = answerEl.value;
+    console.log(question, answer);
+});
