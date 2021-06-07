@@ -19,21 +19,23 @@ let currentActiveCard = 0;
 const cardsEl = [];
 
 // Store card data WIP - hardcoded
-const cardsData = [
 
-    {
-        question: 'What must a variable begin with?',
-        answer: 'a letter, $ or _'
-    },
-    {
-        question: 'What is a variable?',
-        answer: 'Container for a piece of data'
-    },
-    {
-        question: 'Example of case Sensitive Variable',
-        answer: 'thisIsAVariable'
-    }
-];
+
+// const cardsData = [
+
+//     {
+//         question: 'What must a variable begin with?',
+//         answer: 'a letter, $ or _'
+//     },
+//     {
+//         question: 'What is a variable?',
+//         answer: 'Container for a piece of data'
+//     },
+//     {
+//         question: 'Example of case Sensitive Variable',
+//         answer: 'thisIsAVariable'
+//     }
+// ];
 
 // Create all cards
 function crateCards() {
