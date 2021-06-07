@@ -92,6 +92,11 @@ function getCardsData() {
     return cards === null ? [] : cards;
 }
 
+// Add card to local storage
+function setCardsData(cards) {
+    
+}
+
 crateCards();
 
 // Event listeners
@@ -155,5 +160,12 @@ addCardBtn.addEventListener('click', () => {
         // clear input after submission
         questionEl.value = '';
         answerEl.value = '';
+
+        // Hide add container
+        addContainer.classList.remove('show');
+
+        // Push new card to the []
+        cardsData.push(newCard);
+        setCardsData(cardsData);
     }
 });
