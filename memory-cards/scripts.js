@@ -1,5 +1,3 @@
-const { AsyncLocalStorage } = require("async_hooks");
-
 // Dome selector imports
 const clearBtn = document.getElementById('clear');
 const showBtn = document.getElementById('show');
@@ -97,6 +95,8 @@ function getCardsData() {
 crateCards();
 
 // Event listeners
+
+// enable next button
 nextBtn.addEventListener('click', () => {
     // override the current class name with a new one
     cardsEl[currentActiveCard].className = 'card left';
@@ -104,9 +104,9 @@ nextBtn.addEventListener('click', () => {
     // change current active card to the next index value
     currentActiveCard = currentActiveCard + 1;
 
-    if(currentActiveCard > cardsEl.length -1) {
+    if (currentActiveCard > cardsEl.length - 1) {
         // return the card number and calculated from the index
-        currentActiveCard = cardsEl.length -1;
+        currentActiveCard = cardsEl.length - 1;
     }
 
     // set the next selected card to the active class
@@ -115,7 +115,7 @@ nextBtn.addEventListener('click', () => {
     updateCurrentText();
 })
 
-
+// enable previous button
 prevBtn.addEventListener('click', () => {
     // override the current class name with a new one
     cardsEl[currentActiveCard].className = 'card right';
@@ -123,7 +123,7 @@ prevBtn.addEventListener('click', () => {
     // change current active card to the next index value
     currentActiveCard = currentActiveCard - 1;
 
-    if(currentActiveCard < 0) {
+    if (currentActiveCard < 0) {
         // return the card number and calculated from the index
         currentActiveCard = 0;
     }
@@ -133,3 +133,6 @@ prevBtn.addEventListener('click', () => {
 
     updateCurrentText();
 })
+
+// Show add container
+showBtn.addEventListener('click', () => addContainer.classList.add('show'));
