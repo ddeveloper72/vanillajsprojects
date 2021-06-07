@@ -145,5 +145,15 @@ hideBtn.addEventListener('click', () => addContainer.classList.remove('show'));
 addCardBtn.addEventListener('click', () => {
     const question = questionEl.value;
     const answer = answerEl.value;
-    console.log(question, answer);
+    
+    // check if data has been added
+    if(question.trim() && answer.trim()) {
+        const newCard = {question, answer};
+
+        createCard(newCard);
+
+        // clear input after submission
+        questionEl.value = '';
+        answerEl.value = '';
+    }
 });
