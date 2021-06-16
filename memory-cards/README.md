@@ -1,10 +1,14 @@
-# Memory Cards
+# [Memory Cards](https://memory-cards-6388a.firebaseapp.com/)
 
 Improve your memory using Flash Cards.  One side of the card has the question, the other the answer.
 
-## 🚧 The Specifications 🚧
+## The Specifications
 
-* The project specifications will be added here 👇
+* Create a front end card flip UI using CSS.
+* Display a question on the front of a card the answer on the back.
+* Let the user add their own questions and answers by adding a new card.
+* The user is also able to remove all the cards.
+* The questions and answers are stored s a JSON string in local storage.
 
 ## Deployment
 
