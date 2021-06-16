@@ -88,3 +88,8 @@ form button {
     color: #fff;
     padding: 4px 10px;
 }
+
+ul.songs {
+    list-style: none;
+    padding: 0;
+}
