@@ -15,3 +15,8 @@ button {
 button:active {
     transform: scale(0.95);
 }
+
+
+input:focus,button:focus {
+    outline: none;
+}
