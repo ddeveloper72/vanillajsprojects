@@ -106,3 +106,7 @@ ul.songs li {
     width: 500px;
     max-width: 100%;
 }
+
+.container h2 {
+    font-weight: 300px;
+}
