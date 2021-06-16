@@ -110,3 +110,7 @@ ul.songs li {
 .container h2 {
     font-weight: 300px;
 }
+
+.container p {
+    text-align: center;
+}
