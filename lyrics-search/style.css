@@ -66,3 +66,15 @@ form input {
     padding: 15px 30px;
     width: 100%;
 }
+
+form button {
+    background-color: #8e48eb;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    border: 0;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 16px;
+    padding: 13px 30px;
+}
