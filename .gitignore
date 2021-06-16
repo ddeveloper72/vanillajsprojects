@@ -29,3 +29,5 @@ typing-game/.firebaserc
 typing-game/firebase.json
 speech-text-reader/.firebaserc
 speech-text-reader/firebase.json
+memory-cards/.firebaserc
+memory-cards/firebase.json
