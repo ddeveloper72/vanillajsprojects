@@ -78,3 +78,13 @@ form button {
     font-size: 16px;
     padding: 13px 30px;
 }
+
+/* class used for JS */
+
+.btn {
+    background-color: #8e48eb;
+    border: 0;
+    border-radius: 5px;
+    color: #fff;
+    padding: 4px 10px;
+}
