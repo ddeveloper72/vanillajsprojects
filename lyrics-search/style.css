@@ -114,3 +114,9 @@ ul.songs li {
 .container p {
     text-align: center;
 }
+
+.centered {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
