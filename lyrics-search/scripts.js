@@ -14,5 +14,10 @@ form.addEventListener('submit', e => {
 
     const searchTerm = search.value.trim();
 
-    console.log(searchTerm);
+    // add validation for a search term
+    if (!searchTerm) {
+        alert('please type in a search term');
+    } else {
+        searchSongs(searchTerm);
+    }
 });
