@@ -6,14 +6,23 @@ const more = document.getElementById('more');
 
 
 // Import API from https://musicbrainz.org/
+const apiURL = 'https://musicbrainz.org/ws/2';
+
 // reference https://musicbrainz.org/doc/MusicBrainz_API/Search for search type annotations with
 // related fields
 async function searchSongs(term) {
-    const res = await fetch(`https://musicbrainz.org/ws/2/recording/?query=${term}&fmt=json`);
+    const res = await fetch(`${apiURL}/recording/?query=${term}&fmt=json`);
     const data = await res.json();
 
-    console.log(data);
+    showsData(data);
 }
+
+// Show song and artist in DOM
+function showsData(data) {
+
+}
+
+
 
 
 // Event listeners
