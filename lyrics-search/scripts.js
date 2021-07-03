@@ -11,15 +11,30 @@ const apiURL = 'https://musicbrainz.org/ws/2';
 // reference https://musicbrainz.org/doc/MusicBrainz_API/Search for search type annotations with
 // related fields
 async function searchSongs(term) {
-    const res = await fetch(`${apiURL}/recording/?query=${term}&fmt=json`);
+    const res = await fetch(`${apiURL}/recording/?query=${term}&limit=10&fmt=json`);
     const data = await res.json();
 
-    showsData(data);
+    // console.log(data);
+    showData(data);
 }
 
 // Show song and artist in DOM
-function showsData(data) {
-
+function showData(data) {
+    // used debug tools to determine the end-point expressions
+    result.innerHTML = `
+        <ul class="songs">
+        ${data.recordings
+            .map(
+                song =>
+                    `<li>
+                    <span><strong>${song["artist-credit"][0].artist.name}</strong> - ${song.title}</span>
+                    <button class="btn" data-artist="${song["artist-credit"][0].artist.name}"
+                        data-songtitle="${song.title}">Get Lyrics</button>
+                </li>`
+            )
+            .join('')}
+        </ul>    
+    `;
 }
 
 
