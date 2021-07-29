@@ -13,6 +13,7 @@ let page = 0;
 let limit = 10;
 
 
+
 // reference https://musicbrainz.org/doc/MusicBrainz_API/Search for search type annotations with
 // related fields
 async function searchSongs(
@@ -20,7 +21,7 @@ async function searchSongs(
 ) {
     const response = await fetch(`${apiURL}/recording/?query=${term}&offset=${page}&limit=${limit}&fmt=json`);
     const data = await response.json();
-    console.log(data);
+
     showData(data);
 }
 
@@ -31,7 +32,7 @@ async function nextPage(
     page++;
     const res = await fetch(`${apiURL}/recording/?query=${term}&offset=${page}&limit=${limit}&fmt=json`);
     const data = await res.json();
-    console.log(data);
+
     showData(data);
 }
 
@@ -56,14 +57,14 @@ function showData(data) {
             .map(
                 song =>
                     `<li>
-                    <span><strong>${song["artist-credit"][0].artist.name}</strong> - ${song.title}</span>
-                    <button class="btn" data-artist="${song["artist-credit"][0].artist.name}"
+                    <span><strong>${song["artist-credit"][0].artist.name}</strong> - ${song.title} - ${song.length}</span>
+                    <button class="btn" data-artist="${song.id}"
                         data-songtitle="${song.title}">Get Lyrics</button>
                 </li>`
             )
             .join('')}
         </ul> 
-        <p>Page ${page +1}</P>   
+        <p>Page ${page + 1}</P>   
     `;
 
     // get number of recordings 
@@ -85,6 +86,52 @@ function showData(data) {
 }
 
 
+// Get lyrics for song
+async function getInformation(artist) {
+    const res = await fetch(`${apiURL}/recording/${artist}?inc=artist-credits+isrcs+releases&fmt=json`);
+    const data = await res.json();
+
+    // Define a default value for an item if it is not defined
+    var noValue = (typeof noValue === 'undefined') ? '🐱‍💻' : noValue;
+
+    // duration of the song in seconds
+    let time = data.length / 1000;
+
+    // Convert time into a user friendly format
+    // hours, minutes and seconds
+    // use ~~ to get determine the whole number without fractional part
+    var hrs = ~~(time / 3600);
+    var mins = ~~((time % 3600) / 60);
+    var secs = ~~(time % 60);  // use modulus operator to get fractional part then apply ~~
+
+    //define output as "1:01" or "2:24:59" or "120:44:59"
+    var ret = "";
+    if (hrs > 0) {
+        ret += hrs + ":" + (mins < 10 ? "0" : "");
+    }
+    ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+    ret += "" + secs;
+
+
+    if (data.error) {
+        result.innerHTML = data.error;
+    } else {
+        result.innerHTML = `
+        <h2><strong>${data.title}, by ${data["artist-credit"][0].name}</strong></h2>
+            <ul>
+            <li>First Released: ${data["first-release-date"] || noValue} in ${data.releases[0].country || noValue}</li>
+            <li>Song Length: ${ret + 's'} </li>
+            <li>Title: ${data.releases[0].title || noValue}</li>
+            <li>From the Album: ${data.releases[0].title || noValue}</li>
+            <li>Group type: ${data["artist-credit"][0].artist.type || noValue}</li>
+            <li>Artist type: ${data["artist-credit"][0].artist.disambiguation || noValue}</li>
+            </ul>
+            
+        `;
+    }
+
+    more.innerHTML = '';
+}
 
 // Event listeners
 form.addEventListener('submit', e => {
@@ -101,15 +148,21 @@ form.addEventListener('submit', e => {
 
     // Add search term to local storage
     localStorage.setItem('searchTerm', JSON.stringify(searchTerm));
-    // console.log('📢 ' + searchTerm);
-    // reload page, so data form local storage is then read
-    // window.location.reload();
 });
 
 function getTerm() {
     const word = JSON.parse(localStorage.getItem('searchTerm'));
-
-    console.log('📢 ' + word);
-
     return word;
 }
+
+// Get lyrics button click
+result.addEventListener('click', e => {
+    const clickedEl = e.target;
+
+    if (clickedEl.tagName === 'BUTTON') {
+        const artist = clickedEl.getAttribute('data-artist');
+        console.log(artist);
+
+        getInformation(artist);
+    }
+});
