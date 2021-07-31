@@ -57,9 +57,9 @@ function showData(data) {
             .map(
                 song =>
                     `<li>
-                    <span><strong>${song["artist-credit"][0].artist.name}</strong> - ${song.title} - ${song.length}</span>
+                    <span><strong>${song["artist-credit"][0].artist.name}</strong> - ${song.title}</span>
                     <button class="btn" data-artist="${song.id}"
-                        data-songtitle="${song.title}">Get Lyrics</button>
+                        data-songtitle="${song.title}">Get Details</button>
                 </li>`
             )
             .join('')}
