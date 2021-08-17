@@ -9,12 +9,15 @@ const more = document.getElementById('more');
 const apiURL = 'https://musicbrainz.org/ws/2';
 
 // Import API from Cover Archive
-const coverURL = 'https://coverartarchive.org/release/';
+const coverURL = 'https://coverartarchive.org';
+// const coverURL = 'https://ia800609.us.archive.org/30/items/mbid-';
+
+const defaultImg = './image/music.jpg';
+
 
 // API offset - page number
 let page = 0;
 let limit = 10;
-var MBID;
 
 // reference https://musicbrainz.org/doc/MusicBrainz_API/Search for search type annotations with
 // related fields
@@ -89,20 +92,52 @@ function showData(data) {
 
 
 // Get lyrics for song
-async function getInformation(artist, imgURL = getCoverURL()) {
-    const res = await fetch(`${apiURL}/recording/${artist}?inc=artist-credits+isrcs+releases&fmt=json`);
-    const data = await res.json();
+function getInformation(artist) {
+    return fetch(`${apiURL}/recording/${artist}?inc=artist-credits+isrcs+releases&fmt=json`)
+        .then(res => res.json())
+        .then(data => {
+            showInformation(data);
+            getCoverUrl(data);
+        })
+}
 
+
+// Get coverArt from https://coverartarchive.org/ based on the MBID from MusicBrainz_API
+async function getCoverUrl(data) {
+    let mbid = data.releases[0].id;
+    console.log(mbid + ' ✔');
+
+
+    return image = await fetch(`${coverURL}/release/${mbid}` + status)
+        .then(res => res.json())
+        .then(data => {
+            getImg(data);
+        })
+
+}
+
+// Get image from API
+async function getImg(data) {
+    const image = await data.images[0].image;
+
+    // Add image from API to local storage
+    localStorage.setItem('image', image);
+}
+
+// Show music data selected
+function showInformation(data) {
     // Define a default value for an item if it is not defined
-    var noValue = (typeof noValue === 'undefined') ? '🐱‍💻' : noValue;
+    var noValue = (typeof noValue === 'undefined') ? 'Unknown' : noValue;
 
-    MBID = data.releases[0].id;
-    console.log('🚧 ' + MBID);
 
-    // imgURL = getCoverURL();
+    // Add mbiD term to local storage
+    // const mbiD = await data.releases[0].id;
+    // console.log(mbiD);
+    // localStorage.setItem('mbiD', JSON.stringify(mbiD));
 
     // duration of the song in seconds
     let time = data.length / 1000;
+
 
     // Convert time into a user friendly format
     // hours, minutes and seconds
@@ -119,44 +154,38 @@ async function getInformation(artist, imgURL = getCoverURL()) {
     ret += "" + mins + ":" + (secs < 10 ? "0" : "");
     ret += "" + secs;
 
-    if (data.error) {
-        result.innerHTML = data.error;
-    } else {
-        result.innerHTML = `
-        <h2><strong>${data.title}, by ${data["artist-credit"][0].name}</strong></h2>
-            <ul class="detail">
-            <li>First Released: <span>${data["first-release-date"] || noValue} in ${data.releases[0].country || noValue}</span></li>
-            <li>Song Length: <span>${ret + 's'}</span></li>
-            <li>Title: <span>${data.releases[0].title || noValue}</span></li>
-            <li>From the Album: <span>${data.releases[0].title || noValue}</span></li>
-            <li>Group type: <span>${data["artist-credit"][0].artist.type || noValue}</span></li>
-            <li>Artist type: <span>${data["artist-credit"][0].artist.disambiguation || noValue}</span<</li>
-            <li>MBID: <span>${imgURL.imgURL || noValue}</span<</li>
-            </ul> 
+    // Delay innerHTML rendering to permit getImg to complete
+    setTimeout(showImage, 3000);
 
-            `;
-            // <img src="${getCoverURL().imageURL || 'https://ia800609.us.archive.org/30/items/mbid-b8899b17-b05a-47d7-ab93-e786590f11a8/mbid-b8899b17-b05a-47d7-ab93-e786590f11a8-2555760127.jpg'}" alt="${data.title}">
+    function showImage() {
+        const image = localStorage.getItem('image');
+
+        if (data.error) {
+
+            result.innerHTML = data.error;
+        } else {
+
+            result.innerHTML = `
+                    <h2><strong>${data.title}, by ${data["artist-credit"][0].name || noValue}</strong></h2>
+                        <ul class="detail">
+                        <li>First Released: <span>${data["first-release-date"] || noValue} in ${data.releases[0].country || noValue}</span></li>
+                        <li>Song Length: <span>${ret + 's'}</span></li>
+                        <li>Title: <span>${data.releases[0].title || noValue}</span></li>
+                        <li>From the Album: <span>${data.releases[0].title || noValue}</span></li>
+                        <li>Group type: <span>${data["artist-credit"][0].artist.type || noValue}</span></li>
+                        <li>Artist type: <span>${data["artist-credit"][0].artist.disambiguation || noValue}</span<</li>
+                        </ul> 
+        
+                        <img src="${image}" loading="lazy" alt="${data.title}">
+                        
+                        `;
+        }
+
     }
 
     more.innerHTML = '';
 }
 
-// Get coverArt from https://coverartarchive.org/ based on the MBID from MusicBrainz_API
-async function getCoverURL() {
-    const res = await fetch(`${coverURL}${MBID}`);
-    const data = await res.json();
-    
-    if (data === undefined) {
-        result.innerHTML = data.error;
-        alert(data.error);
-    } else { 
-        media.innerHTML = `
-        <img src="${data.images[0].image}" alt="${data.title}">
-        `;
-    }
-    more.innerHTML = '';
-    getInformation(data);
-}
 
 
 // Event listeners
@@ -174,12 +203,18 @@ form.addEventListener('submit', e => {
 
     // Add search term to local storage
     localStorage.setItem('searchTerm', JSON.stringify(searchTerm));
+    localStorage.setItem('image', defaultImg);
 });
 
+
+
+// Get search etm from local storage
 function getTerm() {
     const word = JSON.parse(localStorage.getItem('searchTerm'));
     return word;
 }
+
+
 
 // Get lyrics button click
 result.addEventListener('click', e => {
