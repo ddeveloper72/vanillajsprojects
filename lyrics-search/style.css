@@ -82,7 +82,7 @@ form button {
 /* class used for JS */
 
 .btn {
-  background-color: #8e48eb;
+  /* background-color: #8e48eb; */
   border: 0;
   border-radius: 5px;
   color: #fff;
@@ -102,7 +102,10 @@ ul.detail li {
   margin: 10px 0;
 }
 
-ul.detail li span {
+
+ul.detail li span,
+ul.list li span
+{
   color: #489090;
 }
 
