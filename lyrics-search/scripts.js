@@ -58,19 +58,19 @@ async function prevPage(
 function showData(data) {
     // used debug tools to determine the end-point expressions
     result.innerHTML = `
-        <ul class="songs">
+        <ul class="songs detail">
         ${data.recordings
             .map(
                 song =>
                     `<li>
-                    <span><strong>${song["artist-credit"][0].artist.name}</strong> - ${song.title}</span>
-                    <button class="btn" data-artist="${song.id}"
-                        data-songtitle="${song.title}">Get Details</button>
+                    <strong>${song["artist-credit"][0].artist.name}</strong> - <span>${song.title}</span>
+                    <button type="button" class="btn btn-dark" data-artist="${song.id}"
+                        data-songtitle="${song.title}">Get info</button>
                 </li>`
             )
             .join('')}
         </ul> 
-        <p>Page ${page + 1}</P>   
+        <p><strong>Page ${page + 1}</strong></P>   
     `;
 
     // get number of recordings 
@@ -83,8 +83,8 @@ function showData(data) {
     // if on the last page, remove the nextPage button
     if (page <= count) {
         more.innerHTML = `
-        ${page !== 0 ? `<button class="btn" onclick="prevPage()">Prev</button>` : ''}
-        ${page !== count ? `<button class="btn" onclick="nextPage()">Next</button>` : ''}
+        ${page !== 0 ? `<button type="button" class="btn btn-primary" onclick="prevPage()">Prev</button>` : ''}
+        ${page !== count ? `<button type="button" class="btn btn-primary" onclick="nextPage()">Next</button>` : ''}
             `;
     } else {
         more.innerHTML = '';
