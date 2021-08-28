@@ -2,6 +2,7 @@
 const form = document.getElementById('form');
 const search = document.getElementById('search');
 const result = document.getElementById('result');
+const error = document.getElementById('error');
 const more = document.getElementById('more');
 
 
@@ -106,22 +107,45 @@ function getInformation(artist) {
 async function getCoverUrl(data) {
     let mbid = data.releases[0].id;
     console.log(mbid + ' ✔');
+    result.innerHTML = "";
 
-
-    return image = await fetch(`${coverURL}/release/${mbid}` + status)
-        .then(res => res.json())
+    if (await fetch(`${coverURL}/release/${mbid}` + status)
+        .then(res => {
+            if (res.status === 200) {
+                return res.json();
+            } else {
+                response = res.status;
+                getImg(response);
+            }
+        })
         .then(data => {
             getImg(data);
         })
+    );
+
+
 
 }
 
 // Get image from API
-async function getImg(data) {
-    const image = await data.images[0].image;
+async function getImg(data, response) {
+    image = "";
+    result.innerHTML = "";
 
-    // Add image from API to local storage
-    localStorage.setItem('image', image);
+    try {
+        image = data.images[0].image;
+
+        // Add image from API to local storage
+        localStorage.setItem('image', image);
+
+
+    } catch (err) {
+        result.innerHTML = `<div class="alert alert-warning alert-dismissible" role="alert">
+        <p>No Album art found.  Error is ` + response + `.</p>
+        </div>
+        `;
+    }
+
 }
 
 // Show music data selected
@@ -163,6 +187,22 @@ function showInformation(data) {
         if (data.error) {
 
             result.innerHTML = data.error;
+        } else if (image !== defaultImg) {
+
+            result.innerHTML = `
+                    <h2><strong>${data.title}, by ${data["artist-credit"][0].name || noValue}</strong></h2>
+                        <ul class="detail">
+                        <li>First Released: <span>${data["first-release-date"] || noValue} in ${data.releases[0].country || noValue}</span></li>
+                        <li>Song Length: <span>${ret + 's'}</span></li>
+                        <li>Title: <span>${data.releases[0].title || noValue}</span></li>
+                        <li>From the Album: <span>${data.releases[0].title || noValue}</span></li>
+                        <li>Group type: <span>${data["artist-credit"][0].artist.type || noValue}</span></li>
+                        <li>Artist type: <span>${data["artist-credit"][0].artist.disambiguation || noValue}</span<</li>
+                        </ul>
+                        <img src="${image}" loading="lazy" alt="${data.title}">
+                        <p>Image source courtesy of <a href="https://coverartarchive.org/" target="_blank">Cover Art Archive</a></p>
+                        `;
+
         } else {
 
             result.innerHTML = `
@@ -174,10 +214,8 @@ function showInformation(data) {
                         <li>From the Album: <span>${data.releases[0].title || noValue}</span></li>
                         <li>Group type: <span>${data["artist-credit"][0].artist.type || noValue}</span></li>
                         <li>Artist type: <span>${data["artist-credit"][0].artist.disambiguation || noValue}</span<</li>
-                        </ul> 
-        
-                        <img src="${image}" loading="lazy" alt="${data.title}">
-                        
+                        </ul>
+                        <img src="${image}" loading="lazy" alt="${data.title}">                       
                         `;
         }
 
