@@ -7,10 +7,12 @@ the original app leverages the [lyrics.ovh](https://lyricsovh.docs.apiary.io/) A
 * Built a UI with a song search
 * Fetch song/artist from Music Brainz and added to the DOM
 * Added used defined URL syntax to fetch specific areas of the search array so as to create pagination in the UI.
-* Provide paged numbers for each set of of 10 songs found from each API fetch.
+* Provide page numbers for each set of of 10 songs found from each API fetch.
 * Fetch the album art from Cover Art Archive, once the user selected the septic song that they want to see the detail on.
 * Render the song detail from Music Brainz and the album art from Cover Art Archive.
 * Render a default cover art image, where album art may not exist yet for the song detail selected.
+* Included a text banner to indicate a condition where no album art is available.
+* Used bootstrap to CDN to simplify the text banner and button styling.
 
 ## Deployment
 
