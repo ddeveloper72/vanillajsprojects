@@ -31,3 +31,5 @@ speech-text-reader/.firebaserc
 speech-text-reader/firebase.json
 memory-cards/.firebaserc
 memory-cards/firebase.json
+lyrics-search/firebase.json
+lyrics-search/.firebaserc
