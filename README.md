@@ -18,6 +18,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Typing Game](https://speed-typing-8160a.firebaseapp.com/)
 * [Speech to text Reader](https://text-to-speech-6f7cf.firebaseapp.com/)
 * [Memory Cards](https://memory-cards-6388a.firebaseapp.com/)
+* [Lyrics Search but modified](https://song-search-562d6.firebaseapp.com/)
 
 ## Deployment
 

@@ -1,4 +1,4 @@
-# Lyrics Search but modified
+# [Lyrics Search but modified](https://song-search-562d6.firebaseapp.com/)
 
 the original app leverages the [lyrics.ovh](https://lyricsovh.docs.apiary.io/) API.  This API was unavailable at the time of doing this project so another API was chosen.  To try and stick as closely as possible to the original project theme, [Music Brainz](https://musicbrainz.org/doc/MusicBrainz_API/Search) was chosen.  Then during the process of building the application, another API, [Cover Art Archive](https://coverartarchive.org) was included as well, to stand in for the lyrics that were rendered to the UI in the original tutorial.
 
