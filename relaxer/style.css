@@ -1,1 +1,17 @@
-ECHO is on.
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #224941 url('./image/bg.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;
+  
+}
