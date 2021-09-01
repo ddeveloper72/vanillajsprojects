@@ -25,3 +25,6 @@ function breatheAnimation() {
 
     }, breatheTime);
 }
+
+// repeat the animation
+setInterval(breatheAnimation, totalTime);
