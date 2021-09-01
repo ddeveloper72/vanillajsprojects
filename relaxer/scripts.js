@@ -15,12 +15,18 @@ breatheAnimation();
 function breatheAnimation() {
     text.innerText = 'Breathe In!';
 
+    // add class cor css grow keyframe
+    container.className = 'container grow';
+
     setTimeout(() => {
 
         text.innerText = '..Hold..';
 
         setTimeout(() => {
             text.innerText = '...Breathe Out';
+
+            // add class for css shrink keyframe
+            container.className = 'container shrink';
         }, holdTime);
 
     }, breatheTime);
