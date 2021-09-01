@@ -33,3 +33,5 @@ memory-cards/.firebaserc
 memory-cards/firebase.json
 lyrics-search/firebase.json
 lyrics-search/.firebaserc
+relaxer/firebase.json
+relaxer/.firebaserc
