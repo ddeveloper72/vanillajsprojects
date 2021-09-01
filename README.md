@@ -19,6 +19,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Speech to text Reader](https://text-to-speech-6f7cf.firebaseapp.com/)
 * [Memory Cards](https://memory-cards-6388a.firebaseapp.com/)
 * [Lyrics Search but modified](https://song-search-562d6.firebaseapp.com/)
+* [Relaxation Exercise](https://relaxer-4ad57.firebaseapp.com/)
 
 ## Deployment
 
