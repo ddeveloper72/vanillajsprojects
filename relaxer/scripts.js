@@ -8,4 +8,20 @@ const totalTime = 7500;
 const breatheTime = (totalTime / 5) * 2;
 const holdTime = totalTime / 5;
 
-console.log(breatheTime, holdTime);
+
+// Call the function
+breatheAnimation();
+
+function breatheAnimation() {
+    console.log('Breathe In!');
+
+    setTimeout(() => {
+
+        console.log('Hold');
+
+        setTimeout(() => {
+            console.log('Breathe Out...');
+        }, holdTime);
+
+    }, breatheTime);
+}
