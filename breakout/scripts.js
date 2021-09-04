@@ -5,6 +5,8 @@ const canvas = document.getElementById('canvas');
 
 const ctx = canvas.getContext('2d');
 
+let score = 0;
+
 // Create ball properties (object)
 // dx horizontal dy vertical direction
 const ball = {
@@ -19,7 +21,7 @@ const ball = {
 // Create paddle properties (object)
 
 const paddle = {
-    x: canvas.width / 2 -40,
+    x: canvas.width / 2 - 40,
     y: canvas.height - 20,
     w: 80,
     h: 10,
@@ -54,13 +56,24 @@ function drawPaddle() {
 function draw() {
     drawBall();
     drawPaddle();
+    drawScore();
 }
+
+// Draw Score
+function drawScore() {
+    // Reference https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_text#styling_text
+    ctx.font = '20px Arial';
+
+    // Drawings text: fillText(text, x, y [, maxWidth])
+    ctx.strokeText(`Score: ${score}`, canvas.width - 100, 30)
+}
+
 
 draw();
 
 // Rules and close Event listeners
-rulesBtn.addEventListener('click', () => 
-rules.classList.add('show'));
+rulesBtn.addEventListener('click', () =>
+    rules.classList.add('show'));
 
-closeBtn.addEventListener('click', () => 
-rules.classList.remove('show'));
+closeBtn.addEventListener('click', () =>
+    rules.classList.remove('show'));
