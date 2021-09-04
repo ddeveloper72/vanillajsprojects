@@ -134,6 +134,16 @@ function update() {
 
 update();
 
+// Keydown event
+function keyDown(e) {
+    console.log(e.key);
+}
+
+// keyup keyUp
+function keyUp(e) {
+    console.log(2);
+}
+
 // Keyboard event handler
 document.addEventListener('keydown', keyDown);
 document.addEventListener('keyup', keyUp);
