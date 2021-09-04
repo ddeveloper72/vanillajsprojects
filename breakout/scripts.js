@@ -98,7 +98,7 @@ function movePaddle() {
 
     // Wall detection
     if (paddle.x + paddle.w > canvas.width) {
-        paddle.x = canvas.width = paddle.w;
+        paddle.x = canvas.width - paddle.w;
     }
 
     if (paddle.x < 0) {
