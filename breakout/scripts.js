@@ -85,7 +85,7 @@ function drawBricks() {
         column.forEach(brick => {
             ctx.beginPath();
             ctx.fillRect(brick.x, brick.y, brick.w, brick.h);
-            ctx.fillStyle = brick.visible ? '#059dd' : 'transparent';
+            ctx.fillStyle = brick.visible ? '#0095dd' : 'transparent';
             ctx.fill();
             ctx.closePath;
         })
@@ -112,36 +112,36 @@ function moveBall() {
     ball.y += ball.dy;
 
     // Wall detection (x axis right/left)
-    if(ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+    if (ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
         ball.dx *= -1;  // ball.dx = ball.dx * -1; reverses ball direction
     }
 
     // Wall detection (y axis top/bottom)
-    if(ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
+    if (ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
         ball.dy *= -1;
     }
 
     // Paddle detection
-    if(ball.x - ball.size > paddle.x && 
-        ball.x + ball.size < paddle.x + paddle.w && 
+    if (ball.x - ball.size > paddle.x &&
+        ball.x + ball.size < paddle.x + paddle.w &&
         ball.y + ball.size > paddle.y
-        ) {
+    ) {
         ball.dy *= -1;
     }
 
     // Brick collision
     bricks.forEach(column => {
         column.forEach(brick => {
-          if(brick.visible) {
-            if(ball.x -ball.size > brick.x && // left brick side check
-                ball.x + ball.size < brick.x + brick.w && // right brick side check
-                ball.y + ball.size > brick.y && // top brick side check
-                ball.y - ball.size < brick.y + brick.h // bottom brick side check
+            if (brick.visible) {
+                if (ball.x - ball.size > brick.x && // left brick side check
+                    ball.x + ball.size < brick.x + brick.w && // right brick side check
+                    ball.y + ball.size > brick.y && // top brick side check
+                    ball.y - ball.size < brick.y + brick.h // bottom brick side check
                 ) {
-                ball.dy *= -1;
-                brick.visible = false;
+                    ball.dy *= -1;
+                    brick.visible = false;
                 }
-          }  
+            }
         })
     })
 }
