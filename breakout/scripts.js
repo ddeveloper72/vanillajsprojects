@@ -47,12 +47,12 @@ const brickInfo = {
 
 // Create bricks
 const bricks = [];
-for(let i = 0; i > brickRowCount; i++) {
+for (let i = 0; i < brickRowCount; i++) {
     bricks[i] = [];
     for (let j = 0; j < brickColumnCount; j++) {
         const x = i * (brickInfo.w + brickInfo.padding) + brickInfo.offsetX;
         const y = j * (brickInfo.h + brickInfo.padding) + brickInfo.offsetY;
-        bricks[i][j] = {x, y, ...brickInfo}
+        bricks[i][j] = { x, y, ...brickInfo };
     }
 }
 
@@ -79,12 +79,25 @@ function drawPaddle() {
     ctx.closePath();
 }
 
+// Draw bricks on canvas
+function drawBricks() {
+    bricks.forEach(column => {
+        column.forEach(brick => {
+            ctx.beginPath();
+            ctx.fillRect(brick.x, brick.y, brick.w, brick.h);
+            ctx.fillStyle = brick.visible ? '#059dd' : 'transparent';
+            ctx.fill();
+            ctx.closePath;
+        })
+    })
+}
 
 // Draw everything
 function draw() {
     drawBall();
     drawPaddle();
     drawScore();
+    drawBricks();
 }
 
 // Draw Score
