@@ -3,7 +3,9 @@
 
 ## Game design:
 
-Reference materials from [Mozilla](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+Reference materials from
+* [Mozilla Canvas](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)
+* [Mozilla Request Animation Frame](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame)
 
 1. Create the canvas context
 2. Create and draw the ball
