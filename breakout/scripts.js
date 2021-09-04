@@ -64,7 +64,7 @@ function drawBall() {
 
     // Drawing an arc: arc(x, y, radius, startAngle, endAngle, counterclockwise)
     ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
-    ctx.fillStyle = '#0095dd';
+    ctx.fillStyle = '#f00';
     ctx.fill();
     ctx.closePath();
 }
