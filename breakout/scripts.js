@@ -40,7 +40,18 @@ function drawBall() {
     ctx.closePath();
 }
 
+// Draw paddle on canvas
+function drawPaddle() {
+    ctx.beginPath();
+    // Drawings filled rectangle: fillRect(x, y, width, height)
+    ctx.fillRect(paddle.x, paddle.y, paddle.w, paddle.h);
+    ctx.fillStyle = '#0095dd';
+    ctx.fill();
+    ctx.closePath();
+}
+
 drawBall();
+drawPaddle();
 
 // Rules and close Event listeners
 rulesBtn.addEventListener('click', () => 
