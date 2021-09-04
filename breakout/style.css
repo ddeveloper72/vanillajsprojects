@@ -54,7 +54,8 @@ canvas {
     background: #333;
     color: #fff;
     min-height: 100vh;
-    min-width: 400px;
+    width: 400px;
     padding: 20px;
     line-height: 1.5;
+    transform: translateX(-400px);
 }
