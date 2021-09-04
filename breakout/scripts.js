@@ -16,7 +16,20 @@ const ball = {
     dy: -4
 }
 
+// Draw ball on canvas
+function drawBall() {
 
+    // Beginning a drawings:  https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
+    ctx.beginPath();
+
+    // Drawing an arc: arc(x, y, radius, startAngle, endAngle, counterclockwise)
+    ctx.arc(ball.x, ball.y, ball.size, 0, Math.PI * 2);
+    ctx.fillStyle = '#0095dd';
+    ctx.fill();
+    ctx.closePath();
+}
+
+drawBall();
 
 // Rules and close Event listeners
 rulesBtn.addEventListener('click', () => 
