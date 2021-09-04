@@ -136,7 +136,11 @@ update();
 
 // Keydown event
 function keyDown(e) {
-    console.log(e.key);
+    if(e.key === 'ArrowRight' || e.key === 'Right') {
+        paddle.dx = paddle.speed;
+    } else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+        paddle.dx = -paddle.speed;
+    }
 }
 
 // keyup keyUp
