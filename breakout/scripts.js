@@ -84,7 +84,9 @@ function drawBricks() {
     bricks.forEach(column => {
         column.forEach(brick => {
             ctx.beginPath();
-            ctx.fillRect(brick.x, brick.y, brick.w, brick.h);
+            // Reference: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/rect
+            // Do not use fillRect which will not let this function work correctly
+            ctx.rect(brick.x, brick.y, brick.w, brick.h);
             ctx.fillStyle = brick.visible ? '#0095dd' : 'transparent';
             ctx.fill();
             ctx.closePath;
