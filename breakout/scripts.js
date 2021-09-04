@@ -6,7 +6,7 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 
 // Create ball properties (object)
-
+// dx horizontal dy vertical direction
 const ball = {
     x: canvas.width / 2,
     y: canvas.height / 2,
@@ -14,6 +14,17 @@ const ball = {
     speed: 4,
     dx: 4,
     dy: -4
+}
+
+// Create paddle properties (object)
+
+const paddle = {
+    x: canvas.width / 2 -40,
+    y: canvas.height - 20,
+    w: 80,
+    h: 10,
+    speed: 8,
+    dx: 0
 }
 
 // Draw ball on canvas
