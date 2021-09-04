@@ -7,6 +7,10 @@ const ctx = canvas.getContext('2d');
 
 let score = 0;
 
+// Brick variables
+const brickRowCount = 9;
+const brickColumnCount = 5;
+
 // Create ball properties (object)
 // dx horizontal dy vertical direction
 const ball = {
@@ -28,6 +32,19 @@ const paddle = {
     speed: 8,
     dx: 0
 }
+
+// Draw brick properties
+// specify the default params for 1 brick which will be altered by looping through
+// the params so many bricks can be crated at different location and visibility
+const brickInfo = {
+    w: 70,
+    h: 20,
+    padding: 10,
+    offsetX: 45,
+    offsetY: 60,
+    visible: true
+}
+
 
 // Draw ball on canvas
 function drawBall() {
@@ -51,6 +68,7 @@ function drawPaddle() {
     ctx.fill();
     ctx.closePath();
 }
+
 
 // Draw everything
 function draw() {
