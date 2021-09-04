@@ -142,10 +142,21 @@ function moveBall() {
                 ) {
                     ball.dy *= -1;
                     brick.visible = false;
+
+                    increaseScore();
                 }
             }
         })
     })
+}
+
+// Increase Score
+function increaseScore() {
+    score++;
+
+    if (score % (brickColumnCount * brickRowCount) === 0) {
+        showAllBricks();
+    }
 }
 
 // Draw everything
