@@ -139,6 +139,7 @@ function moveBall() {
                 ball.y - ball.size < brick.y + brick.h // bottom brick side check
                 ) {
                 ball.dy *= -1;
+                brick.visible = false;
                 }
           }  
         })
