@@ -109,8 +109,16 @@ function drawScore() {
     ctx.strokeText(`Score: ${score}`, canvas.width - 100, 30)
 }
 
+// Update canvas drawing and animation
+function update() {
+    movePaddle();
+    // Draw everything
+    draw();
 
-draw();
+    requestAnimationFrame(update);
+}
+
+update();
 
 // Rules and close Event listeners
 rulesBtn.addEventListener('click', () =>
