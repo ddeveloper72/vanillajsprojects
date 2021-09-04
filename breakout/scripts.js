@@ -134,6 +134,10 @@ function update() {
 
 update();
 
+// Keyboard event handler
+document.addEventListener('keydown', keyDown);
+document.addEventListener('keyup', keyUp);
+
 // Rules and close Event listeners
 rulesBtn.addEventListener('click', () =>
     rules.classList.add('show'));
