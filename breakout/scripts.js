@@ -159,6 +159,15 @@ function increaseScore() {
     }
 }
 
+// Repaint all bricks to canvas
+function showAllBricks() {
+    bricks.forEach(column => {
+        column.forEach(brick => (
+            brick.visible = true
+        ))
+    })
+}
+
 // Draw everything
 function draw() {
     // clear canvas
