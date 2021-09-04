@@ -73,7 +73,7 @@ function drawBall() {
 function drawPaddle() {
     ctx.beginPath();
     // Drawings filled rectangle: fillRect(x, y, width, height)
-    ctx.fillRect(paddle.x, paddle.y, paddle.w, paddle.h);
+    ctx.rect(paddle.x, paddle.y, paddle.w, paddle.h);
     ctx.fillStyle = '#0095dd';
     ctx.fill();
     ctx.closePath();
