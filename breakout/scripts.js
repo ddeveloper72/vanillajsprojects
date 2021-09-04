@@ -110,6 +110,16 @@ function movePaddle() {
 function moveBall() {
     ball.x += ball.dx;
     ball.y += ball.dy;
+
+    // Wall detection (x axis right/left)
+    if(ball.x + ball.size > canvas.width || ball.x - ball.size < 0) {
+        ball.dx *= -1;  // ball.dx = ball.dx * -1; reverses ball direction
+    }
+
+    // Wall detection (y axis top/bottom)
+    if(ball.y + ball.size > canvas.height || ball.y - ball.size < 0) {
+        ball.dy *= -1;
+    }
 }
 
 // Draw everything
