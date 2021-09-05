@@ -20,6 +20,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Memory Cards](https://memory-cards-6388a.firebaseapp.com/)
 * [Lyrics Search but modified](https://song-search-562d6.firebaseapp.com/)
 * [Relaxation Exercise](https://relaxer-4ad57.firebaseapp.com/)
+* [Breakout!](https://breakout-6d65f.firebaseapp.com/)
 
 ## Deployment
 
