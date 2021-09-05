@@ -35,3 +35,5 @@ lyrics-search/firebase.json
 lyrics-search/.firebaserc
 relaxer/firebase.json
 relaxer/.firebaserc
+breakout/.firebaserc
+breakout/firebase.json
