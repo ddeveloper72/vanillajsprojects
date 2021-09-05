@@ -148,6 +148,12 @@ function moveBall() {
             }
         })
     })
+
+    // If ball hist bottom wall, lose
+    if(ball.y + ball.size > canvas.height) {
+        showAllBricks();
+        score = 0;
+    }
 }
 
 // Increase Score
