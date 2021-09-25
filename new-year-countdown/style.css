@@ -46,3 +46,14 @@ h1 {
     transform: scale(2);
 }
 
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+}
+
+.time h2 {
+    margin: 0 0 5PX;
+}
