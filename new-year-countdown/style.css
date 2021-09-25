@@ -11,7 +11,7 @@ body {
     background-position: center center;
     height: 100vh;
     color: #fff;
-    font-family: 'Lato' sans-serif;
+    font-family: 'Lato', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -56,4 +56,21 @@ h1 {
 
 .time h2 {
     margin: 0 0 5PX;
+}
+
+@media(max-width: 500px) {
+    hr {
+        font-size: 45px;
+    }
+    .time {
+        margin: 5px;
+    }
+    .time h2 {
+        font-size: 12px;
+        margin: 0;
+    }
+    .time small {
+        font-size: 10px;
+    }
+
 }
