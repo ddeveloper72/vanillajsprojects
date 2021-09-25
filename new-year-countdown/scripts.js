@@ -45,6 +45,7 @@ function updateCountdown() {
 // show spinner before countdown
 setTimeout(() => {
     loading.remove();
+    countdown.style.display = 'flex';
 }, 1000);
 
 // update every second
