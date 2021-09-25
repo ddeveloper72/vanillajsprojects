@@ -21,6 +21,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Lyrics Search but modified](https://song-search-562d6.firebaseapp.com/)
 * [Relaxation Exercise](https://relaxer-4ad57.firebaseapp.com/)
 * [Breakout!](https://breakout-6d65f.firebaseapp.com/)
+* [New Year Countdown](https://new-year-countdown-3a8a8.firebaseapp.com/)
 
 ## Deployment
 
