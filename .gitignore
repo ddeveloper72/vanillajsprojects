@@ -37,3 +37,5 @@ relaxer/firebase.json
 relaxer/.firebaserc
 breakout/.firebaserc
 breakout/firebase.json
+new-year-countdown/firebase.json
+new-year-countdown/.firebaserc
