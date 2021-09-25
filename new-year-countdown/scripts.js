@@ -5,6 +5,7 @@ const minute = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
 const countdown = document.getElementById('countdown');
 const year = document.getElementById('year');
+const loading = document.getElementById('loading');
 
 // get current year
 const currentYear = new Date().getFullYear();
@@ -40,6 +41,11 @@ function updateCountdown() {
     minutes.innerHTML = m < 10 ? '0' + m : m;
     seconds.innerHTML = s < 10 ? '0' + s : s;
 }
+
+// show spinner before countdown
+setTimeout(() => {
+    loading.remove();
+}, 1000);
 
 // update every second
 setInterval(updateCountdown, 1000);
