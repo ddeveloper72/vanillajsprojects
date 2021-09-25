@@ -29,6 +29,13 @@ function updateCountdown() {
     // console.log(m + ' minutes');
     const s = Math.floor(diff / 1000) % 60;
     // console.log(s + ' seconds');
+
+    // inject values into DOM
+    days.innerHTML = d;
+    // add leading 0 if value is less than 10
+    hours.innerHTML = h < 10 ? '0'+ h  : h;
+    minutes.innerHTML = m < 10 ? '0' + m : m;
+    seconds.innerHTML = s < 10 ? '0' + s : s;
 }
 
 setInterval(updateCountdown, 1000);
