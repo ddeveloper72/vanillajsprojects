@@ -19,6 +19,16 @@ function updateCountdown() {
 
     // get diff in milliseconds
     console.log(diff);
+
+    // 60 to get minutes / 60 to get hours / 24 to get days
+    const d = Math.floor(diff / 1000 / 60 / 60 / 24);
+    console.log(d + ' days');
+    const h = Math.floor(diff / 1000 / 60 / 60) % 24;
+    console.log(h + ' hours');
+    const m = Math.floor(diff / 1000 / 60 ) % 60;
+    console.log(m + ' minutes');
+    const s = Math.floor(diff / 1000) % 60;
+    console.log(s + ' seconds');
 }
 
 updateCountdown();
