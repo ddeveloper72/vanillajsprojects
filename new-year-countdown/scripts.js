@@ -10,3 +10,15 @@ const currentYear = new Date().getFullYear();
 
 // inject current year string into newYear time
 const newYearTime = new Date(`January 01 ${currentYear +1} 00:00:00`);
+
+
+// update the countdown
+function updateCountdown() {
+    const currentTime = new Date();
+    const diff = newYearTime - currentTime;
+
+    // get diff in milliseconds
+    console.log(diff);
+}
+
+updateCountdown();
