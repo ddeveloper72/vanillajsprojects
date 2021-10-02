@@ -39,5 +39,6 @@ function crateList() {
             <i class="fa fa-grip-lines"></i>
         </div>
         `
+        
     })
 }
