@@ -17,7 +17,7 @@ const richList = [
 
 
 //  Store list items
-const listItems = [];
+const listItem = [];
 
 let dragStartIndex;
 
@@ -27,9 +27,17 @@ crateList();
 function crateList() {
     [...richestPeople]
     .forEach((person, index) => {
-        const listItems = document.createElement('li');
+        const listItem = document.createElement('li');
 
         // data index matches the index from the array
-        listItems.setAttribute('data-index', index);
+        listItem.setAttribute('data-index', index);
+
+        listItem.innerHTML = `
+        <span class"number">${index + 1}</span>
+        <div class="draggable" draggable="true">
+            <p class="person-name">${person}</p>
+            <i class="fa fa-grip-lines"></i>
+        </div>
+        `
     })
 }
