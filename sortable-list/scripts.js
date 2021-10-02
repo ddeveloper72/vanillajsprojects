@@ -15,30 +15,32 @@ const richList = [
     'Deirdre and Mark Lyons'
 ];
 
-
 //  Store list items
-const listItem = [];
+const listItems = [];
 
 let dragStartIndex;
 
-crateList();
+createList();
 
 //Insert list items into the DOM
-function crateList() {
-    [...richestPeople]
-    .forEach((person, index) => {
-        const listItem = document.createElement('li');
+function createList() {
+    [...richList]
+        .forEach((unit, index) => {
+            const listItem = document.createElement('li');
 
-        // data index matches the index from the array
-        listItem.setAttribute('data-index', index);
+            listItem.setAttribute('data-index', index);
 
-        listItem.innerHTML = `
-        <span class"number">${index + 1}</span>
-        <div class="draggable" draggable="true">
-            <p class="person-name">${person}</p>
-            <i class="fa fa-grip-lines"></i>
-        </div>
-        `
-        
-    })
+            listItem.innerHTML = `
+                <span class="number">${index + 1}</span>
+                <div class="draggable" draggable="true">
+                  <p class="person-name">${unit}</p>
+                  <i class="fas fa-grip-lines"></i>
+                </div>
+            `;
+
+            listItems.push(listItem);
+
+            draggable_list.appendChild(listItem);
+        });
+
 }
