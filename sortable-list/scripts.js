@@ -14,3 +14,16 @@ const richList = [
     'John Magnier and family',
     'Deirdre and Mark Lyons'
 ];
+
+
+//  Store list items
+const listItems = [];
+
+let dragStartIndex;
+
+crateList();
+
+//Insert list items into the DOM
+function crateList() {
+    
+}
