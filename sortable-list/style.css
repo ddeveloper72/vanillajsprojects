@@ -4,6 +4,7 @@
     --border-color: #e3e5e4;
     --text-color: #34444f;
     --background-color: #c3c7ca;
+    --draggable-shadow: #eaeaea;
 }
 
 * {
@@ -46,6 +47,10 @@ body {
     font-size: 28;
     height: 60px;
     width: 60px;
+}
+
+.draggable-list li.over .draggable {
+    background-color: var(--draggable-shadow);
 }
 
 .draggable-list .person-name {
