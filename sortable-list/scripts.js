@@ -25,5 +25,11 @@ crateList();
 
 //Insert list items into the DOM
 function crateList() {
-    
+    [...richestPeople]
+    .forEach((person, index) => {
+        const listItems = document.createElement('li');
+
+        // data index matches the index from the array
+        listItems.setAttribute('data-index', index);
+    })
 }
