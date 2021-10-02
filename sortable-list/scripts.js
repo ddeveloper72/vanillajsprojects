@@ -25,6 +25,14 @@ createList();
 //Insert list items into the DOM
 function createList() {
     [...richList]
+        // copy the array and crate a random math value for each array item
+        .map(a => ({ value: a, sort: Math.random() }))
+
+        // sort the math value into incrementing values
+        .sort((a, b) => a.sort - b.sort)
+
+        // map the sorted values back into the array
+        .map(a => a.value)
         .forEach((unit, index) => {
             const listItem = document.createElement('li');
 
