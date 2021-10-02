@@ -26,3 +26,9 @@ body {
     padding: 0;
     list-style: none;
 }
+
+.draggable-list li {
+    background-color: #ffff;
+    display: flex;
+    flex: 1;
+}
