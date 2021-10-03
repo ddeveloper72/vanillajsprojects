@@ -62,5 +62,7 @@ function addEventListeners() {
     const draggables = document.querySelectorAll('.draggable');
     const dragListItems = document.querySelectorAll('draggable-list li');
 
-
+    draggables.forEach(draggable => {
+        draggable.addEventListener('dragstart', dragstart);
+    })
 }
