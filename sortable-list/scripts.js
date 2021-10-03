@@ -65,4 +65,11 @@ function addEventListeners() {
     draggables.forEach(draggable => {
         draggable.addEventListener('dragstart', dragstart);
     })
+
+    dragListItems.forEach(draggable => {
+        draggable.addEventListener('dragleave', dragleave);
+        draggable.addEventListener('dragover', dragOver);
+        draggable.addEventListener('dragenter', dragEnter);
+        draggable.addEventListener('drop', dragDrop);
+    })
 }
