@@ -94,12 +94,26 @@ function swapItems(fromIndex, toIndex) {
     // get the dom elements
     const itemOne = listItems[fromIndex].querySelector('.draggable');
     const itemTwo = listItems[toIndex].querySelector('.draggable');
-    
+
     //swap the items to respective indexes
     listItems[fromIndex].appendChild(itemTwo);
     listItems[toIndex].appendChild(itemOne)
 }
 
+// Check the li order
+function checkOrder() {
+    listItems.forEach((listItem, index) => {
+        const unitName = listItem.querySelector('.draggable')
+            .innerText.trim();
+
+        if (unitName != richList[index]) {
+            listItem.classList.add('wrong');
+        } else {
+            listItem.classList.remove('wrong');
+            listItem.classList.add('right');
+        }
+    });
+}
 
 function addEventListeners() {
     const draggables = document.querySelectorAll('.draggable');

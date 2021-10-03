@@ -57,6 +57,14 @@ body {
     margin: 0 20px 0 0 ;
 }
 
+.draggable-list li.wrong .person-name {
+    color: #f07474;
+}
+
+.draggable-list li.right .person-name {
+    color: #259a16
+}
+
 .draggable {
     cursor: pointer;
     display: flex;
