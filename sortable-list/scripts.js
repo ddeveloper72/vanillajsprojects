@@ -116,3 +116,5 @@ function addEventListeners() {
         item.addEventListener('drop', dragDrop);
     })
 }
+
+check.addEventListener('click', checkOrder);
