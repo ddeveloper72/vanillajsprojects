@@ -58,23 +58,23 @@ function createList() {
 }
 
 function dragStart() {
-    console.log('Event: ', 'dragstart');
+    // console.log('Event: ', 'dragstart');
 }
 
 function dragLeave() {
-    console.log('Event: ', 'dragleave');
+    // console.log('Event: ', 'dragleave');
 }
 
 function dragOver() {
-    console.log('Event: ', 'dragover');
+    // console.log('Event: ', 'dragover');
 }
 
 function dragEnter() {
-    console.log('Event: ', 'dragenter');
+    // console.log('Event: ', 'dragenter');
 }
 
 function dragDrop() {
-    console.log('Event: ', 'drop');
+    // console.log('Event: ', 'drop');
 }
 
 
