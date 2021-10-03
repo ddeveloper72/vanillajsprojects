@@ -94,7 +94,10 @@ function swapItems(fromIndex, toIndex) {
     // get the dom elements
     const itemOne = listItems[fromIndex].querySelector('.draggable');
     const itemTwo = listItems[toIndex].querySelector('.draggable');
-    console.log(itemOne, itemTwo);
+    
+    //swap the items to respective indexes
+    listItems[fromIndex].appendChild(itemTwo);
+    listItems[toIndex].appendChild(itemOne)
 }
 
 
