@@ -69,8 +69,9 @@ function dragLeave() {
     this.classList.remove('over');
 }
 
-function dragOver() {
+function dragOver(e) {
     // console.log('Event: ', 'dragover');
+    e.preventDefault();
 }
 
 function dragEnter() {
@@ -87,6 +88,9 @@ function dragDrop() {
     this.classList.remove('over');
 }
 
+function swapItems(fromIndex, toIndex) {
+    console.log(123);
+}
 
 
 function addEventListeners() {
