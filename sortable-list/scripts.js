@@ -108,6 +108,7 @@ function checkOrder() {
 
         if (unitName != richList[index]) {
             listItem.classList.add('wrong');
+            listItem.classList.remove('right');
         } else {
             listItem.classList.remove('wrong');
             listItem.classList.add('right');
