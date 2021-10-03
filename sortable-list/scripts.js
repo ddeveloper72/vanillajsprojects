@@ -84,6 +84,7 @@ function dragDrop() {
     const dragEndIndex = +this.getAttribute('data-index');
     swapItems(dragStartIndex, dragEndIndex);
 
+    this.classList.remove('over');
 }
 
 
