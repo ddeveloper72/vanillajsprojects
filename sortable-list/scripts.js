@@ -82,7 +82,8 @@ function dragDrop() {
     // console.log('Event: ', 'drop');
     // get drag end index of closest li element
     const dragEndIndex = +this.getAttribute('data-index');
-    
+    swapItems(dragStartIndex, dragEndIndex);
+
 }
 
 
