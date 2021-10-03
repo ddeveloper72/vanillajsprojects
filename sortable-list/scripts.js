@@ -88,8 +88,13 @@ function dragDrop() {
     this.classList.remove('over');
 }
 
+// swap the dom elements for the li items
 function swapItems(fromIndex, toIndex) {
-    console.log(123);
+
+    // get the dom elements
+    const itemOne = listItems[fromIndex].querySelector('.draggable');
+    const itemTwo = listItems[toIndex].querySelector('.draggable');
+    console.log(itemOne, itemTwo);
 }
 
 
