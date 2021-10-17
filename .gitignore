@@ -39,3 +39,5 @@ breakout/.firebaserc
 breakout/firebase.json
 new-year-countdown/firebase.json
 new-year-countdown/.firebaserc
+sortable-list/.firebaserc
+sortable-list/firebase.json
