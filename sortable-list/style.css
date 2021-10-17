@@ -3,7 +3,7 @@
 :root {
   --border-color: #e3e5e4;
   --text-color: #34444f;
-  --background-color: #c3c7ca;
+  --background-color: #b4c3ce;
   --draggable-shadow: #eaeaea;
 }
 
@@ -12,14 +12,34 @@
 }
 
 body {
-  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   margin: 0;
+  background-color: #fff;
   font-family: 'Lato', sans-serif;
+  background: linear-gradient(to right, #f7d9b9, #3f87a6);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 420px;
+}
+
+.draggable {
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 0fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
 }
 
 .draggable-list {
@@ -28,12 +48,15 @@ body {
   padding: 0;
   list-style: none;
   width: 80%;
+  
 }
 
 .draggable-list li {
   background-color: #ffff;
   display: flex;
+  overflow: hidden;
   /* flex: 1; */
+  background: linear-gradient(#f0f0c1c4, #f0f0c1c4);
 }
 
 .draggable-list li:not(:last-of-type) {
@@ -45,13 +68,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 28;
+  font-size: 20px;
   height: 60px;
-  width: 60px;
+  min-width: 60px;
 }
 
 .draggable-list li.over .draggable {
   background-color: var(--draggable-shadow);
+  background: linear-gradient(#f1f1c3, #f1f1c3);
 }
 
 .draggable-list .person-name {
@@ -79,26 +103,18 @@ body {
   margin: 0 20px 0 0;
 }
 
-.draggable-list li.wrong  {
-  background-color: #b635243d;
+.draggable-list li.wrong {
+  background-color: #f86b5891;
+  background-image: none;
 }
 
 .draggable-list li.right {
-  background-color: #34b6243d;
-}
-
-.draggable {
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 2fr 1fr 2fr 0fr;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px;
-  flex: 1;
+  background-color: #35b62450;
+  background-image: none;
 }
 
 .check-btn {
-  background-color: var(--background-color);
+  background-color: #b2ddfc;
   border: none;
   color: var(--text-color);
   font-size: 16px;
@@ -112,4 +128,27 @@ body {
 
 .check-btn:focus {
   outline: none;
+}
+
+@media (max-width: 840px) {
+  .draggable-list .person-source,
+  .draggable-list .person-networth {
+    justify-content: start;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 644px) {
+  .draggable {
+    padding: 0 5px 0 5px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 14px;
+  }
 }
