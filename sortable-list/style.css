@@ -1,92 +1,115 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 :root {
-    --border-color: #e3e5e4;
-    --text-color: #34444f;
-    --background-color: #c3c7ca;
-    --draggable-shadow: #eaeaea;
+  --border-color: #e3e5e4;
+  --text-color: #34444f;
+  --background-color: #c3c7ca;
+  --draggable-shadow: #eaeaea;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    background-color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
 }
 
 .draggable-list {
-    border: 1px solid var(--border-color);
-    color: var(--text-color);
-    padding: 0;
-    list-style: none;
+  border: 1px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style: none;
+  width: 80%;
 }
 
 .draggable-list li {
-    background-color: #ffff;
-    display: flex;
-    flex: 1;
+  background-color: #ffff;
+  display: flex;
+  /* flex: 1; */
 }
 
 .draggable-list li:not(:last-of-type) {
-    border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .draggable-list .number {
-    background-color: var(--background-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28;
-    height: 60px;
-    width: 60px;
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28;
+  height: 60px;
+  width: 60px;
 }
 
 .draggable-list li.over .draggable {
-    background-color: var(--draggable-shadow);
+  background-color: var(--draggable-shadow);
 }
 
 .draggable-list .person-name {
-    margin: 0 20px 0 0 ;
+  margin: 0 10px 0 0;
 }
 
-.draggable-list li.wrong .person-name {
-    color: #f07474;
+.draggable-list .person-source {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+  margin: 0 50px 0 0;
 }
 
-.draggable-list li.right .person-name {
-    color: #259a16
+.draggable-list li .person-networth {
+  visibility: hidden;
+  display: flex;
+  flex: 1;
+  margin: 0 20px 0 0;
+}
+
+.draggable-list li.right .person-networth {
+  visibility: visible;
+  display: flex;
+  flex: 1;
+  margin: 0 20px 0 0;
+}
+
+.draggable-list li.wrong  {
+  background-color: #b635243d;
+}
+
+.draggable-list li.right {
+  background-color: #34b6243d;
 }
 
 .draggable {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    flex: 1;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 0fr;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  flex: 1;
 }
 
 .check-btn {
-    background-color: var(--background-color);
-    border: none;
-    color: var(--text-color);
-    font-size: 16px;
-    padding: 10px 20px;
-    cursor: pointer;
+  background-color: var(--background-color);
+  border: none;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
 }
 
 .check-btn:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .check-btn:focus {
-    outline: none;
+  outline: none;
 }
