@@ -1,13 +1,14 @@
-# Sortable List
+# [Sortable List](https://top10-sortable-list.firebaseapp.com/)
 
 Display a data list which can be sorted by hand.
 
 ## Specifications
 
-* Create and ordered list of the top 10 richest people
+* Create and ordered list of the top 10 richest Irish people with the source of their wealth.
 * Scramble the items randomly using JS
 * Allow a user to re-arrange the list by dragging and dropping an item on the list
 * Provide the user with a button to check if the items ore in the right order
+* Add the net-worth of the person to the correctly ordered list item.
 * Use green for correctly ordered items and red for incorrectly sorted items
 
 ## Deployment
