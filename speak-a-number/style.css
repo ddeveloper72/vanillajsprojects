@@ -1,1 +1,15 @@
-ECHO is on.
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #243542 url('img/bg.webp') no-repeat left center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    font-family: 'Areal, Helvetica, sans-serif';
+}
