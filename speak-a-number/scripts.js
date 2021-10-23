@@ -37,9 +37,9 @@ function writeMessage(msg) {
 function checkNumber(msg) {
     const num = +msg;
 
-    // Check if valid number
+    // Check if valid number and append to the msg msgEl
     if (Number.isNaN(num)) {
-        msgEl.innerHTML = `<div>That was not a valid number</div>`;
+        msgEl.innerHTML += `<div>That was not a valid number</div>`;
         return;
     }
 
