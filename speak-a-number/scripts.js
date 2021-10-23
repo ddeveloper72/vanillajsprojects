@@ -19,7 +19,7 @@ function onSpeak(e) {
     const msg = e.results[0][0].transcript;
     
     writeMessage(msg);
-    // checkNumber(msg);
+    checkNumber(msg);
 }
 
 // Write what the user speaks
@@ -28,6 +28,14 @@ function writeMessage(msg) {
         <div>You said: </div>
         <span class="box">${msg}</span>
     `;
+}
+
+// Check message against number
+function checkNumber(msg) {
+    const num = +msg;
+
+    // Check if valid number
+
 }
 
 // Generate a random number
