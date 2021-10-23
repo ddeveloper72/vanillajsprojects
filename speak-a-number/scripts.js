@@ -14,6 +14,12 @@ let recognition = new window.SpeechRecognition();
 // Start recognition game
 recognition.start();
 
+// Capture user voice when speaking
+function onSpeak() {
+    
+}
+
+// Generate a random number
 function getRandomNumber() {
     return Math.floor(Math.random() * 100) + 1
 }
