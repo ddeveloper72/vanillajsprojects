@@ -23,3 +23,8 @@ img {
     height: auto;
     width: 200px;
 }
+
+p {
+    line-height: 1.5;
+    margin: 0;
+}
