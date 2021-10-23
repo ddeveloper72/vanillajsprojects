@@ -47,13 +47,20 @@ function checkNumber(msg) {
     }
 
     // Check Number
-    if(num === randomNum) {
+    if (num === randomNum) {
         document.body.innerHTML = `
         <h2>Congratulations! You've guessed the number!<br><br>
         ${num} was the correct number</h2>
         <button class="play-again" id="play-again">Play Again</button>
         `;
-    } 
+    }
+    else if (num > randomNum) {
+        msgEl.innerHTML +=
+            `<div>Go Lower 🔻</div>`;
+    } else {
+        msgEl.innerHTML +=
+            `<div>Go Higher 🔺</div>`;
+    }
 }
 
 // Generate a random number
