@@ -17,7 +17,7 @@ recognition.start();
 // Capture user voice when speaking
 function onSpeak(e) {
     const msg = e.results[0][0].transcript;
-    
+
     writeMessage(msg);
     checkNumber(msg);
 }
@@ -35,8 +35,14 @@ function checkNumber(msg) {
     const num = +msg;
 
     // Check if valid number
-    if(Number.isNaN(num)) {
+    if (Number.isNaN(num)) {
         msgEl.innerHTML = `<div>That was not a valid number</div>`;
+        return;
+    }
+
+    // Check if number is in range
+    if (num > 100 || num < 1) {
+        msgEl.innerHTML = `<div>This number myst be between 1 - 100</div>`;
         return;
     }
 }
