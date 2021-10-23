@@ -17,7 +17,9 @@ recognition.start();
 // Capture user voice when speaking
 function onSpeak(e) {
     const msg = e.results[0][0].transcript;
-    console.log(msg);
+    
+    // writeMessage(msg);
+    // checkNumber(msg);
 }
 
 // Generate a random number
