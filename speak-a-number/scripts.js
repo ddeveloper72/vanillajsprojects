@@ -35,7 +35,10 @@ function checkNumber(msg) {
     const num = +msg;
 
     // Check if valid number
-
+    if(Number.isNaN(num)) {
+        msgEl.innerHTML = `<div>That was not a valid number</div>`;
+        return;
+    }
 }
 
 // Generate a random number
