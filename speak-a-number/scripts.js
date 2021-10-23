@@ -15,8 +15,8 @@ let recognition = new window.SpeechRecognition();
 recognition.start();
 
 // Capture user voice when speaking
-function onSpeak() {
-    
+function onSpeak(e) {
+    console.log(e);
 }
 
 // Generate a random number
