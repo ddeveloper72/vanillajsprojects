@@ -18,8 +18,16 @@ recognition.start();
 function onSpeak(e) {
     const msg = e.results[0][0].transcript;
     
-    // writeMessage(msg);
+    writeMessage(msg);
     // checkNumber(msg);
+}
+
+// Write what the user speaks
+function writeMessage(msg) {
+    msgEl.innerHTML = `
+        <div>You said: </div>
+        <span class="box">${msg}</span>
+    `;
 }
 
 // Generate a random number
