@@ -18,6 +18,9 @@ recognition.start();
 function onSpeak(e) {
     const msg = e.results[0][0].transcript;
 
+    // mic & msg test
+    console.log(msg);
+
     writeMessage(msg);
     checkNumber(msg);
 }
@@ -76,7 +79,7 @@ recognition.addEventListener('end', () => recognition.start());
 
 // Reload game 
 document.body.addEventListener('click', e => {
-    if(e.target.id == 'play-again') {
+    if (e.target.id == 'play-again') {
         window.location.reload();
     }
 })
