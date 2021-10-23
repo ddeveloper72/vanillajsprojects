@@ -4,7 +4,7 @@
 
 body {
     background: linear-gradient(rgba(82, 107, 124, 0.45), rgba(0, 31, 39, 0.45)), url('img/bg.webp') no-repeat left center/cover;
-    color: #fff;
+    color: rgb(248, 232, 4);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -32,9 +32,14 @@ p {
 .play-again {
     padding: 8px 15px;
     border: 0;
-    background: #f4f4f4;
+    background: #83ddff;
     border-radius: 5px;
     margin-top: 10px;
+}
+
+.play-again:active {
+    outline: none;
+    transform: scale(0.9);
 }
 
 .msg {
