@@ -45,6 +45,15 @@ function checkNumber(msg) {
         msgEl.innerHTML = `<div>This number myst be between 1 - 100</div>`;
         return;
     }
+
+    // Check Number
+    if(num === randomNum) {
+        document.body.innerHTML = `
+        <h2>Congratulations! You've guessed the number!<br><br>
+        ${num} was the correct number</h2>
+        <button class="play-again" id="play-again">Play Again</button>
+        `;
+    } 
 }
 
 // Generate a random number
