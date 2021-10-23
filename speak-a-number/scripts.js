@@ -56,17 +56,20 @@ function checkNumber(msg) {
     }
     else if (num > randomNum) {
         msgEl.innerHTML +=
-            `<div>Go Lower 🔻</div>`;
+            '<div>Go Lower 🔻</div>';
     } else {
         msgEl.innerHTML +=
-            `<div>Go Higher 🔺</div>`;
+            '<div>Go Higher 🔺</div>';
     }
 }
 
 // Generate a random number
 function getRandomNumber() {
-    return Math.floor(Math.random() * 100) + 1
+    return Math.floor(Math.random() * 100) + 1;
 }
 
 // Speak result
 recognition.addEventListener('result', onSpeak);
+
+// End speech recognition service
+recognition.addEventListener('end', () => recognition.start());
