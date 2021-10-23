@@ -1,4 +1,4 @@
-# Number Guessing Game using speech recognition
+# [Number Guessing Game using speech recognition](https://guess-the-number-f231d.firebaseapp.com/)
 
 This speech recognition app leverages the [SpeechRecognition](https://developer.mozilla.org/en-US/docs/Web/API/SpeechRecognition) APi from MDN Web Docs
 

@@ -23,6 +23,7 @@ Selection of JavaScript applications re-created and in some cases added to, for 
 * [Breakout!](https://breakout-6d65f.firebaseapp.com/)
 * [New Year Countdown](https://new-year-countdown-3a8a8.firebaseapp.com/)
 * [Sortable List](https://top10-sortable-list.firebaseapp.com/)
+* [Number Guessing Game using speech recognition](https://guess-the-number-f231d.firebaseapp.com/)
 
 ## Deployment
 
